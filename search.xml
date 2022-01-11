@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>pdf测试</title>
-    <url>/blog_cn/2022/01/10/%E6%B5%8B%E8%AF%95/pdf%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>下面进行实验</p>
-<a id="more"></a>
-<div class="pdfobject-container" data-target="AAAI.pdf" data-height="500px"></div>
-]]></content>
-  </entry>
-  <entry>
     <title>常见数学符号</title>
     <url>/blog_cn/2022/01/11/%E6%B5%8B%E8%AF%95/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>下面进行一些符号渲染测试</p>
@@ -23,6 +15,14 @@
       <tags>
         <tag>服务器测试</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>pdf测试</title>
+    <url>/blog_cn/2022/01/10/%E6%B5%8B%E8%AF%95/pdf%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>下面进行实验</p>
+<a id="more"></a>
+<div class="pdfobject-container" data-target="AAAI.pdf" data-height="500px"></div>
+]]></content>
   </entry>
   <entry>
     <title>Hexo_Github建站备忘录</title>
@@ -76,669 +76,44 @@
       </tags>
   </entry>
   <entry>
-    <title>建站记录</title>
-    <url>/blog_cn/2022/01/10/%E6%B5%8B%E8%AF%95/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>下面是建站记录 <a id="more"></a></p>
-<ul>
-<li>live-2d看板娘</li>
-<li>升级版 有大坑
-<ul>
-<li>好了，但没完全好，看看后面能不能解决本地无法加载，线上版本不同步的问题</li>
-<li>巨坑有bug，太坑了，路径上不要加'/'</li>
-</ul></li>
-<li>fancybox 图片放大 有坑
-<ul>
-<li>https://matlab.xyz/2020/07/22/Hexo%E4%BD%BF%E7%94%A8Fancybox%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</li>
-</ul></li>
-<li>代码复制
-<ul>
-<li>copy_button</li>
-</ul></li>
-<li>darkmode
-<ul>
-<li>https://www.techgrow.cn/posts/abf4aee1.html#Next-8-x-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%8F%AF%E5%88%87%E6%8D%A2%E7%9A%84%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F</li>
-</ul></li>
-<li>加载进度条</li>
-<li>点击特效
-<ul>
-<li>不要加/坑死了</li>
-</ul></li>
-<li>pdf 预览
-<ul>
-<li>主页预览存在问题，文章中并没有问题</li>
-</ul></li>
-<li>公式渲染
-<ul>
-<li>目前采用panoc方案，但是仍然是存在一定概率渲染成功
-<ul>
-<li>https://zhum.in/blog/tutorial/hexo%E4%B8%8B%E6%B8%B2%E6%9F%93mathjax%E9%97%AE%E9%A2%98.html</li>
-</ul></li>
-<li>巨坑</li>
-<li>表格内公式如何换行？</li>
-</ul></li>
-<li>采用Gittalk评论区</li>
-</ul>
-<h1 id="常用命令">常用命令</h1>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式</span><br><span class="line">$ hexo p  =&gt; hexo publish</span><br><span class="line">$ hexo g  =&gt; hexo generate  #生成</span><br><span class="line">$ hexo s  =&gt; hexo server  #启动服务预览</span><br><span class="line">$ hexo d  =&gt; hexo deploy  #部署</span><br><span class="line"></span><br><span class="line">$ hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。</span><br><span class="line">$ hexo server -s   #静态模式</span><br><span class="line">$ hexo server -p 5000   #更改端口</span><br><span class="line">$ hexo server -i 192.168.1.1   #自定义IP</span><br><span class="line">$ hexo clean   #清除缓存，网页正常情况下可以忽略此条命令</span><br></pre></td></tr></table></figure>
-<h2 id="本地加载">本地加载</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-<h2 id="服务器部署">服务器部署</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<h2 id="创建新的博文">创建新的博文</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n 名称</span><br></pre></td></tr></table></figure>
-<p>然后自主分类</p>
-<h2 id="阅读全文">阅读全文</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="添加pdf文件">添加pdf文件</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% pdf AAAI.pdf %&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>二阶矩过程</title>
-    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E4%BA%8C%E9%98%B6%E7%9F%A9%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第三章的内容，主要就是二阶矩过程。 <a id="more"></a></p>
-<h1 id="常见定义">常见定义</h1>
-<table>
-<colgroup>
-<col style="width: 10%">
-<col style="width: 44%">
-<col style="width: 44%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">基本概念</th>
-<th style="text-align: center;">定义公式</th>
-<th style="text-align: center;">注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">二阶矩过程</td>
-<td style="text-align: center;"><span class="math inline">\(E|X|^2 &lt;\infty\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">洛维准则</td>
-<td style="text-align: center;"><span class="math inline">\(\lim_{i,j\rightarrow\infty}E\xi_i\overline{\xi_j}=c\)</span></td>
-<td style="text-align: center;">Loove准则用于证明均方极限存在，而且证明随机过程<span class="math inline">\(\xi_i\)</span>可以均方收敛<span class="math inline">\(\xi\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">柯西准则</td>
-<td style="text-align: center;"><span class="math inline">\(\lim_{i,j\rightarrow\infty}E|\xi_i-\xi_j|^2=||\xi_i-\xi_j||=0\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">唯一性定理</td>
-<td style="text-align: center;"><span class="math inline">\(E\xi(t)=c,D(\xi(t)-c)=D(\xi(t))=0\)</span></td>
-<td style="text-align: center;">随机过程恒等于一个常数或者确定性过程。c可以推广到一个确定性过程<span class="math inline">\(g(t)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">各态历经性</td>
-<td style="text-align: center;">均值遍历+相关函数遍历</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">均值遍历</td>
-<td style="text-align: center;"><span class="math inline">\(E[\xi(t)]=\mu(t)=\int \xi(t) f_{\xi(t)}(x)dx\\=&lt;\xi(t)&gt;=\lim_{T\rightarrow \infty} \frac{1}{2T}\int_{-T}^T \xi(t)dt\)</span></td>
-<td style="text-align: center;">值得注意的是<span class="math inline">\(\mu(t)\)</span>是一个确定性的数，<span class="math inline">\(&lt;\xi(t)&gt;\)</span>是一个随机变量；简单来说就是均值的集合平均等于时间平均</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">相关函数遍历</td>
-<td style="text-align: center;"><span class="math inline">\(R(t,t+\tau)=E[\xi(t)\overline{\xi(t+\tau)}]=\\&lt;\xi(t)\overline{\xi(t+\tau)}&gt;= \lim_{T\rightarrow \infty} \frac{1}{2T} \int_{-T}^{T} \xi(t)\overline{\xi(t+\tau)}dt\)</span></td>
-<td style="text-align: center;">简单来说就是相关函数的时间平均=集合平均</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">宽平稳</td>
-<td style="text-align: center;"><span class="math inline">\(E|X|^2&lt;\infty, E[\xi(t)]=\mu(t)=\mu,\\ R(t,t+\tau)=R(\tau)\\=C(t,t+\tau)+\mu^2=C(\tau)+\mu^2\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">严平稳</td>
-<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t1,t2,...,t_n)=F_{\xi}(t1+\tau,t2+\tau,...,tn+\tau)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">二阶严平稳</td>
-<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t_1,t_2)=F_{\xi}(0,t_2-t_1)=F_{\xi}(0,\tau)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(R(t_1,t_2)=\int x_1 x_2 dF_{\xi}(t_1,t_2)=\int x_1 x_2 dF_{\xi}(0,\tau)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">一阶严平稳</td>
-<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t)=F_{\xi}(0)\)</span></td>
-<td style="text-align: center;">任意时刻的随机变量相同</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">独立增量过程</td>
-<td style="text-align: center;"><span class="math inline">\(\xi_1,\xi_2-\xi_1,...,\xi_n-\xi_{n-1}\)</span>独立</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">平稳增量过程</td>
-<td style="text-align: center;"><span class="math inline">\(\xi(t+\tau)-\xi(t) \sim \xi(\tau)\)</span></td>
-<td style="text-align: center;">也就是增量的差的分布和时间无关之和时间差有关</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">正交增量过程</td>
-<td style="text-align: center;"><span class="math inline">\(R(\xi(t_i)-\xi(t_j),\xi(t_j)-\xi(t_k) )=0\)</span></td>
-<td style="text-align: center;">增量相互正交</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">随机变量独立</td>
-<td style="text-align: center;">$独立 f(x,y)=f(x)f(y);\ E((jw(x)+(y)))\ =E((jw(x)))E((jw(y))) $</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">随机变量不相关</td>
-<td style="text-align: center;"><span class="math inline">\(不相关 \Leftrightarrow C(\xi,\eta)=0 \Leftrightarrow R(\xi,\eta)=\mu_\xi \mu_\eta\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">联合平稳</td>
-<td style="text-align: center;"><span class="math inline">\(R_{\xi\eta}(t,t+\tau)=R_{\xi\eta}(\tau)\)</span></td>
-<td style="text-align: center;"><strong>联合平稳才能保证各自的线性组合仍然平稳</strong></td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见结论">常见结论</h1>
-<table>
-<colgroup>
-<col style="width: 19%">
-<col style="width: 71%">
-<col style="width: 9%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">基本结论</th>
-<th style="text-align: center;">公式</th>
-<th style="text-align: center;">注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">均值遍历判准</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">相关函数遍历判准</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">线性组合平稳</td>
-<td style="text-align: center;"><span class="math inline">\(R_{\eta\xi}(t,t+\tau)=R_{\eta\xi}(\tau) \Rightarrow \eta+\xi 平稳\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">CS不等式</td>
-<td style="text-align: center;"><span class="math inline">\(|E\xi\overline{\eta}|\le E|\xi\overline{\eta}|\le \sqrt{E|\xi|^2E|\eta|^2}\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">三角不等式</td>
-<td style="text-align: center;"><span class="math inline">\(\sqrt{E|\xi+\eta|^2}\le \sqrt{E|\xi|^2}+\sqrt{E|\eta|^2}\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">绝对值不等式</td>
-<td style="text-align: center;"><span class="math inline">\(E|\xi+\eta|\le E|\xi|+E|\eta|\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见数学技巧">常见数学技巧</h1>
-<h2 id="欧拉公式">欧拉公式</h2>
-<p><span class="math display">\[
-\exp(jw\tau)=cos(w\tau)-jsin(w\tau)
-\]</span></p>
-<p>这个尝尝用于不等式运算和傅里叶变换中奇偶性的运算，通常sin在对称区间上积分为0。</p>
-]]></content>
-      <categories>
-        <category>清华课程</category>
-        <category>随机过程</category>
-      </categories>
-      <tags>
-        <tag>清华课程</tag>
-        <tag>随机过程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随机过程课件</title>
-    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/PPT%E6%B1%87%E6%80%BB/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%AF%BE%E4%BB%B6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这里我们给出随机过程课件。</p>
+    <title>本科毕设</title>
+    <url>/blog_cn/2022/01/11/%E7%A7%91%E7%A0%94/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这里我们给出本科毕业设计。</p>
 <a id="more"></a>
-<h1 id="第一章">第一章</h1>
-<div class="pdfobject-container" data-target="chapter1-2021.pdf" data-height="500px"></div>
-<h1 id="第二章">第二章</h1>
-<div class="pdfobject-container" data-target="chapter2-2021.pdf" data-height="500px"></div>
-<h1 id="第三章">第三章</h1>
-<div class="pdfobject-container" data-target="chapter3-2021.pdf" data-height="500px"></div>
-<h1 id="第四章">第四章</h1>
-<div class="pdfobject-container" data-target="chapter4-2021.pdf" data-height="500px"></div>
-<h1 id="第五章">第五章</h1>
-<div class="pdfobject-container" data-target="chapter5-2021.pdf" data-height="500px"></div>
-<h1 id="第六章">第六章</h1>
-<div class="pdfobject-container" data-target="chapter6-2021.pdf" data-height="500px"></div>
-<h1 id="第七章">第七章</h1>
-<div class="pdfobject-container" data-target="chapter7-2021.pdf" data-height="500px"></div>
-<h1 id="第八章">第八章</h1>
-<div class="pdfobject-container" data-target="chapter8-2021.pdf" data-height="500px"></div>
+<div class="pdfobject-container" data-target="paper.pdf" data-height="500px"></div>
 ]]></content>
       <categories>
-        <category>清华课程</category>
-        <category>随机过程</category>
-        <category>课件</category>
+        <category>毕业设计</category>
       </categories>
       <tags>
-        <tag>清华课程</tag>
-        <tag>随机过程</tag>
-        <tag>课程课件</tag>
+        <tag>毕业设计</tag>
+        <tag>本科</tag>
       </tags>
   </entry>
   <entry>
-    <title>平稳过程谱分析</title>
-    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B9%B3%E7%A8%B3%E8%BF%87%E7%A8%8B%E8%B0%B1%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第四章的内容，主要就是平稳过程谱分析。 <a id="more"></a></p>
-<h1 id="常见定义">常见定义</h1>
-<table>
-<colgroup>
-<col style="width: 8%">
-<col style="width: 42%">
-<col style="width: 49%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">基本概念</th>
-<th style="text-align: center;">定义公式</th>
-<th style="text-align: center;">注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">二阶矩过程</td>
-<td style="text-align: center;"><span class="math inline">\(E|X|^2&lt;\infty\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">平稳过程</td>
-<td style="text-align: center;"><span class="math display">\[R(t,t+\tau)=R(\tau),E|X|^2&lt;\infty,E[\xi(t)]=\mu\]</span></td>
-<td style="text-align: center;">平稳过程一般指的是宽平稳</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">功率谱密度</td>
-<td style="text-align: center;"><span class="math inline">\(S(w)=\int R(\tau) \exp(-jw\tau) d\tau\)</span></td>
-<td style="text-align: center;">傅里叶正变换；而且需要注意谱密度是定义</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">相关函数</td>
-<td style="text-align: center;"><span class="math inline">\(R(\tau)=\frac{1}{2\pi}\int S(w)\exp(jw\tau)dw\)</span></td>
-<td style="text-align: center;">傅里叶逆变换，注意如果采用f就不用考虑系数，这个可以用于检验</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">平均功率</td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\pi}\int S(w)dw=R(0)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">平均功率</td>
-<td style="text-align: center;"><span class="math inline">\(S(0)=\int R(\tau)d\tau\)</span></td>
-<td style="text-align: center;">这个类似于相关函数的时间求和</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">卷积运算</td>
-<td style="text-align: center;"><span class="math inline">\(f*g=\int_{-\infty}^{\infty} f(\tau)g(t-\tau)d\tau\)</span></td>
-<td style="text-align: center;">卷积定义在全空间;卷积运算是辅参，所以真正的变量是t，也就是f和g的变量都是t，<span class="math inline">\(\tau\)</span>只是一个辅参</td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见结论">常见结论</h1>
-<table>
-<colgroup>
-<col style="width: 25%">
-<col style="width: 37%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">基本结论</th>
-<th style="text-align: center;">公式</th>
-<th style="text-align: center;">注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">实平稳随机过程<span class="math inline">\(S(w)\)</span>和<span class="math inline">\(R(\tau)\)</span>都是偶函数</td>
-<td style="text-align: center;"><span class="math inline">\(R(\tau)=R(-\tau);S(w)=S(-w)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">实平稳随机过程傅里叶正变换</td>
-<td style="text-align: center;"><span class="math inline">\(S(w)=\int R(\tau) cos(w\tau) d\tau -j \int R(\tau)sin(w\tau) d\tau \\= \int R(\tau) cos(w\tau) d\tau\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">实平稳随机过程傅里叶逆变换</td>
-<td style="text-align: center;"><span class="math inline">\(R(\tau)=\frac{1}{2\pi}[\int S(w cos(w\tau) dw -j \int S(w)sin(w\tau) dw] \\= \frac{1}{2\pi} \int S(w) cos(w\tau) dw\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(S(w)\)</span>始终是非负的实函数</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(S(w)\)</span>带有功率的物理意义</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">位移</td>
-<td style="text-align: center;">$R(+_0)=S(f)(j2f (+_0))df\ =(j2f )df $</td>
-<td style="text-align: center;"><span class="math inline">\(R(\tau+\tau_0)\sim S(w)\exp(jw\tau_0)\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">频率调制</td>
-<td style="text-align: center;">$S(w+w_0)=R()(-j(w+w_0))d=(-jw)d$</td>
-<td style="text-align: center;"><span class="math inline">\(S(w+w_0)\sim R(\tau)\exp(-jw_0\tau)\\ R(\tau)\exp(jw_0\tau)\sim S(w-w_0)\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">时域卷积定理</td>
-<td style="text-align: center;"><span class="math inline">\(f(t)*g(t)\sim F(w)\cdot G(w)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">频域卷积定理</td>
-<td style="text-align: center;"><span class="math inline">\(f(t)\cdot g(t ) \sim \frac{1}{2\pi}F(w)*G(w)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(\int \exp(jw\tau)dw=2\pi \delta(\tau)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\delta(\tau)\sim 1\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(\int \exp(-jw\tau)dw = \int \exp(j\lambda \tau) d\lambda=2\pi\delta(\tau)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(\int \exp(jw\tau)d\tau=2\pi \delta(w)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(\int \exp(-jw\tau)d\tau = \int \exp(j\lambda w) d\lambda=2\pi\delta(w)\)</span></td>
-<td style="text-align: center;">$1 2(w) $</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">脉冲函数筛选性</td>
-<td style="text-align: center;"><span class="math inline">\(\int f(t)\delta(t-t_0)dt = f(t_0) = f(t_0) * \delta(t_0)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">脉冲函数对称性</td>
-<td style="text-align: center;"><span class="math inline">\(\delta(t)=\delta(-t)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">脉冲函数缩放性</td>
-<td style="text-align: center;"><span class="math inline">\(\delta(at)=\frac{1}{|a|}\delta(t)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">脉冲函数积分性质</td>
-<td style="text-align: center;"><span class="math inline">\(\int_{-\infty}^{\infty} \delta(t)dt =1\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">脉冲函数卷积</td>
-<td style="text-align: center;"><span class="math inline">\(f(t)*\delta(t)=f(t)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见傅里叶变换对">常见傅里叶变换对</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(R(\tau)\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(S(w)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(a\exp(-b|\tau|)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{2ab}{b^2+w^2}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(acos(w_0\tau)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(a\pi(\delta(w+w_0)+\delta(w-w_0))\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(asin(w_0\tau)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{a\pi}{j}(\delta(w-w_0)-\delta(w-w_0))\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\delta(\tau)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\pi}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\delta(w)\)</span></td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见数学技巧">常见数学技巧</h1>
-<h2 id="欧拉公式">欧拉公式</h2>
-<p><span class="math display">\[
-\exp(jw\tau)=cos(w\tau)-jsin(w\tau)
-\]</span></p>
-<p>这个尝尝用于不等式运算和傅里叶变换中奇偶性的运算，通常sin在对称区间上积分为0。</p>
-]]></content>
-      <categories>
-        <category>清华课程</category>
-        <category>随机过程</category>
-      </categories>
-      <tags>
-        <tag>清华课程</tag>
-        <tag>随机过程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>条件概率</title>
-    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第六章的内容，主要就是条件概率。 <a id="more"></a></p>
-<h1 id="常见定义">常见定义</h1>
-<table>
-<colgroup>
-<col style="width: 11%">
-<col style="width: 30%">
-<col style="width: 58%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">基本概念</th>
-<th style="text-align: center;">定义公式</th>
-<th style="text-align: center;">注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">条件期望</td>
-<td style="text-align: center;"><span class="math inline">\(EX|Y=\sum_x XP(X|Y)\)</span></td>
-<td style="text-align: center;">条件期望是Y的函数，仍然是一个随机变量，服从随机变量函数的性质</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">条件概率</td>
-<td style="text-align: center;"><span class="math inline">\(P(A|B)=\frac{P(A,B)}{P(B)}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(P(A,B)\)</span>代表两个随机事件同时发生。而<span class="math inline">\(P(A|B)\)</span>是在已知某个事件已经发生的条件下，另外一个事件发生的概率。那么如果毫不相关的事件发生了，一定不会对当前事件发生的概率产生任何影响。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">条件乘法公式</td>
-<td style="text-align: center;"><span class="math inline">\(P(AC|B)=P(A|CB)P(C|B)\)</span></td>
-<td style="text-align: center;">把<span class="math inline">\(B\)</span>去掉就是经典的乘法公式</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">条件独立</td>
-<td style="text-align: center;"><span class="math inline">\(P(A|CB)=P(A|B)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">全期望公式</td>
-<td style="text-align: center;"><span class="math inline">\(EEX|Y=EX\)</span></td>
-<td style="text-align: center;">期望公式算期望</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">全概率公式</td>
-<td style="text-align: center;"><span class="math inline">\(\sum_{B_i}^{U} P(A|B_i)P(B_i)\)</span></td>
-<td style="text-align: center;">概率公式算概率</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">均方估值</td>
-<td style="text-align: center;"><span class="math inline">\(g(X)=EY|X\)</span></td>
-<td style="text-align: center;">其中<span class="math inline">\(g(X)\)</span> 代表对未知序列Y的在均方意义意义下的最优估计。<span class="math inline">\(E Y \mid X\)</span> 是 <span class="math inline">\(Y\)</span> 的最佳均方估计, 称为 <span class="math inline">\(Y\)</span> 关于 <span class="math inline">\(X\)</span> 的回归。 用 <span class="math inline">\(E Y \mid X\)</span> 预测 <span class="math inline">\(Y\)</span> 可使均方误差最小</td>
-</tr>
-</tbody>
-</table>
-<h1 id="常见结论">常见结论</h1>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">结论</th>
-<th style="text-align: center;">公式</th>
-<th style="text-align: center;">解释</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">常数的条件期望</td>
-<td style="text-align: center;"><span class="math inline">\(E(C|X)=C\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">条件的条件期望</td>
-<td style="text-align: center;"><span class="math inline">\(E(X|X)=X\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">条件确定函数的条件期望</td>
-<td style="text-align: center;"><span class="math inline">\(E(g(X)|X)=g(X)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">条件期望线性性质</td>
-<td style="text-align: center;"><span class="math inline">\(E(C_1X_1+C_2X_2|Y)=C_1E(X_1|Y)+C_2E(X_2|Y)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">条件期望的常数性</td>
-<td style="text-align: center;"><span class="math inline">\(E(g(X)f(Y)|X)=g(X)E[f(Y)|X]\)</span></td>
-<td style="text-align: center;">条件期望的核心在于把条件看成常数</td>
-</tr>
-</tbody>
-</table>
-<h2 id="离散全期望公式证明">离散全期望公式证明</h2>
-<p><span class="math display">\[
-\begin{aligned}
-E X &amp;=\sum_{i} x_{i} \operatorname{Pr}\left(X=x_{i}\right)=\sum_{i} x_{i} \sum_{j} \operatorname{Pr}\left(X=x_{i} \mid Y=y_{j}\right) \operatorname{Pr}\left(Y=y_{j}\right) \\
-&amp;=\sum_{j} \operatorname{Pr}\left(Y=y_{j}\right) \cdot \sum_{i} x_{i} \operatorname{Pr}\left(X=x_{i} \mid Y=y_{j}\right) \\
-&amp;=\sum_{j} \operatorname{Pr}\left(Y=y_{j}\right) E\left(X \mid Y=y_{j}\right)=E E(X \mid Y) \quad \text { 全期望公式 }
-\end{aligned}
-\]</span></p>
+    <title>清华大学毕业设计模板</title>
+    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>课程学习的过程中，收集到了清华大学的毕设模板，感觉很好看，就记录下。</p>
+<a id="more"></a>
+<h1 id="单栏-大作业">单栏-大作业</h1>
 <ul>
-<li>核心在于使用全概率公式计算即可。</li>
+<li>https://www.overleaf.com/project/61cacf53747e8e4f4c6dc47e</li>
 </ul>
-<h2 id="连续全期望公式证明">连续全期望公式证明</h2>
-<p><span class="math display">\[
-\begin{aligned}
-E(X \mid Y=y) &amp;=\int_{\mathbb{R}} x d F(X \mid Y=y)=\int_{\mathbb{R}} x f(x \mid y) d x \\
-E E X \mid Y &amp;=\int_{\mathbb{R}} \int_{\mathbb{R}} x f(x \mid y) d x d F_{Y}(y)=\int_{\mathbb{R}} \int_{\mathbb{R}} x f(x \mid y) f_{Y}(y) d x d y \\
-&amp;=\int_{\mathbb{R}} \int_{\mathbb{R}} x f(x, y) d x d y=\int_{\mathbb{R}} x f_{X}(x) d x=E X
-\end{aligned}
-\]</span></p>
-<h2 id="多元连续全期望公式证明">多元连续全期望公式证明</h2>
-<p><span class="math display">\[
-E(X|Y_1,Y_2)=\int xdF(X|Y_1,Y_2)\\
-= \int  x f_{x|y_1,y_2}dx\\
-EEX|Y_1,Y_2 = \int \int \int x f_{y_1,y_2}f_{x|y_1,y_2}dxdy_1dy_2\\
-= \int x \int \int f_{y_1,y_2} f_{x|y_1,y_2}dy_1dy_2 dx\\
-= \int x \int \int f_{x,y_1,y_2}dy_1dy_2dx\\
-= \int x f_x dx\\
-= EX
-\]</span></p>
-<h2 id="一元均方估值证明">一元均方估值证明</h2>
-<blockquote>
-<p><span class="math inline">\(\text { 定理: } E|Y-g(X)|^{2} \geq E|Y-E(Y \mid X)|^{2} \text { i.e. } g^{*}(X)=E Y \mid X\)</span></p>
-</blockquote>
-<p>证: 由于 <span class="math inline">\(E Y \mid X\)</span> 是 <span class="math inline">\(X\)</span> 的函数, 故可令 <span class="math inline">\(E(Y \mid X) \triangleq \hat{g}(x)\)</span> <span class="math inline">\(E|Y-g(X)|^{2}=E|Y-\hat{g}(X)+\hat{g}(X)-g(X)|^{2}\)</span> <span class="math inline">\(=E \mid \underline{Y-\left.\hat{g}(X)\right|^{2}}+E(Y-\hat{g}(X)) \frac{\bar{g}(X)-g(X)}{(\hat{g}(X)-g(X))}\)</span> <span class="math inline">\(+E \overline{(Y-\hat{g}(X))}(\hat{g}(X)-g(X))+E|\hat{g}(X)-g(X)|^{2}\)</span> <span class="math inline">\(\geq E|Y-\hat{g}(X)|^{2}\)</span> 等号在 <span class="math inline">\(E|\hat{g}(X)-g(X)|^{2}=0\)</span> 时成立 <span class="math inline">\(\Leftrightarrow g(X)=E Y \mid X\)</span>, a.e.</p>
-<p>核心在于如下的公式，也就是将目标带入就好了。</p>
-<p>使用全期望公式 <span class="math display">\[
-\begin{aligned}
-&amp; E(Y-\hat{g}(X)) \cdot(\overline{\hat{g}(X)-g(X)}) \\
-=&amp;{ }^{3} E\{E[Y-\hat{g}(X)][\overline{\hat{g}(X)-g(X)}] \mid X\} \\
-=&amp; E\{[\overline{\hat{g}(X)-g(X)}] E[Y-\hat{g}(X)] \mid X\} \\
-=&amp; E\{[\overline{\hat{g}(X)-g(X)}][E Y|X-E \hat{g}(X)| X]\} \\
-=&amp; 0 \quad \text { 其中 } E Y \mid X=\hat{g}(X) \quad \text { 且 } E \hat{g}(X) \mid X=\hat{g}(X)
-\end{aligned}
-\]</span></p>
-<h2 id="多元均方估值证明">多元均方估值证明</h2>
-<blockquote>
-<p><span class="math inline">\(\text { 定理（推广）: } Y^{*}=g^{*}\left(X_{n}, \cdots X_{1}\right)=E Y \mid X_{n}, \cdots X_{1}\)</span></p>
-</blockquote>
-<p><span class="math display">\[
-\begin{aligned}
-&amp; E|Y-g(X_{1},..,X_{n})|^{2}=E|Y-\hat{g}(X_{1},..,X_{n})+\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})|^{2} \\
-=&amp; E|Y-\hat{g}(X_{1},..,X_{n})|^{2}+E(Y-\hat{g}(X_{1},..,X_{n}))\overline{(\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n}))} \\
-&amp;+E\overline{(Y-\hat{g}(X_{1},..,X_{n}))}(\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n}))+E|\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})|^{2} \\
-\geq &amp; E|Y-\hat{g}(X_{1},..,X_{n})|^{2}
-\end{aligned}
-\]</span></p>
-<p>其中我们有 <span class="math display">\[
-\begin{aligned}
-&amp; E(Y-\hat{g}(X_{1},..,X_{n})) \cdot(\overline{\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n}))} \\
-=&amp; E\{E[Y-\hat{g}(X_{1},..,X_{n})][\overline{\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})}] \mid X_{1},..,X_{n}\} \\
-=&amp; E\{[\overline{\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})}] E[Y-\hat{g}(X_{1},..,X_{n})] \mid X_{1},..,X_{n}\} \\
-=&amp; E\{\overline{[\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})]}[E Y|X_{1},..,X_{n}-E \hat{g}(X_{1},..,X_{n})| X_{1},..,X_{n}]\} \\
-=&amp; 0 \text { 其中 } E Y \mid X=\hat{g}(X_{1},..,X_{n}) \text { 且 } E \hat{g}(X_{1},..,X_{n}) \mid X_{1},..,X_{n}=\hat{g}(X_{1},..,X_{n})
-\end{aligned}
-\]</span> 所以我们可以得到$ Y^{<em>}=g^{</em>}(X_{n}, X_{1})=E Y X_{n}, X_{1}$</p>
-<h1 id="问题">问题</h1>
-<ol type="1">
-<li>换元之后除了变量长得不一样，还有什么区别吗？变量的定义域变了么？如何确定呢？</li>
-</ol>
-<h1 id="等待解决">等待解决</h1>
-<ol type="1">
-<li>什么是期望？
-<ol type="1">
-<li>普通期望</li>
-<li>条件期望</li>
-</ol></li>
-<li>什么是协方差矩阵？
-<ol type="1">
-<li>自协方差</li>
-<li>互协方差</li>
-</ol></li>
-<li>什么是相关函数？
-<ol type="1">
-<li>自相关函数</li>
-<li>互相关函数</li>
-</ol></li>
-<li>什么是方差？
-<ol type="1">
-<li>普通方差</li>
-<li>条件方差</li>
-</ol></li>
-<li>什么是概率？
-<ol type="1">
-<li>普通概率</li>
-<li>条件概率</li>
-</ol></li>
-</ol>
+<p>下面给一个模板排版的样例（单栏，大作业形式）</p>
+<div class="pdfobject-container" data-target="paper1.pdf" data-height="500px"></div>
+<h1 id="单栏-毕业设计">单栏-毕业设计</h1>
+<ul>
+<li>https://www.overleaf.com/project/61dd66c280ffb4ec813ce948</li>
+</ul>
+<p>下面给一个模板排版的样例（单栏，毕设形式）</p>
+<div class="pdfobject-container" data-target="paper2.pdf" data-height="500px"></div>
+<h1 id="双栏-大作业">双栏-大作业</h1>
+<ul>
+<li>https://www.overleaf.com/project/616315779eb0d65a0bb4b56e</li>
+</ul>
+<p>下面给一个模板排版的样例（双栏，大作业形式）</p>
+<div class="pdfobject-container" data-target="paper3.pdf" data-height="500px"></div>
 ]]></content>
-      <categories>
-        <category>清华课程</category>
-        <category>随机过程</category>
-      </categories>
-      <tags>
-        <tag>清华课程</tag>
-        <tag>随机过程</tag>
-      </tags>
   </entry>
   <entry>
     <title>常见数学技巧</title>
@@ -1333,6 +708,411 @@ R(t,t+\tau)那么前面那个就是m否则后面那个是m
       </tags>
   </entry>
   <entry>
+    <title>平稳过程谱分析</title>
+    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B9%B3%E7%A8%B3%E8%BF%87%E7%A8%8B%E8%B0%B1%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第四章的内容，主要就是平稳过程谱分析。 <a id="more"></a></p>
+<h1 id="常见定义">常见定义</h1>
+<table>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 42%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">基本概念</th>
+<th style="text-align: center;">定义公式</th>
+<th style="text-align: center;">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">二阶矩过程</td>
+<td style="text-align: center;"><span class="math inline">\(E|X|^2&lt;\infty\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">平稳过程</td>
+<td style="text-align: center;"><span class="math display">\[R(t,t+\tau)=R(\tau),E|X|^2&lt;\infty,E[\xi(t)]=\mu\]</span></td>
+<td style="text-align: center;">平稳过程一般指的是宽平稳</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">功率谱密度</td>
+<td style="text-align: center;"><span class="math inline">\(S(w)=\int R(\tau) \exp(-jw\tau) d\tau\)</span></td>
+<td style="text-align: center;">傅里叶正变换；而且需要注意谱密度是定义</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">相关函数</td>
+<td style="text-align: center;"><span class="math inline">\(R(\tau)=\frac{1}{2\pi}\int S(w)\exp(jw\tau)dw\)</span></td>
+<td style="text-align: center;">傅里叶逆变换，注意如果采用f就不用考虑系数，这个可以用于检验</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">平均功率</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\pi}\int S(w)dw=R(0)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">平均功率</td>
+<td style="text-align: center;"><span class="math inline">\(S(0)=\int R(\tau)d\tau\)</span></td>
+<td style="text-align: center;">这个类似于相关函数的时间求和</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">卷积运算</td>
+<td style="text-align: center;"><span class="math inline">\(f*g=\int_{-\infty}^{\infty} f(\tau)g(t-\tau)d\tau\)</span></td>
+<td style="text-align: center;">卷积定义在全空间;卷积运算是辅参，所以真正的变量是t，也就是f和g的变量都是t，<span class="math inline">\(\tau\)</span>只是一个辅参</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见结论">常见结论</h1>
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 37%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">基本结论</th>
+<th style="text-align: center;">公式</th>
+<th style="text-align: center;">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">实平稳随机过程<span class="math inline">\(S(w)\)</span>和<span class="math inline">\(R(\tau)\)</span>都是偶函数</td>
+<td style="text-align: center;"><span class="math inline">\(R(\tau)=R(-\tau);S(w)=S(-w)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">实平稳随机过程傅里叶正变换</td>
+<td style="text-align: center;"><span class="math inline">\(S(w)=\int R(\tau) cos(w\tau) d\tau -j \int R(\tau)sin(w\tau) d\tau \\= \int R(\tau) cos(w\tau) d\tau\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">实平稳随机过程傅里叶逆变换</td>
+<td style="text-align: center;"><span class="math inline">\(R(\tau)=\frac{1}{2\pi}[\int S(w cos(w\tau) dw -j \int S(w)sin(w\tau) dw] \\= \frac{1}{2\pi} \int S(w) cos(w\tau) dw\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(S(w)\)</span>始终是非负的实函数</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(S(w)\)</span>带有功率的物理意义</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">位移</td>
+<td style="text-align: center;">$R(+_0)=S(f)(j2f (+_0))df\ =(j2f )df $</td>
+<td style="text-align: center;"><span class="math inline">\(R(\tau+\tau_0)\sim S(w)\exp(jw\tau_0)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">频率调制</td>
+<td style="text-align: center;">$S(w+w_0)=R()(-j(w+w_0))d=(-jw)d$</td>
+<td style="text-align: center;"><span class="math inline">\(S(w+w_0)\sim R(\tau)\exp(-jw_0\tau)\\ R(\tau)\exp(jw_0\tau)\sim S(w-w_0)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">时域卷积定理</td>
+<td style="text-align: center;"><span class="math inline">\(f(t)*g(t)\sim F(w)\cdot G(w)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">频域卷积定理</td>
+<td style="text-align: center;"><span class="math inline">\(f(t)\cdot g(t ) \sim \frac{1}{2\pi}F(w)*G(w)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(\int \exp(jw\tau)dw=2\pi \delta(\tau)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\delta(\tau)\sim 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(\int \exp(-jw\tau)dw = \int \exp(j\lambda \tau) d\lambda=2\pi\delta(\tau)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(\int \exp(jw\tau)d\tau=2\pi \delta(w)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(\int \exp(-jw\tau)d\tau = \int \exp(j\lambda w) d\lambda=2\pi\delta(w)\)</span></td>
+<td style="text-align: center;">$1 2(w) $</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">脉冲函数筛选性</td>
+<td style="text-align: center;"><span class="math inline">\(\int f(t)\delta(t-t_0)dt = f(t_0) = f(t_0) * \delta(t_0)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">脉冲函数对称性</td>
+<td style="text-align: center;"><span class="math inline">\(\delta(t)=\delta(-t)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">脉冲函数缩放性</td>
+<td style="text-align: center;"><span class="math inline">\(\delta(at)=\frac{1}{|a|}\delta(t)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">脉冲函数积分性质</td>
+<td style="text-align: center;"><span class="math inline">\(\int_{-\infty}^{\infty} \delta(t)dt =1\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">脉冲函数卷积</td>
+<td style="text-align: center;"><span class="math inline">\(f(t)*\delta(t)=f(t)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见傅里叶变换对">常见傅里叶变换对</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(R(\tau)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(S(w)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(a\exp(-b|\tau|)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{2ab}{b^2+w^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(acos(w_0\tau)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(a\pi(\delta(w+w_0)+\delta(w-w_0))\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(asin(w_0\tau)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{a\pi}{j}(\delta(w-w_0)-\delta(w-w_0))\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\delta(\tau)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2\pi}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\delta(w)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见数学技巧">常见数学技巧</h1>
+<h2 id="欧拉公式">欧拉公式</h2>
+<p><span class="math display">\[
+\exp(jw\tau)=cos(w\tau)-jsin(w\tau)
+\]</span></p>
+<p>这个尝尝用于不等式运算和傅里叶变换中奇偶性的运算，通常sin在对称区间上积分为0。</p>
+]]></content>
+      <categories>
+        <category>清华课程</category>
+        <category>随机过程</category>
+      </categories>
+      <tags>
+        <tag>清华课程</tag>
+        <tag>随机过程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>条件概率</title>
+    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第六章的内容，主要就是条件概率。 <a id="more"></a></p>
+<h1 id="常见定义">常见定义</h1>
+<table>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 30%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">基本概念</th>
+<th style="text-align: center;">定义公式</th>
+<th style="text-align: center;">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">条件期望</td>
+<td style="text-align: center;"><span class="math inline">\(EX|Y=\sum_x XP(X|Y)\)</span></td>
+<td style="text-align: center;">条件期望是Y的函数，仍然是一个随机变量，服从随机变量函数的性质</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">条件概率</td>
+<td style="text-align: center;"><span class="math inline">\(P(A|B)=\frac{P(A,B)}{P(B)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(P(A,B)\)</span>代表两个随机事件同时发生。而<span class="math inline">\(P(A|B)\)</span>是在已知某个事件已经发生的条件下，另外一个事件发生的概率。那么如果毫不相关的事件发生了，一定不会对当前事件发生的概率产生任何影响。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">条件乘法公式</td>
+<td style="text-align: center;"><span class="math inline">\(P(AC|B)=P(A|CB)P(C|B)\)</span></td>
+<td style="text-align: center;">把<span class="math inline">\(B\)</span>去掉就是经典的乘法公式</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">条件独立</td>
+<td style="text-align: center;"><span class="math inline">\(P(A|CB)=P(A|B)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">全期望公式</td>
+<td style="text-align: center;"><span class="math inline">\(EEX|Y=EX\)</span></td>
+<td style="text-align: center;">期望公式算期望</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">全概率公式</td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{B_i}^{U} P(A|B_i)P(B_i)\)</span></td>
+<td style="text-align: center;">概率公式算概率</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">均方估值</td>
+<td style="text-align: center;"><span class="math inline">\(g(X)=EY|X\)</span></td>
+<td style="text-align: center;">其中<span class="math inline">\(g(X)\)</span> 代表对未知序列Y的在均方意义意义下的最优估计。<span class="math inline">\(E Y \mid X\)</span> 是 <span class="math inline">\(Y\)</span> 的最佳均方估计, 称为 <span class="math inline">\(Y\)</span> 关于 <span class="math inline">\(X\)</span> 的回归。 用 <span class="math inline">\(E Y \mid X\)</span> 预测 <span class="math inline">\(Y\)</span> 可使均方误差最小</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见结论">常见结论</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">结论</th>
+<th style="text-align: center;">公式</th>
+<th style="text-align: center;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">常数的条件期望</td>
+<td style="text-align: center;"><span class="math inline">\(E(C|X)=C\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">条件的条件期望</td>
+<td style="text-align: center;"><span class="math inline">\(E(X|X)=X\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">条件确定函数的条件期望</td>
+<td style="text-align: center;"><span class="math inline">\(E(g(X)|X)=g(X)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">条件期望线性性质</td>
+<td style="text-align: center;"><span class="math inline">\(E(C_1X_1+C_2X_2|Y)=C_1E(X_1|Y)+C_2E(X_2|Y)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">条件期望的常数性</td>
+<td style="text-align: center;"><span class="math inline">\(E(g(X)f(Y)|X)=g(X)E[f(Y)|X]\)</span></td>
+<td style="text-align: center;">条件期望的核心在于把条件看成常数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="离散全期望公式证明">离散全期望公式证明</h2>
+<p><span class="math display">\[
+\begin{aligned}
+E X &amp;=\sum_{i} x_{i} \operatorname{Pr}\left(X=x_{i}\right)=\sum_{i} x_{i} \sum_{j} \operatorname{Pr}\left(X=x_{i} \mid Y=y_{j}\right) \operatorname{Pr}\left(Y=y_{j}\right) \\
+&amp;=\sum_{j} \operatorname{Pr}\left(Y=y_{j}\right) \cdot \sum_{i} x_{i} \operatorname{Pr}\left(X=x_{i} \mid Y=y_{j}\right) \\
+&amp;=\sum_{j} \operatorname{Pr}\left(Y=y_{j}\right) E\left(X \mid Y=y_{j}\right)=E E(X \mid Y) \quad \text { 全期望公式 }
+\end{aligned}
+\]</span></p>
+<ul>
+<li>核心在于使用全概率公式计算即可。</li>
+</ul>
+<h2 id="连续全期望公式证明">连续全期望公式证明</h2>
+<p><span class="math display">\[
+\begin{aligned}
+E(X \mid Y=y) &amp;=\int_{\mathbb{R}} x d F(X \mid Y=y)=\int_{\mathbb{R}} x f(x \mid y) d x \\
+E E X \mid Y &amp;=\int_{\mathbb{R}} \int_{\mathbb{R}} x f(x \mid y) d x d F_{Y}(y)=\int_{\mathbb{R}} \int_{\mathbb{R}} x f(x \mid y) f_{Y}(y) d x d y \\
+&amp;=\int_{\mathbb{R}} \int_{\mathbb{R}} x f(x, y) d x d y=\int_{\mathbb{R}} x f_{X}(x) d x=E X
+\end{aligned}
+\]</span></p>
+<h2 id="多元连续全期望公式证明">多元连续全期望公式证明</h2>
+<p><span class="math display">\[
+E(X|Y_1,Y_2)=\int xdF(X|Y_1,Y_2)\\
+= \int  x f_{x|y_1,y_2}dx\\
+EEX|Y_1,Y_2 = \int \int \int x f_{y_1,y_2}f_{x|y_1,y_2}dxdy_1dy_2\\
+= \int x \int \int f_{y_1,y_2} f_{x|y_1,y_2}dy_1dy_2 dx\\
+= \int x \int \int f_{x,y_1,y_2}dy_1dy_2dx\\
+= \int x f_x dx\\
+= EX
+\]</span></p>
+<h2 id="一元均方估值证明">一元均方估值证明</h2>
+<blockquote>
+<p><span class="math inline">\(\text { 定理: } E|Y-g(X)|^{2} \geq E|Y-E(Y \mid X)|^{2} \text { i.e. } g^{*}(X)=E Y \mid X\)</span></p>
+</blockquote>
+<p>证: 由于 <span class="math inline">\(E Y \mid X\)</span> 是 <span class="math inline">\(X\)</span> 的函数, 故可令 <span class="math inline">\(E(Y \mid X) \triangleq \hat{g}(x)\)</span> <span class="math inline">\(E|Y-g(X)|^{2}=E|Y-\hat{g}(X)+\hat{g}(X)-g(X)|^{2}\)</span> <span class="math inline">\(=E \mid \underline{Y-\left.\hat{g}(X)\right|^{2}}+E(Y-\hat{g}(X)) \frac{\bar{g}(X)-g(X)}{(\hat{g}(X)-g(X))}\)</span> <span class="math inline">\(+E \overline{(Y-\hat{g}(X))}(\hat{g}(X)-g(X))+E|\hat{g}(X)-g(X)|^{2}\)</span> <span class="math inline">\(\geq E|Y-\hat{g}(X)|^{2}\)</span> 等号在 <span class="math inline">\(E|\hat{g}(X)-g(X)|^{2}=0\)</span> 时成立 <span class="math inline">\(\Leftrightarrow g(X)=E Y \mid X\)</span>, a.e.</p>
+<p>核心在于如下的公式，也就是将目标带入就好了。</p>
+<p>使用全期望公式 <span class="math display">\[
+\begin{aligned}
+&amp; E(Y-\hat{g}(X)) \cdot(\overline{\hat{g}(X)-g(X)}) \\
+=&amp;{ }^{3} E\{E[Y-\hat{g}(X)][\overline{\hat{g}(X)-g(X)}] \mid X\} \\
+=&amp; E\{[\overline{\hat{g}(X)-g(X)}] E[Y-\hat{g}(X)] \mid X\} \\
+=&amp; E\{[\overline{\hat{g}(X)-g(X)}][E Y|X-E \hat{g}(X)| X]\} \\
+=&amp; 0 \quad \text { 其中 } E Y \mid X=\hat{g}(X) \quad \text { 且 } E \hat{g}(X) \mid X=\hat{g}(X)
+\end{aligned}
+\]</span></p>
+<h2 id="多元均方估值证明">多元均方估值证明</h2>
+<blockquote>
+<p><span class="math inline">\(\text { 定理（推广）: } Y^{*}=g^{*}\left(X_{n}, \cdots X_{1}\right)=E Y \mid X_{n}, \cdots X_{1}\)</span></p>
+</blockquote>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; E|Y-g(X_{1},..,X_{n})|^{2}=E|Y-\hat{g}(X_{1},..,X_{n})+\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})|^{2} \\
+=&amp; E|Y-\hat{g}(X_{1},..,X_{n})|^{2}+E(Y-\hat{g}(X_{1},..,X_{n}))\overline{(\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n}))} \\
+&amp;+E\overline{(Y-\hat{g}(X_{1},..,X_{n}))}(\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n}))+E|\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})|^{2} \\
+\geq &amp; E|Y-\hat{g}(X_{1},..,X_{n})|^{2}
+\end{aligned}
+\]</span></p>
+<p>其中我们有 <span class="math display">\[
+\begin{aligned}
+&amp; E(Y-\hat{g}(X_{1},..,X_{n})) \cdot(\overline{\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n}))} \\
+=&amp; E\{E[Y-\hat{g}(X_{1},..,X_{n})][\overline{\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})}] \mid X_{1},..,X_{n}\} \\
+=&amp; E\{[\overline{\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})}] E[Y-\hat{g}(X_{1},..,X_{n})] \mid X_{1},..,X_{n}\} \\
+=&amp; E\{\overline{[\hat{g}(X_{1},..,X_{n})-g(X_{1},..,X_{n})]}[E Y|X_{1},..,X_{n}-E \hat{g}(X_{1},..,X_{n})| X_{1},..,X_{n}]\} \\
+=&amp; 0 \text { 其中 } E Y \mid X=\hat{g}(X_{1},..,X_{n}) \text { 且 } E \hat{g}(X_{1},..,X_{n}) \mid X_{1},..,X_{n}=\hat{g}(X_{1},..,X_{n})
+\end{aligned}
+\]</span> 所以我们可以得到$ Y^{<em>}=g^{</em>}(X_{n}, X_{1})=E Y X_{n}, X_{1}$</p>
+<h1 id="问题">问题</h1>
+<ol type="1">
+<li>换元之后除了变量长得不一样，还有什么区别吗？变量的定义域变了么？如何确定呢？</li>
+</ol>
+<h1 id="等待解决">等待解决</h1>
+<ol type="1">
+<li>什么是期望？
+<ol type="1">
+<li>普通期望</li>
+<li>条件期望</li>
+</ol></li>
+<li>什么是协方差矩阵？
+<ol type="1">
+<li>自协方差</li>
+<li>互协方差</li>
+</ol></li>
+<li>什么是相关函数？
+<ol type="1">
+<li>自相关函数</li>
+<li>互相关函数</li>
+</ol></li>
+<li>什么是方差？
+<ol type="1">
+<li>普通方差</li>
+<li>条件方差</li>
+</ol></li>
+<li>什么是概率？
+<ol type="1">
+<li>普通概率</li>
+<li>条件概率</li>
+</ol></li>
+</ol>
+]]></content>
+      <categories>
+        <category>清华课程</category>
+        <category>随机过程</category>
+      </categories>
+      <tags>
+        <tag>清华课程</tag>
+        <tag>随机过程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>泊松过程</title>
     <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第八章的内容，主要就是泊松过程。 <a id="more"></a></p>
@@ -1684,6 +1464,112 @@ e^{-x}=1-x
       <categories>
         <category>清华课程</category>
         <category>随机随机过程</category>
+      </categories>
+      <tags>
+        <tag>清华课程</tag>
+        <tag>随机过程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随机过程概论</title>
+    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%A6%82%E8%AE%BA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第1-2章的内容，主要就是随机过程基本定义。 <a id="more"></a></p>
+<h1 id="常见定义">常见定义</h1>
+<table>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 45%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">基本概念</th>
+<th style="text-align: center;">定义公式</th>
+<th style="text-align: center;">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">随机变量</td>
+<td style="text-align: center;"><span class="math inline">\(X(w)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(P(X\le x)\)</span>代表某些事件发生的概率也就是随机变量<span class="math inline">\(X(w)\le x\)</span>这个事件发生的概率</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">随机过程</td>
+<td style="text-align: center;"><span class="math inline">\(X(w,t)\)</span></td>
+<td style="text-align: center;">简单来说就是随机变量的二元函数，其中一个参变量t常常代表时间</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">有限维分布</td>
+<td style="text-align: center;"><span class="math inline">\(F_\xi(t1,t2,t3...,tn;x1,x2,x3,...,xn)=P(\xi1 \le x1,\xi2\le x2...)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">随机过程概率</td>
+<td style="text-align: center;"><span class="math inline">\(F_X(x,t)=P(X(w,t)\le x)\)</span></td>
+<td style="text-align: center;">通常来说x代表的是事件而t代表的是时间</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">相关函数</td>
+<td style="text-align: center;"><span class="math inline">\(R(\xi,\eta)=E[\xi \overline{\eta}]\)</span></td>
+<td style="text-align: center;">常常我们有<span class="math inline">\(R(\xi(t),\xi(t+\tau))=E[\xi(t)\overline{\xi(t+\tau)}]\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">协方差矩阵</td>
+<td style="text-align: center;"><span class="math inline">\(C(\xi,\eta)=E[[\xi-E\xi][\eta-E\eta]]\)</span></td>
+<td style="text-align: center;">协方差矩阵与方差有类似的含义，更多的代表两个变量之间的关系</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">线性系数</td>
+<td style="text-align: center;"><span class="math inline">\(\rho = \frac{c_{i,j}}{\sigma_i\sigma_j}\)</span></td>
+<td style="text-align: center;">线性系数又称为归一化协方差</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">线性不相关</td>
+<td style="text-align: center;"><span class="math inline">\(\rho=0;c_{i,j}=0\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">随机变量独立</td>
+<td style="text-align: center;"><span class="math inline">\(f_{xy}=f_xf_y;F_{xy}=F_xF_y\)</span></td>
+<td style="text-align: center;">独立是没有任何关系，不相关仅仅是没有线性关系</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">独立增量过程</td>
+<td style="text-align: center;"><span class="math inline">\(\xi_1,\xi_2-\xi_1,...,\xi_n-\xi_{n-1}\)</span>独立</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">平稳增量过程</td>
+<td style="text-align: center;"><span class="math inline">\(\xi(t+\tau)-\xi(t) \sim \xi(\tau)\)</span></td>
+<td style="text-align: center;">也就是增量的差的分布和时间无关之和时间差有关</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">马尔科夫过程</td>
+<td style="text-align: center;"><span class="math inline">\(\xi(x_n|x_{n-1},...x_1)=\xi(x_n|x_{n-1})\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">宽平稳</td>
+<td style="text-align: center;"><span class="math inline">\(E|X|^2&lt;\infty, E[\xi(t)]=\mu(t)=\mu,\\ R(t,t+\tau)=R(\tau)\\=C(t,t+\tau)+\mu^2=C(\tau)+\mu^2\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">严平稳</td>
+<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t1,t2,...,t_n)=F_{\xi}(t1+\tau,t2+\tau,...,tn+\tau)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">高斯过程</td>
+<td style="text-align: center;">有限维分布服从高斯分布的随机过程</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>清华课程</category>
+        <category>随机过程</category>
       </categories>
       <tags>
         <tag>清华课程</tag>
@@ -2044,109 +1930,36 @@ b--0.5-->a</pre></li>
       </tags>
   </entry>
   <entry>
-    <title>随机过程概论</title>
-    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E6%A6%82%E8%AE%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第1-2章的内容，主要就是随机过程基本定义。 <a id="more"></a></p>
-<h1 id="常见定义">常见定义</h1>
-<table>
-<colgroup>
-<col style="width: 9%">
-<col style="width: 45%">
-<col style="width: 45%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">基本概念</th>
-<th style="text-align: center;">定义公式</th>
-<th style="text-align: center;">注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">随机变量</td>
-<td style="text-align: center;"><span class="math inline">\(X(w)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(P(X\le x)\)</span>代表某些事件发生的概率也就是随机变量<span class="math inline">\(X(w)\le x\)</span>这个事件发生的概率</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">随机过程</td>
-<td style="text-align: center;"><span class="math inline">\(X(w,t)\)</span></td>
-<td style="text-align: center;">简单来说就是随机变量的二元函数，其中一个参变量t常常代表时间</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">有限维分布</td>
-<td style="text-align: center;"><span class="math inline">\(F_\xi(t1,t2,t3...,tn;x1,x2,x3,...,xn)=P(\xi1 \le x1,\xi2\le x2...)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">随机过程概率</td>
-<td style="text-align: center;"><span class="math inline">\(F_X(x,t)=P(X(w,t)\le x)\)</span></td>
-<td style="text-align: center;">通常来说x代表的是事件而t代表的是时间</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">相关函数</td>
-<td style="text-align: center;"><span class="math inline">\(R(\xi,\eta)=E[\xi \overline{\eta}]\)</span></td>
-<td style="text-align: center;">常常我们有<span class="math inline">\(R(\xi(t),\xi(t+\tau))=E[\xi(t)\overline{\xi(t+\tau)}]\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">协方差矩阵</td>
-<td style="text-align: center;"><span class="math inline">\(C(\xi,\eta)=E[[\xi-E\xi][\eta-E\eta]]\)</span></td>
-<td style="text-align: center;">协方差矩阵与方差有类似的含义，更多的代表两个变量之间的关系</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">线性系数</td>
-<td style="text-align: center;"><span class="math inline">\(\rho = \frac{c_{i,j}}{\sigma_i\sigma_j}\)</span></td>
-<td style="text-align: center;">线性系数又称为归一化协方差</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">线性不相关</td>
-<td style="text-align: center;"><span class="math inline">\(\rho=0;c_{i,j}=0\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">随机变量独立</td>
-<td style="text-align: center;"><span class="math inline">\(f_{xy}=f_xf_y;F_{xy}=F_xF_y\)</span></td>
-<td style="text-align: center;">独立是没有任何关系，不相关仅仅是没有线性关系</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">独立增量过程</td>
-<td style="text-align: center;"><span class="math inline">\(\xi_1,\xi_2-\xi_1,...,\xi_n-\xi_{n-1}\)</span>独立</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">平稳增量过程</td>
-<td style="text-align: center;"><span class="math inline">\(\xi(t+\tau)-\xi(t) \sim \xi(\tau)\)</span></td>
-<td style="text-align: center;">也就是增量的差的分布和时间无关之和时间差有关</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">马尔科夫过程</td>
-<td style="text-align: center;"><span class="math inline">\(\xi(x_n|x_{n-1},...x_1)=\xi(x_n|x_{n-1})\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">宽平稳</td>
-<td style="text-align: center;"><span class="math inline">\(E|X|^2&lt;\infty, E[\xi(t)]=\mu(t)=\mu,\\ R(t,t+\tau)=R(\tau)\\=C(t,t+\tau)+\mu^2=C(\tau)+\mu^2\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">严平稳</td>
-<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t1,t2,...,t_n)=F_{\xi}(t1+\tau,t2+\tau,...,tn+\tau)\)</span></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">高斯过程</td>
-<td style="text-align: center;">有限维分布服从高斯分布的随机过程</td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
+    <title>随机过程课件</title>
+    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/PPT%E6%B1%87%E6%80%BB/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%AF%BE%E4%BB%B6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这里我们给出随机过程课件。</p>
+<a id="more"></a>
+<h1 id="第一章">第一章</h1>
+<div class="pdfobject-container" data-target="chapter1-2021.pdf" data-height="500px"></div>
+<h1 id="第二章">第二章</h1>
+<div class="pdfobject-container" data-target="chapter2-2021.pdf" data-height="500px"></div>
+<h1 id="第三章">第三章</h1>
+<div class="pdfobject-container" data-target="chapter3-2021.pdf" data-height="500px"></div>
+<h1 id="第四章">第四章</h1>
+<div class="pdfobject-container" data-target="chapter4-2021.pdf" data-height="500px"></div>
+<h1 id="第五章">第五章</h1>
+<div class="pdfobject-container" data-target="chapter5-2021.pdf" data-height="500px"></div>
+<h1 id="第六章">第六章</h1>
+<div class="pdfobject-container" data-target="chapter6-2021.pdf" data-height="500px"></div>
+<h1 id="第七章">第七章</h1>
+<div class="pdfobject-container" data-target="chapter7-2021.pdf" data-height="500px"></div>
+<h1 id="第八章">第八章</h1>
+<div class="pdfobject-container" data-target="chapter8-2021.pdf" data-height="500px"></div>
 ]]></content>
       <categories>
         <category>清华课程</category>
         <category>随机过程</category>
+        <category>课件</category>
       </categories>
       <tags>
         <tag>清华课程</tag>
         <tag>随机过程</tag>
+        <tag>课程课件</tag>
       </tags>
   </entry>
   <entry>
@@ -2537,18 +2350,231 @@ S_n&amp;=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
       </tags>
   </entry>
   <entry>
-    <title>本科毕设</title>
-    <url>/blog_cn/2022/01/11/%E7%A7%91%E7%A0%94/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这里我们给出本科毕业设计。</p>
-<a id="more"></a>
-<div class="pdfobject-container" data-target="paper.pdf" data-height="500px"></div>
+    <title>建站记录</title>
+    <url>/blog_cn/2022/01/10/%E6%B5%8B%E8%AF%95/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>下面是建站记录 <a id="more"></a></p>
+<ul>
+<li>live-2d看板娘</li>
+<li>升级版 有大坑
+<ul>
+<li>好了，但没完全好，看看后面能不能解决本地无法加载，线上版本不同步的问题</li>
+<li>巨坑有bug，太坑了，路径上不要加'/'</li>
+</ul></li>
+<li>fancybox 图片放大 有坑
+<ul>
+<li>https://matlab.xyz/2020/07/22/Hexo%E4%BD%BF%E7%94%A8Fancybox%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</li>
+</ul></li>
+<li>代码复制
+<ul>
+<li>copy_button</li>
+</ul></li>
+<li>darkmode
+<ul>
+<li>https://www.techgrow.cn/posts/abf4aee1.html#Next-8-x-%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E5%8F%AF%E5%88%87%E6%8D%A2%E7%9A%84%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F</li>
+</ul></li>
+<li>加载进度条</li>
+<li>点击特效
+<ul>
+<li>不要加/坑死了</li>
+</ul></li>
+<li>pdf 预览
+<ul>
+<li>主页预览存在问题，文章中并没有问题</li>
+</ul></li>
+<li>公式渲染
+<ul>
+<li>目前采用panoc方案，但是仍然是存在一定概率渲染成功
+<ul>
+<li>https://zhum.in/blog/tutorial/hexo%E4%B8%8B%E6%B8%B2%E6%9F%93mathjax%E9%97%AE%E9%A2%98.html</li>
+</ul></li>
+<li>巨坑</li>
+<li>表格内公式如何换行？</li>
+</ul></li>
+<li>采用Gittalk评论区</li>
+<li>lazyload 懒加载优化</li>
+</ul>
+<h1 id="常用命令">常用命令</h1>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式</span><br><span class="line">$ hexo p  =&gt; hexo publish</span><br><span class="line">$ hexo g  =&gt; hexo generate  #生成</span><br><span class="line">$ hexo s  =&gt; hexo server  #启动服务预览</span><br><span class="line">$ hexo d  =&gt; hexo deploy  #部署</span><br><span class="line"></span><br><span class="line">$ hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。</span><br><span class="line">$ hexo server -s   #静态模式</span><br><span class="line">$ hexo server -p 5000   #更改端口</span><br><span class="line">$ hexo server -i 192.168.1.1   #自定义IP</span><br><span class="line">$ hexo clean   #清除缓存，网页正常情况下可以忽略此条命令</span><br></pre></td></tr></table></figure>
+<h2 id="本地加载">本地加载</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<h2 id="服务器部署">服务器部署</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="创建新的博文">创建新的博文</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n 名称</span><br></pre></td></tr></table></figure>
+<p>然后自主分类</p>
+<h2 id="阅读全文">阅读全文</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="添加pdf文件">添加pdf文件</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% pdf AAAI.pdf %&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>二阶矩过程</title>
+    <url>/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E4%BA%8C%E9%98%B6%E7%9F%A9%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script><p>这边文章中我们给出期末复习第三章的内容，主要就是二阶矩过程。 <a id="more"></a></p>
+<h1 id="常见定义">常见定义</h1>
+<table>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 44%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">基本概念</th>
+<th style="text-align: center;">定义公式</th>
+<th style="text-align: center;">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">二阶矩过程</td>
+<td style="text-align: center;"><span class="math inline">\(E|X|^2 &lt;\infty\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">洛维准则</td>
+<td style="text-align: center;"><span class="math inline">\(\lim_{i,j\rightarrow\infty}E\xi_i\overline{\xi_j}=c\)</span></td>
+<td style="text-align: center;">Loove准则用于证明均方极限存在，而且证明随机过程<span class="math inline">\(\xi_i\)</span>可以均方收敛<span class="math inline">\(\xi\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">柯西准则</td>
+<td style="text-align: center;"><span class="math inline">\(\lim_{i,j\rightarrow\infty}E|\xi_i-\xi_j|^2=||\xi_i-\xi_j||=0\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">唯一性定理</td>
+<td style="text-align: center;"><span class="math inline">\(E\xi(t)=c,D(\xi(t)-c)=D(\xi(t))=0\)</span></td>
+<td style="text-align: center;">随机过程恒等于一个常数或者确定性过程。c可以推广到一个确定性过程<span class="math inline">\(g(t)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">各态历经性</td>
+<td style="text-align: center;">均值遍历+相关函数遍历</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">均值遍历</td>
+<td style="text-align: center;"><span class="math inline">\(E[\xi(t)]=\mu(t)=\int \xi(t) f_{\xi(t)}(x)dx\\=&lt;\xi(t)&gt;=\lim_{T\rightarrow \infty} \frac{1}{2T}\int_{-T}^T \xi(t)dt\)</span></td>
+<td style="text-align: center;">值得注意的是<span class="math inline">\(\mu(t)\)</span>是一个确定性的数，<span class="math inline">\(&lt;\xi(t)&gt;\)</span>是一个随机变量；简单来说就是均值的集合平均等于时间平均</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">相关函数遍历</td>
+<td style="text-align: center;"><span class="math inline">\(R(t,t+\tau)=E[\xi(t)\overline{\xi(t+\tau)}]=\\&lt;\xi(t)\overline{\xi(t+\tau)}&gt;= \lim_{T\rightarrow \infty} \frac{1}{2T} \int_{-T}^{T} \xi(t)\overline{\xi(t+\tau)}dt\)</span></td>
+<td style="text-align: center;">简单来说就是相关函数的时间平均=集合平均</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">宽平稳</td>
+<td style="text-align: center;"><span class="math inline">\(E|X|^2&lt;\infty, E[\xi(t)]=\mu(t)=\mu,\\ R(t,t+\tau)=R(\tau)\\=C(t,t+\tau)+\mu^2=C(\tau)+\mu^2\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">严平稳</td>
+<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t1,t2,...,t_n)=F_{\xi}(t1+\tau,t2+\tau,...,tn+\tau)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">二阶严平稳</td>
+<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t_1,t_2)=F_{\xi}(0,t_2-t_1)=F_{\xi}(0,\tau)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(R(t_1,t_2)=\int x_1 x_2 dF_{\xi}(t_1,t_2)=\int x_1 x_2 dF_{\xi}(0,\tau)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">一阶严平稳</td>
+<td style="text-align: center;"><span class="math inline">\(F_{\xi}(t)=F_{\xi}(0)\)</span></td>
+<td style="text-align: center;">任意时刻的随机变量相同</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">独立增量过程</td>
+<td style="text-align: center;"><span class="math inline">\(\xi_1,\xi_2-\xi_1,...,\xi_n-\xi_{n-1}\)</span>独立</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">平稳增量过程</td>
+<td style="text-align: center;"><span class="math inline">\(\xi(t+\tau)-\xi(t) \sim \xi(\tau)\)</span></td>
+<td style="text-align: center;">也就是增量的差的分布和时间无关之和时间差有关</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">正交增量过程</td>
+<td style="text-align: center;"><span class="math inline">\(R(\xi(t_i)-\xi(t_j),\xi(t_j)-\xi(t_k) )=0\)</span></td>
+<td style="text-align: center;">增量相互正交</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">随机变量独立</td>
+<td style="text-align: center;">$独立 f(x,y)=f(x)f(y);\ E((jw(x)+(y)))\ =E((jw(x)))E((jw(y))) $</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">随机变量不相关</td>
+<td style="text-align: center;"><span class="math inline">\(不相关 \Leftrightarrow C(\xi,\eta)=0 \Leftrightarrow R(\xi,\eta)=\mu_\xi \mu_\eta\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">联合平稳</td>
+<td style="text-align: center;"><span class="math inline">\(R_{\xi\eta}(t,t+\tau)=R_{\xi\eta}(\tau)\)</span></td>
+<td style="text-align: center;"><strong>联合平稳才能保证各自的线性组合仍然平稳</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见结论">常见结论</h1>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 71%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">基本结论</th>
+<th style="text-align: center;">公式</th>
+<th style="text-align: center;">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">均值遍历判准</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">相关函数遍历判准</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">线性组合平稳</td>
+<td style="text-align: center;"><span class="math inline">\(R_{\eta\xi}(t,t+\tau)=R_{\eta\xi}(\tau) \Rightarrow \eta+\xi 平稳\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CS不等式</td>
+<td style="text-align: center;"><span class="math inline">\(|E\xi\overline{\eta}|\le E|\xi\overline{\eta}|\le \sqrt{E|\xi|^2E|\eta|^2}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">三角不等式</td>
+<td style="text-align: center;"><span class="math inline">\(\sqrt{E|\xi+\eta|^2}\le \sqrt{E|\xi|^2}+\sqrt{E|\eta|^2}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">绝对值不等式</td>
+<td style="text-align: center;"><span class="math inline">\(E|\xi+\eta|\le E|\xi|+E|\eta|\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="常见数学技巧">常见数学技巧</h1>
+<h2 id="欧拉公式">欧拉公式</h2>
+<p><span class="math display">\[
+\exp(jw\tau)=cos(w\tau)-jsin(w\tau)
+\]</span></p>
+<p>这个尝尝用于不等式运算和傅里叶变换中奇偶性的运算，通常sin在对称区间上积分为0。</p>
 ]]></content>
       <categories>
-        <category>毕业设计</category>
+        <category>清华课程</category>
+        <category>随机过程</category>
       </categories>
       <tags>
-        <tag>毕业设计</tag>
-        <tag>本科</tag>
+        <tag>清华课程</tag>
+        <tag>随机过程</tag>
       </tags>
   </entry>
 </search>
