@@ -282,7 +282,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
+              <span>3.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -301,332 +301,345 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这边文章中我们给出期末复习第七章的内容，主要就是马尔科夫过程。<br><a id="more"></a></p>
-<h1 id="状态分类"><a href="#状态分类" class="headerlink" title="状态分类"></a>状态分类</h1><p>马尔科夫链的状态常常可以分为常返、非常返、周期、非周期、正常返、零常返</p>
-<div class="table-container">
+        <p>这边文章中我们给出期末复习第七章的内容，主要就是马尔科夫过程。 <a id="more"></a></p>
+<h1 id="状态分类">状态分类</h1>
+<p>马尔科夫链的状态常常可以分为常返、非常返、周期、非周期、正常返、零常返</p>
 <table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 31%">
+<col style="width: 31%">
+<col style="width: 31%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">概念名称</th>
-<th style="text-align:center">基本定义</th>
-<th style="text-align:center">常用判准</th>
-<th style="text-align:center">解释</th>
+<tr class="header">
+<th style="text-align: center;">概念名称</th>
+<th style="text-align: center;">基本定义</th>
+<th style="text-align: center;">常用判准</th>
+<th style="text-align: center;">解释</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">可到达</td>
-<td style="text-align:center">$i\rightarrow j\doteq 存在 n\ge 1, p_{i,j}^{(n)}&gt;0$</td>
-<td style="text-align:center">根据转移矩阵$P$判断是否可到达，另外状态转移图也可</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">可到达</td>
+<td style="text-align: center;"><span class="math inline">\(i\rightarrow j\doteq 存在 n\ge 1, p_{i,j}^{(n)}&gt;0\)</span></td>
+<td style="text-align: center;">根据转移矩阵<span class="math inline">\(P\)</span>判断是否可到达，另外状态转移图也可</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">联通</td>
-<td style="text-align:center">$i\rightarrow j,j \rightarrow i$</td>
-<td style="text-align:center">建议直接画状态转移图，就是联通集，矩阵很难直接看出来。</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">联通</td>
+<td style="text-align: center;"><span class="math inline">\(i\rightarrow j,j \rightarrow i\)</span></td>
+<td style="text-align: center;">建议直接画状态转移图，就是联通集，矩阵很难直接看出来。</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>常</strong>返状态</td>
-<td style="text-align:center">$f_{ii}=1$</td>
-<td style="text-align:center">$\sum<em>{n=0}^{\infty} p</em>{ii}^{(n)}=\infty$</td>
-<td style="text-align:center">常返可以解释为有限时间返回原点的概率为1。</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>常</strong>返状态</td>
+<td style="text-align: center;"><span class="math inline">\(f_{ii}=1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{n=0}^{\infty} p_{ii}^{(n)}=\infty\)</span></td>
+<td style="text-align: center;">常返可以解释为有限时间返回原点的概率为1。</td>
 </tr>
-<tr>
-<td style="text-align:center">非常返</td>
-<td style="text-align:center">$f_{ii}&lt;1$</td>
-<td style="text-align:center">$\sum<em>{n=0}^{\infty} p</em>{ii}^{(n)}= 常数$</td>
-<td style="text-align:center">有限时间内返回原点的概率小于1</td>
+<tr class="even">
+<td style="text-align: center;">非常返</td>
+<td style="text-align: center;"><span class="math inline">\(f_{ii}&lt;1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{n=0}^{\infty} p_{ii}^{(n)}= 常数\)</span></td>
+<td style="text-align: center;">有限时间内返回原点的概率小于1</td>
 </tr>
-<tr>
-<td style="text-align:center">周期</td>
-<td style="text-align:center">$gcd{d,p_{ii}^{(d)}\ge 0}$</td>
-<td style="text-align:center">$p<em>{ii}^{(1)} =0, 存在 d&gt;1, p</em>{ii}^{(d)}&gt;0$</td>
-<td style="text-align:center">简单来说能一步自回归的状态为非周期，其余为周期。当然特别的如果回不来，周期就是无穷；周期为d代表着n足够大的时候$p^{nd}_{ii}&gt;0$</td>
+<tr class="odd">
+<td style="text-align: center;">周期</td>
+<td style="text-align: center;"><span class="math inline">\(gcd\{d,p_{ii}^{(d)}\ge 0\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{ii}^{(1)} =0, 存在 d&gt;1, p_{ii}^{(d)}&gt;0\)</span></td>
+<td style="text-align: center;">简单来说能一步自回归的状态为非周期，其余为周期。当然特别的如果回不来，周期就是无穷；周期为d代表着n足够大的时候<span class="math inline">\(p^{nd}_{ii}&gt;0\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">非周期</td>
-<td style="text-align:center">$gcd{d,p_{ii}^{(d)}\ge 0}$</td>
-<td style="text-align:center">$p_{ii}^{(1)} &gt;0$</td>
-<td style="text-align:center">一步就能回到自身</td>
+<tr class="even">
+<td style="text-align: center;">非周期</td>
+<td style="text-align: center;"><span class="math inline">\(gcd\{d,p_{ii}^{(d)}\ge 0\}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p_{ii}^{(1)} &gt;0\)</span></td>
+<td style="text-align: center;">一步就能回到自身</td>
 </tr>
-<tr>
-<td style="text-align:center">正常返</td>
-<td style="text-align:center">$E<em>{f</em>{ii}}(n)=\sum<em>{n=1}^{\infty}nf</em>{ii}^{(n)} =常数$</td>
-<td style="text-align:center">$\lim<em>{k-&gt;\infty}p</em>{ii}^{(dk)}=\frac{d}{\mu}&gt;0$</td>
-<td style="text-align:center">平均返回时间的期望存在，主要看期望存不存在</td>
+<tr class="odd">
+<td style="text-align: center;">正常返</td>
+<td style="text-align: center;"><span class="math inline">\(E_{f_{ii}}(n)=\sum_{n=1}^{\infty}nf_{ii}^{(n)} =常数\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lim_{k-&gt;\infty}p_{ii}^{(dk)}=\frac{d}{\mu}&gt;0\)</span></td>
+<td style="text-align: center;">平均返回时间的期望存在，主要看期望存不存在</td>
 </tr>
-<tr>
-<td style="text-align:center">零常返</td>
-<td style="text-align:center">$E<em>{f</em>{ii}}(n)=\sum<em>{n=1}^{\infty}nf</em>{ii}^{(n)} =\infty$</td>
-<td style="text-align:center">$\lim<em>{k-&gt;\infty}p</em>{ii}^{(k)}=\frac{d}{\mu}=0$</td>
-<td style="text-align:center">平均返回时间的期望为无穷，也就是基本回不来</td>
+<tr class="even">
+<td style="text-align: center;">零常返</td>
+<td style="text-align: center;"><span class="math inline">\(E_{f_{ii}}(n)=\sum_{n=1}^{\infty}nf_{ii}^{(n)} =\infty\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lim_{k-&gt;\infty}p_{ii}^{(k)}=\frac{d}{\mu}=0\)</span></td>
+<td style="text-align: center;">平均返回时间的期望为无穷，也就是基本回不来</td>
 </tr>
-<tr>
-<td style="text-align:center">遍历态</td>
-<td style="text-align:center">非周期+正常返</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">遍历态</td>
+<td style="text-align: center;">非周期+正常返</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">联通状态</td>
-<td style="text-align:center">状态的性质完全相同。</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">联通状态</td>
+<td style="text-align: center;">状态的性质完全相同。</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">闭集</td>
-<td style="text-align:center">集合中所有状态可以构成一条完整的马氏链。（无法转移到链外状态）</td>
-<td style="text-align:center">一步转移矩阵中剔除闭集以外的状态（行列都剔除），如果仍是一个随机矩阵，那么就是闭集。</td>
-<td style="text-align:center">特别的，全集一定是一个闭集</td>
+<tr class="odd">
+<td style="text-align: center;">闭集</td>
+<td style="text-align: center;">集合中所有状态可以构成一条完整的马氏链。（无法转移到链外状态）</td>
+<td style="text-align: center;">一步转移矩阵中剔除闭集以外的状态（行列都剔除），如果仍是一个随机矩阵，那么就是闭集。</td>
+<td style="text-align: center;">特别的，全集一定是一个闭集</td>
 </tr>
-<tr>
-<td style="text-align:center">不可约集</td>
-<td style="text-align:center">集合中所有状态联通</td>
-<td style="text-align:center">就是判断这个集合是不是全联通的。</td>
-<td style="text-align:center">不可约最简单地判断方法就是查看这个闭集内部是否存在闭集，如果不可拆分就不可约。否则可约。</td>
+<tr class="even">
+<td style="text-align: center;">不可约集</td>
+<td style="text-align: center;">集合中所有状态联通</td>
+<td style="text-align: center;">就是判断这个集合是不是全联通的。</td>
+<td style="text-align: center;">不可约最简单地判断方法就是查看这个闭集内部是否存在闭集，如果不可拆分就不可约。否则可约。</td>
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="常见概念"><a href="#常见概念" class="headerlink" title="常见概念"></a>常见概念</h1><div class="table-container">
+<h1 id="常见概念">常见概念</h1>
 <table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 43%">
+<col style="width: 43%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">概念名称</th>
-<th style="text-align:center">计算表达式</th>
-<th style="text-align:center">解释</th>
+<tr class="header">
+<th style="text-align: center;">概念名称</th>
+<th style="text-align: center;">计算表达式</th>
+<th style="text-align: center;">解释</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">状态的集合</td>
-<td style="text-align:center">$E={s_0,s_1,s_2,…}$</td>
-<td style="text-align:center">包含全部状态的集合</td>
+<tr class="odd">
+<td style="text-align: center;">状态的集合</td>
+<td style="text-align: center;"><span class="math inline">\(E=\{s_0,s_1,s_2,...\}\)</span></td>
+<td style="text-align: center;">包含全部状态的集合</td>
 </tr>
-<tr>
-<td style="text-align:center">转移概率</td>
-<td style="text-align:center">$p_{ij}(t,t+n)=P(x(t+n)=j</td>
-<td style="text-align:center">x(t)=i)\overset{齐次}{=}p_{ij}^{(n)}$</td>
-<td>通过n步，从状态i转移到状态j，注意左上角不是幂。</td>
+<tr class="even">
+<td style="text-align: center;">转移概率</td>
+<td style="text-align: center;"><span class="math inline">\(p_{ij}(t,t+n)=P(x(t+n)=j|x(t)=i)\overset{齐次}{=}p_{ij}^{(n)}\)</span></td>
+<td style="text-align: center;">通过n步，从状态i转移到状态j，注意左上角不是幂。</td>
 </tr>
-<tr>
-<td style="text-align:center">转移概率矩阵</td>
-<td style="text-align:center">$P={p_{ij}}, for \quad i,j \in E$</td>
-<td style="text-align:center">全状态转移矩阵</td>
+<tr class="odd">
+<td style="text-align: center;">转移概率矩阵</td>
+<td style="text-align: center;"><span class="math inline">\(P=\{p_{ij}\}, for \quad i,j \in E\)</span></td>
+<td style="text-align: center;">全状态转移矩阵</td>
 </tr>
-<tr>
-<td style="text-align:center">首达概率</td>
-<td style="text-align:center">$f_{ij}^{(n)}=P(x(n)=j,x(n-1)\ne j,…</td>
-<td style="text-align:center">x(0)=i)$</td>
-<td>$f<em>{ij}^{(0)}=0 \quad if \ i\ne j \ or\ f</em>{ij}^{(0)}=1$</td>
+<tr class="even">
+<td style="text-align: center;">首达概率</td>
+<td style="text-align: center;"><span class="math inline">\(f_{ij}^{(n)}=P(x(n)=j,x(n-1)\ne j,...|x(0)=i)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(f_{ij}^{(0)}=0 \quad if \ i\ne j \ or\ f_{ij}^{(0)}=1\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">首次返回自身概率</td>
-<td style="text-align:center">$f_{ii}^{(n)}=P(x(n)=i,x(n-1)\ne j,…</td>
-<td style="text-align:center">x(0)=i)$</td>
-<td>$f_{ii}^{(0)}=1$</td>
+<tr class="odd">
+<td style="text-align: center;">首次返回自身概率</td>
+<td style="text-align: center;"><span class="math inline">\(f_{ii}^{(n)}=P(x(n)=i,x(n-1)\ne j,...|x(0)=i)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(f_{ii}^{(0)}=1\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">有限时间内返回概率</td>
-<td style="text-align:center">$f<em>{ii}=\sum</em>{n=1}^\infty f_{ii}^{(n)}$</td>
-<td style="text-align:center">表示有限时间内自返回的概率</td>
+<tr class="even">
+<td style="text-align: center;">有限时间内返回概率</td>
+<td style="text-align: center;"><span class="math inline">\(f_{ii}=\sum_{n=1}^\infty f_{ii}^{(n)}\)</span></td>
+<td style="text-align: center;">表示有限时间内自返回的概率</td>
 </tr>
-<tr>
-<td style="text-align:center">CK方程</td>
-<td style="text-align:center">$p<em>{ij}^{m+n}=\sum</em>{k}^{E} p<em>{ik}^{m}p</em>{kj}^{n}$</td>
-<td style="text-align:center">简单来说将i到j分为两步完成，先走m步到达某个中间状态，然后再走n步骤达到j。这里中间状态是不确定的，所以需要遍历所有中间状态。</td>
+<tr class="odd">
+<td style="text-align: center;">CK方程</td>
+<td style="text-align: center;"><span class="math inline">\(p_{ij}^{m+n}=\sum_{k}^{E} p_{ik}^{m}p_{kj}^{n}\)</span></td>
+<td style="text-align: center;">简单来说将i到j分为两步完成，先走m步到达某个中间状态，然后再走n步骤达到j。这里中间状态是不确定的，所以需要遍历所有中间状态。</td>
 </tr>
-<tr>
-<td style="text-align:center">母函数</td>
-<td style="text-align:center">$G(s)=\sum_{k=0}^{\infty}p_k s^k=E[s^k]$</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">母函数</td>
+<td style="text-align: center;"><span class="math inline">\(G(s)=\sum_{k=0}^{\infty}p_k s^k=E[s^k]\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">特征函数</td>
-<td style="text-align:center">$\Phi_{\xi}(w)=E[\exp(jw\xi)]$</td>
-<td style="text-align:center">注意特征函数通过<strong>傅里叶正变换</strong>得到概率密度函数</td>
+<tr class="odd">
+<td style="text-align: center;">特征函数</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi_{\xi}(w)=E[\exp(jw\xi)]\)</span></td>
+<td style="text-align: center;">注意特征函数通过<strong>傅里叶正变换</strong>得到概率密度函数</td>
 </tr>
-<tr>
-<td style="text-align:center">傅里叶正变换</td>
-<td style="text-align:center">$F(w)=\int f(t)\exp(-jwt)dt$</td>
-<td style="text-align:center">注意积分变量是t</td>
+<tr class="even">
+<td style="text-align: center;">傅里叶正变换</td>
+<td style="text-align: center;"><span class="math inline">\(F(w)=\int f(t)\exp(-jwt)dt\)</span></td>
+<td style="text-align: center;">注意积分变量是t</td>
 </tr>
-<tr>
-<td style="text-align:center">傅里叶逆变换</td>
-<td style="text-align:center">$f(t)=\int F(w)\exp(jwt)dw$</td>
-<td style="text-align:center">注意积分变量是w</td>
+<tr class="odd">
+<td style="text-align: center;">傅里叶逆变换</td>
+<td style="text-align: center;"><span class="math inline">\(f(t)=\int F(w)\exp(jwt)dw\)</span></td>
+<td style="text-align: center;">注意积分变量是w</td>
 </tr>
-<tr>
-<td style="text-align:center">平稳分布</td>
-<td style="text-align:center">$\pi<em>j=\lim</em>{n\rightarrow \infty}p_{ij}^{(n)}=\frac{d}{\mu}$</td>
-<td style="text-align:center">状态的转移概率会趋于稳定，无论从哪个状态出发，转移到指定状态的概率都是一样的。平稳分布/极限分布都不一定存在</td>
+<tr class="even">
+<td style="text-align: center;">平稳分布</td>
+<td style="text-align: center;"><span class="math inline">\(\pi_j=\lim_{n\rightarrow \infty}p_{ij}^{(n)}=\frac{d}{\mu}\)</span></td>
+<td style="text-align: center;">状态的转移概率会趋于稳定，无论从哪个状态出发，转移到指定状态的概率都是一样的。平稳分布/极限分布都不一定存在</td>
 </tr>
-<tr>
-<td style="text-align:center">极限分布</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">极限分布</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">首达时间</td>
-<td style="text-align:center">$T<em>{i j} \triangleq \min \left{n: n \geq 1, \xi</em>{0}=i, \xi_{n}=j\right}$</td>
-<td style="text-align:center">从状态i首次到达状态j的时间</td>
+<tr class="even">
+<td style="text-align: center;">首达时间</td>
+<td style="text-align: center;"><span class="math inline">\(T_{i j} \triangleq \min \left\{n: n \geq 1, \xi_{0}=i, \xi_{n}=j\right\}\)</span></td>
+<td style="text-align: center;">从状态i首次到达状态j的时间</td>
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="常见关系"><a href="#常见关系" class="headerlink" title="常见关系"></a>常见关系</h1><div class="table-container">
+<h1 id="常见关系">常见关系</h1>
 <table>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 44%">
+<col style="width: 33%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">概念名称</th>
-<th style="text-align:center">计算表达式</th>
-<th style="text-align:center">解释</th>
+<tr class="header">
+<th style="text-align: center;">概念名称</th>
+<th style="text-align: center;">计算表达式</th>
+<th style="text-align: center;">解释</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">一步转移概率与首达概率级数关系</td>
-<td style="text-align:center">$P<em>{ii}(z)=\frac{1}{1-F</em>{ii}(z)}$</td>
-<td style="text-align:center">$P<em>{ii}(z)=\sum</em>{k=0}^{\infty}p_{ii}^{(k)}z^k$</td>
+<tr class="odd">
+<td style="text-align: center;">一步转移概率与首达概率级数关系</td>
+<td style="text-align: center;"><span class="math inline">\(P_{ii}(z)=\frac{1}{1-F_{ii}(z)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(P_{ii}(z)=\sum_{k=0}^{\infty}p_{ii}^{(k)}z^k\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">一步转移概率-&gt;首达概率</td>
-<td style="text-align:center">$f<em>{ij}^{(n)}=\sum</em>{k\ne j}p<em>{ik}f</em>{kj}^{(n-1) }$</td>
-<td style="text-align:center">这个是按照状态集合定义</td>
+<tr class="even">
+<td style="text-align: center;">一步转移概率-&gt;首达概率</td>
+<td style="text-align: center;"><span class="math inline">\(f_{ij}^{(n)}=\sum_{k\ne j}p_{ik}f_{kj}^{(n-1) }\)</span></td>
+<td style="text-align: center;">这个是按照状态集合定义</td>
 </tr>
-<tr>
-<td style="text-align:center">首达概率-&gt;n步转移概率</td>
-<td style="text-align:center">$p<em>{ij}^{(n)}=\sum</em>{v=1}^{n}f<em>{ij}^{(v)}p</em>{jj}^{(n-v)}\ge f<em>{ij}^{(n)} \le \sum</em>{v=1}^{n}f<em>{ij}^{(v)} \le \sum</em>{v=1}^{\infty}f<em>{ij}^{(v)} =f</em>{ij}$</td>
-<td style="text-align:center">这个是按照转移的时间定义</td>
+<tr class="odd">
+<td style="text-align: center;">首达概率-&gt;n步转移概率</td>
+<td style="text-align: center;"><span class="math inline">\(p_{ij}^{(n)}=\sum_{v=1}^{n}f_{ij}^{(v)}p_{jj}^{(n-v)}\ge f_{ij}^{(n)} \le \sum_{v=1}^{n}f_{ij}^{(v)} \le \sum_{v=1}^{\infty}f_{ij}^{(v)} =f_{ij}\)</span></td>
+<td style="text-align: center;">这个是按照转移的时间定义</td>
 </tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="常见推论"><a href="#常见推论" class="headerlink" title="常见推论"></a>常见推论</h2><div class="table-container">
+<h2 id="常见推论">常见推论</h2>
 <table>
 <thead>
-<tr>
-<th style="text-align:center">推论</th>
-<th style="text-align:center">解释</th>
+<tr class="header">
+<th style="text-align: center;">推论</th>
+<th style="text-align: center;">解释</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center"><strong>有限马氏链</strong>至少有1个状态是常返的。</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;"><strong>有限马氏链</strong>至少有1个状态是常返的。</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>有限不可约马氏链</strong>所有状态常返。</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;"><strong>有限不可约马氏链</strong>所有状态常返。</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">有限不可约非周期马氏链所有状态遍历。</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">有限不可约非周期马氏链所有状态遍历。</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>正常返闭集</strong>具有唯一的平稳分布</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;"><strong>正常返闭集</strong>具有唯一的平稳分布</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">不可约遍历链具有唯一的平稳分布，而且平稳分布就是极限分布</td>
-<td style="text-align:center">通过求解$\pi=P\pi$就可以求解平稳分布</td>
+<tr class="odd">
+<td style="text-align: center;">不可约遍历链具有唯一的平稳分布，而且平稳分布就是极限分布</td>
+<td style="text-align: center;">通过求解<span class="math inline">\(\pi=P\pi\)</span>就可以求解平稳分布</td>
 </tr>
-<tr>
-<td style="text-align:center">马氏链<strong>严平稳等价于初始分布是平稳分布</strong></td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">马氏链<strong>严平稳等价于初始分布是平稳分布</strong></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>有限不可约（非周期）</strong>号氏链存在唯一的平稳分布。</td>
-<td style="text-align:center">$\pi<em>{i}=\frac{1}{\mu</em>{i}}$</td>
+<tr class="odd">
+<td style="text-align: center;"><strong>有限不可约（非周期）</strong>号氏链存在唯一的平稳分布。</td>
+<td style="text-align: center;"><span class="math inline">\(\pi_{i}=\frac{1}{\mu_{i}}\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">有限状态马氏链的平稳分布一定存在</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">有限状态马氏链的平稳分布一定存在</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">平稳分布唯一存在 $\Leftrightarrow$ 只有一个基本正常返闭集 $C_{+}=C$</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">平稳分布唯一存在 <span class="math inline">\(\Leftrightarrow\)</span> 只有一个基本正常返闭集 <span class="math inline">\(C_{+}=C\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">有限马氏链中不存在零常返状态</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">有限马氏链中不存在零常返状态</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="常见题型"><a href="#常见题型" class="headerlink" title="常见题型"></a>常见题型</h1><h2 id="计算极限分布-平稳分布"><a href="#计算极限分布-平稳分布" class="headerlink" title="计算极限分布/平稳分布"></a>计算极限分布/平稳分布</h2><ul>
+<h1 id="常见题型">常见题型</h1>
+<h2 id="计算极限分布平稳分布">计算极限分布/平稳分布</h2>
+<ul>
 <li>首先需要判断极限分布是否存在</li>
 <li>然后需要判断平稳分布是否存在</li>
 <li>再判断平稳分布是否等于极限分布</li>
 <li>最后计算平稳分布得到极限分布</li>
 </ul>
-<h2 id="判断状态类型"><a href="#判断状态类型" class="headerlink" title="判断状态类型"></a>判断状态类型</h2><h3 id="常返-非常返"><a href="#常返-非常返" class="headerlink" title="常返/非常返"></a>常返/非常返</h3><ul>
+<h2 id="判断状态类型">判断状态类型</h2>
+<h3 id="常返非常返">常返/非常返</h3>
+<ul>
 <li>对于每一个不可约（联通）集合可以任意选一个点进行分析，所有点性质完全一样。</li>
-<li>对于每一个连通集中所选状态计算n步转移概率$p<em>{ii}^{(n)},n\ge0,p</em>{ii}^{(0)}=1$</li>
-<li>如果$\sum<em>{n=0}^{\infty}p</em>{ii}^{(n)}$等于无穷，那么就是常返状态；否则非常返。</li>
+<li>对于每一个连通集中所选状态计算n步转移概率<span class="math inline">\(p_{ii}^{(n)},n\ge0,p_{ii}^{(0)}=1\)</span></li>
+<li>如果<span class="math inline">\(\sum_{n=0}^{\infty}p_{ii}^{(n)}\)</span>等于无穷，那么就是常返状态；否则非常返。</li>
 </ul>
-<h3 id="正常返-零常返"><a href="#正常返-零常返" class="headerlink" title="正常返/零常返"></a>正常返/零常返</h3><ul>
-<li>如果是常返状态，那么进一步计算$lim<em>{n \rightarrow \infty}p</em>{ii}^{(n)}$。</li>
-<li>如果 $lim<em>{n \rightarrow \infty}p</em>{ii}^{(n)}$等于0，那么就是零常返，表示平均返回时间的期望是无穷。</li>
-<li>如果 $lim<em>{n \rightarrow \infty}p</em>{ii}^{(n)}$大于0为常数，那么就是正常返。 $lim<em>{n \rightarrow \infty}p</em>{ii}^{(n)}=\frac{d}{\mu}$</li>
+<h3 id="正常返零常返">正常返/零常返</h3>
+<ul>
+<li>如果是常返状态，那么进一步计算<span class="math inline">\(lim_{n \rightarrow \infty}p_{ii}^{(n)}\)</span>。</li>
+<li>如果 <span class="math inline">\(lim_{n \rightarrow \infty}p_{ii}^{(n)}\)</span>等于0，那么就是零常返，表示平均返回时间的期望是无穷。</li>
+<li>如果 <span class="math inline">\(lim_{n \rightarrow \infty}p_{ii}^{(n)}\)</span>大于0为常数，那么就是正常返。 <span class="math inline">\(lim_{n \rightarrow \infty}p_{ii}^{(n)}=\frac{d}{\mu}\)</span></li>
 </ul>
-<h3 id="周期-非周期"><a href="#周期-非周期" class="headerlink" title="周期/非周期"></a>周期/非周期</h3><ul>
-<li>如果$p_{ii}^{(1)}$大于0，那么就是非周期。</li>
+<h3 id="周期非周期">周期/非周期</h3>
+<ul>
+<li>如果<span class="math inline">\(p_{ii}^{(1)}\)</span>大于0，那么就是非周期。</li>
 <li>否则就是周期函数，当然不可返回自身的时候周期就是无穷。</li>
 </ul>
-<h2 id="计算转移矩阵"><a href="#计算转移矩阵" class="headerlink" title="计算转移矩阵"></a>计算转移矩阵</h2><ul>
+<h2 id="计算转移矩阵">计算转移矩阵</h2>
+<ul>
 <li>根据题意得到状态转移图。</li>
 <li>根据状态转移图绘制状态转移矩阵。</li>
 <li>通过行和为1验证计算是否正确。</li>
 </ul>
-<h2 id="判断-验证马尔科夫性"><a href="#判断-验证马尔科夫性" class="headerlink" title="判断/验证马尔科夫性"></a>判断/验证马尔科夫性</h2><ul>
-<li><p>马尔科夫性决定了马尔科夫过程的任意维分布函数由状态转移概率和初始状态分布完全定义</p>
-<script type="math/tex; mode=display">
-f(x_n,x_{n-1},...,x_{1})=f(x_n|x_{n-1})f(x_{n-1}|x_{n-2})...f(x_1)</script></li>
-<li><p>独立增量过程一定是马尔科夫过程。</p>
-</li>
+<h2 id="判断验证马尔科夫性">判断/验证马尔科夫性</h2>
+<ul>
+<li><p>马尔科夫性决定了马尔科夫过程的任意维分布函数由状态转移概率和初始状态分布完全定义 <span class="math display">\[
+f(x_n,x_{n-1},...,x_{1})=f(x_n|x_{n-1})f(x_{n-1}|x_{n-2})...f(x_1)
+\]</span></p></li>
+<li><p>独立增量过程一定是马尔科夫过程。</p></li>
 </ul>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
-<li><p>什么时候是条件？什么时候是乘积？</p>
-</li>
-<li><p>$\sum<em>{i=0}^{\infty} p</em>{ii}=\infty$ 判断常返，那么我们从1开始可以么？0这个点不耽误吧</p>
-</li>
-<li><p>$p<em>{ii}$和$f</em>{ii}$啥时候会成为概率分布呀？</p>
-</li>
-<li><p>回不到自身的状态，如何定义周期？</p>
-</li>
-<li><p>如何判断正常返和0常返？</p>
-</li>
-<li><p>不可约集合一定是闭集吗？</p>
-</li>
-<li><p>独立增量过程一定是马尔科夫过程。这个我们可以直接用吗？</p>
-</li>
+<h1 id="问题">问题</h1>
+<ol type="1">
+<li><p>什么时候是条件？什么时候是乘积？</p></li>
+<li><p><span class="math inline">\(\sum_{i=0}^{\infty} p_{ii}=\infty\)</span> 判断常返，那么我们从1开始可以么？0这个点不耽误吧</p></li>
+<li><p><span class="math inline">\(p_{ii}\)</span>和<span class="math inline">\(f_{ii}\)</span>啥时候会成为概率分布呀？</p></li>
+<li><p>回不到自身的状态，如何定义周期？</p></li>
+<li><p>如何判断正常返和0常返？</p></li>
+<li><p>不可约集合一定是闭集吗？</p></li>
+<li><p>独立增量过程一定是马尔科夫过程。这个我们可以直接用吗？</p></li>
 <li><p>两个联通的状态真的同时非周期吗？</p>
 <pre class="mermaid">   graph TD;
 a[s0];
 b[s1];
 a--1.0-->b
 b--0.5-->b
-b--0.5-->a</pre>
-</li>
-<li><p>平稳分布和极限分布有什么区别？</p>
-</li>
+b--0.5-->a</pre></li>
+<li><p>平稳分布和极限分布有什么区别？</p></li>
 <li><p>这个题目中第二项怎么得到？</p>
-<p><img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E8%BF%87%E7%A8%8B/image-20211224152705477.png" alt="image-20211224152705477"></p>
-<p><img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E8%BF%87%E7%A8%8B/image-20211224152650016.png" alt="image-20211224152650016"></p>
-</li>
-<li><p>如何判断正常返？</p>
-<script type="math/tex; mode=display">
-\pi_0 = \frac{1}{1+ \sum_{k=1}^{\infty}\frac{\Pi_{i=0}^{k-1}\lambda_i}{\Pi_{i=1}^k \mu_i}} > 0=\frac{1}{\mu_0}\\
-\lambda_i=p_{i,i+1},\mu_i=p_{i,i-1}</script></li>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E8%BF%87%E7%A8%8B/image-20211224152705477.png" alt="image-20211224152705477"><figcaption aria-hidden="true">image-20211224152705477</figcaption>
+</figure>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E8%BF%87%E7%A8%8B/image-20211224152650016.png" alt="image-20211224152650016"><figcaption aria-hidden="true">image-20211224152650016</figcaption>
+</figure></li>
+<li><p>如何判断正常返？ <span class="math display">\[
+\pi_0 = \frac{1}{1+ \sum_{k=1}^{\infty}\frac{\Pi_{i=0}^{k-1}\lambda_i}{\Pi_{i=1}^k \mu_i}} &gt; 0=\frac{1}{\mu_0}\\
+\lambda_i=p_{i,i+1},\mu_i=p_{i,i-1}
+\]</span></p></li>
 </ol>
 
     </div>
@@ -714,7 +727,7 @@ b--0.5-->a</pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">状态分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">常见概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">常见关系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%8E%A8%E8%AE%BA"><span class="nav-number">3.1.</span> <span class="nav-text">常见推论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">常见题型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9E%81%E9%99%90%E5%88%86%E5%B8%83-%E5%B9%B3%E7%A8%B3%E5%88%86%E5%B8%83"><span class="nav-number">4.1.</span> <span class="nav-text">计算极限分布&#x2F;平稳分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E7%8A%B6%E6%80%81%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">判断状态类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%BF%94-%E9%9D%9E%E5%B8%B8%E8%BF%94"><span class="nav-number">4.2.1.</span> <span class="nav-text">常返&#x2F;非常返</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E8%BF%94-%E9%9B%B6%E5%B8%B8%E8%BF%94"><span class="nav-number">4.2.2.</span> <span class="nav-text">正常返&#x2F;零常返</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%A8%E6%9C%9F-%E9%9D%9E%E5%91%A8%E6%9C%9F"><span class="nav-number">4.2.3.</span> <span class="nav-text">周期&#x2F;非周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5"><span class="nav-number">4.3.</span> <span class="nav-text">计算转移矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD-%E9%AA%8C%E8%AF%81%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E6%80%A7"><span class="nav-number">4.4.</span> <span class="nav-text">判断&#x2F;验证马尔科夫性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">问题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">状态分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">常见概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%85%B3%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">常见关系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%8E%A8%E8%AE%BA"><span class="nav-number">3.1.</span> <span class="nav-text">常见推论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">常见题型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9E%81%E9%99%90%E5%88%86%E5%B8%83%E5%B9%B3%E7%A8%B3%E5%88%86%E5%B8%83"><span class="nav-number">4.1.</span> <span class="nav-text">计算极限分布&#x2F;平稳分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E7%8A%B6%E6%80%81%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">判断状态类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%BF%94%E9%9D%9E%E5%B8%B8%E8%BF%94"><span class="nav-number">4.2.1.</span> <span class="nav-text">常返&#x2F;非常返</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E8%BF%94%E9%9B%B6%E5%B8%B8%E8%BF%94"><span class="nav-number">4.2.2.</span> <span class="nav-text">正常返&#x2F;零常返</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%A8%E6%9C%9F%E9%9D%9E%E5%91%A8%E6%9C%9F"><span class="nav-number">4.2.3.</span> <span class="nav-text">周期&#x2F;非周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5"><span class="nav-number">4.3.</span> <span class="nav-text">计算转移矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E9%AA%8C%E8%AF%81%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E6%80%A7"><span class="nav-number">4.4.</span> <span class="nav-text">判断&#x2F;验证马尔科夫性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -730,20 +743,20 @@ b--0.5-->a</pre>
       <div class="site-state-item site-state-posts">
           <a href="/blog_cn/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog_cn/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog_cn/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -794,12 +807,12 @@ b--0.5-->a</pre>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">32 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
