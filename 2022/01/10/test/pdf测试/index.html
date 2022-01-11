@@ -305,7 +305,10 @@
     <a href="/blog_cn/2022/01/10/test/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" rel="prev" title="建站记录">
       <i class="fa fa-chevron-left"></i> 建站记录
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/" rel="next" title="泊松过程">
+      泊松过程 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -380,7 +383,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog_cn/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -393,7 +396,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog_cn/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -444,12 +447,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">63k</span>
+    <span title="站点总字数">72k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">58 分钟</span>
+    <span title="站点阅读时长">1:06</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
@@ -545,6 +548,19 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
 </script>
 
 
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
   
