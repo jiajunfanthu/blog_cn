@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog_cn/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog_cn/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog_cn/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog_cn/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog_cn/css/main.css">
+
+
+<link rel="stylesheet" href="/blog_cn/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/blog_cn/lib/pace/pace-theme-minimal.min.css">
+  <script src="/blog_cn/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jiajunfanthu.github.io","root":"/blog_cn/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这边文章中我们给出期末复习第五章的内容，主要就是高斯过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高斯过程">
+<meta property="og:url" content="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="范嘉骏的博客">
+<meta property="og:description" content="这边文章中我们给出期末复习第五章的内容，主要就是高斯过程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225211516978-1888575.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225224934772-1888575.png">
+<meta property="article:published_time" content="2022-01-11T08:08:27.000Z">
+<meta property="article:modified_time" content="2022-01-11T08:12:55.838Z">
+<meta property="article:author" content="范嘉骏">
+<meta property="article:tag" content="清华课程">
+<meta property="article:tag" content="随机过程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225211516978-1888575.png">
+
+<link rel="canonical" href="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>高斯过程 | 范嘉骏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog_cn/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">范嘉骏的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog_cn/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog_cn/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog_cn/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog_cn/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog_cn/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog_cn/images/avatar.jpg">
+      <meta itemprop="name" content="范嘉骏">
+      <meta itemprop="description" content="Nothing is impossible unless you give up early!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="范嘉骏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高斯过程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-01-11 16:08:27 / 修改时间：16:12:55" itemprop="dateCreated datePublished" datetime="2022-01-11T16:08:27+08:00">2022-01-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog_cn/categories/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">清华课程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog_cn/categories/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">随机过程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="高斯过程" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这边文章中我们给出期末复习第五章的内容，主要就是高斯过程。<br><a id="more"></a></p>
+<h1 id="常见定义"><a href="#常见定义" class="headerlink" title="常见定义"></a>常见定义</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">基本概念</th>
+<th style="text-align:center">定义公式</th>
+<th style="text-align:center">注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">高斯过程</td>
+<td style="text-align:center">$\Phi\left(t<em>{1}, \ldots, t</em>{n}\right)=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)$</td>
+<td style="text-align:center">有限维分布全是高斯</td>
+</tr>
+<tr>
+<td style="text-align:center">一维高斯分布</td>
+<td style="text-align:center">$\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">一维高斯分布特征函数</td>
+<td style="text-align:center">$\Phi(t)=E[\exp(jt\xi)]=\exp(jt\mu-\frac{t^2\sigma^2}{2})$</td>
+<td style="text-align:center"><strong>一定要注意1维和N维的特征函数公式是不一样的</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">有限维高斯特征函数</td>
+<td style="text-align:center">$\Phi\left(t<em>{1}, \ldots, t</em>{n}\right)=E[\exp(jt^T\xi)]=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)$</td>
+<td style="text-align:center">0均值时得到$\Phi=\exp(-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t})$ 这个很常用;另外$\exp \left(\sum<em>{k} j t</em>{k} \mu<em>{k}-\frac{1}{2} \sum</em>{k} \sum<em>{i} t</em>{k} t<em>{i} b</em>{k i}\right)$也很常用</td>
+</tr>
+<tr>
+<td style="text-align:center">有限维联合高斯概率密度函数</td>
+<td style="text-align:center">$\frac{1}{(2 \pi)^{\frac{n}{2}}\mathbf{</td>
+<td style="text-align:center">B</td>
+<td>}^{\frac{1}{2}}} \exp \left[-\frac{1}{2}(\mathbf{x}-\mu)^{T} \mathbf{B}^{-1}(\mathbf{x}-\mu)\right]  $</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">高斯分布线性变换</td>
+<td style="text-align:center">$\eta= C\xi$</td>
+<td style="text-align:center">高斯分布做线性变换仍是高斯</td>
+</tr>
+<tr>
+<td style="text-align:center">高斯分布的边缘分布的特征函数</td>
+<td style="text-align:center">$\Phi\left(t<em>{1}, \ldots, t</em>{k},0,0,0\right)$</td>
+<td style="text-align:center">所谓的边缘分布仅仅在特征函数中将其对应的参数置成0就好了。可以看出仍是高斯</td>
+</tr>
+<tr>
+<td style="text-align:center">特征函数计算各阶距</td>
+<td style="text-align:center">$E \xi<em>{1}^{k</em>{1}} \ldots \xi<em>{n}^{k</em>{n}}=\left.j^{-\sum<em>{i} k</em>{i}} \cdot \frac{\partial^{k<em>{1}+\cdots+k</em>{n}} \Phi\left(t<em>{i}, \ldots, t</em>{n}\right)}{\partial t<em>{1}^{k</em>{1}} \ldots \partial t<em>{n}^{k</em>{n}}}\right</td>
+<td style="text-align:center"><em>{t</em>{1}=\cdots=t_{n}=0}$</td>
+<td>特别容易忽略这个j</td>
+</tr>
+<tr>
+<td style="text-align:center">随机变量独立</td>
+<td style="text-align:center">$\Phi(t,u)=\Phi(t)\Phi(u)$</td>
+<td style="text-align:center">当然$f_{xy}=f_x f_y$更经典</td>
+</tr>
+<tr>
+<td style="text-align:center">随机变量不线性相关</td>
+<td style="text-align:center">$c<em>{ij}=E\left(X-\mu</em>{X}\right)\left(Y-\mu_{Y}\right)=0$</td>
+<td style="text-align:center">协方差矩阵为对角矩阵</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="协方差矩阵B"><a href="#协方差矩阵B" class="headerlink" title="协方差矩阵B"></a>协方差矩阵B</h2><script type="math/tex; mode=display">
+B={c_{ij}}\\
+c_{ij} = E\left(\xi_{i}-\mu_{i}\right)\left(\xi_{k}-\mu_{k}\right) \\
+c_{ii} =E[(\xi_i-\mu_i)^2]=D(\xi_i)</script><p>所以协方差矩阵的对角线全部都是方差，而退化到一维情况的时候，仅剩下方差。协方差为0，说明两个随机变量不线性相关。因为线性相关系数$\rho<em>{ij}=\frac{c</em>{ij}}{\sigma_i\sigma_j}$，协方差矩阵具有以下性质</p>
+<ul>
+<li>正定</li>
+<li>对称</li>
+<li>可以进行对角化分解</li>
+</ul>
+<h1 id="线性变换的特征函数"><a href="#线性变换的特征函数" class="headerlink" title="线性变换的特征函数"></a>线性变换的特征函数</h1><h2 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h2><script type="math/tex; mode=display">
+\eta=\sum_{k} a_{k} \xi_{k}=\mathbf{a}^{T} \xi</script><script type="math/tex; mode=display">
+\begin{aligned}
+ & \Phi(\mathbf{t})=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)=E e^{j \mathbf{t}^{T} \xi} \\
+\Phi_{\eta}(u)=& E e^{j u \eta}=E e^{j u\left(\mathbf{a}^{T} \xi\right)}=E \exp \left[j(u \mathbf{a})^{T} \xi\right] \\
+=& \exp \left[j(u \mathbf{a})^{T} \mu-\frac{1}{2}(u \mathbf{a})^{T} \mathbf{B}(u \mathbf{a})\right] \\
+=& \exp \left[j u\left(\mathbf{a}^{T} \mu\right)-\frac{1}{2} u^{2}\left(\mathbf{a}^{T} \mathbf{B a}\right)\right] \\
+=& \exp \left[j u E \eta-\frac{1}{2} u^{2} D \eta\right], \quad \text { 故 } \eta \text { 正态. }
+\end{aligned}</script><p>这里巧妙的运用了$u$作为一个常数，其转置等于自身。而且这里需要了解特征函数真正的定义，一维和多维的定义是不一样的。</p>
+<h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><script type="math/tex; mode=display">
+\xi \rightarrow \eta, \eta=\mathbf{C} \xi, \mathbf{C}=\left(c_{k i}\right)_{m \times n}</script><p>线性变换后仍是高斯</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\Phi_{\eta}\left(t_{1}, \ldots, t_{m}\right) &=E \exp \left(j \mathbf{t}^{T} \eta\right)=E \exp \left(j \mathbf{t}^{T} \mathbf{C} \xi\right) \\
+&=E \exp \left[j\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \xi\right] \\
+&=\exp \left[j\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \mu-\frac{1}{2}\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \mathbf{B}\left(\mathbf{C}^{T} \mathbf{t}\right)\right] \\
+&=\exp \left[j \mathbf{t}^{T}(\mathbf{C} \mu)-\frac{1}{2} \mathbf{t}^{T}\left(\mathbf{C B C}^{T}\right) \mathbf{t}\right]
+\end{aligned}</script><p>简单来说就是直接带入特征函数公式，然后得到类似的结果就好了</p>
+<h1 id="高斯过程过非线性系统"><a href="#高斯过程过非线性系统" class="headerlink" title="高斯过程过非线性系统"></a>高斯过程过非线性系统</h1><h2 id="平方器"><a href="#平方器" class="headerlink" title="平方器"></a>平方器</h2><p>输入假设为零均值，平稳高斯。</p>
+<script type="math/tex; mode=display">
+Y(t)=X(t)^2,X(t)\sim N(0,R(0))</script><h3 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h3><script type="math/tex; mode=display">
+E(Y(t))=E(X^2(t))=R(0)</script><h3 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h3><script type="math/tex; mode=display">
+R_Y(t,t+\tau)=E[Y(t)Y(t+\tau)]\\
+= E[X^2(t)X^2(t+\tau)]\\
+=E[\xi_{t_1}^2\xi_{t_2}^2]\\
+=j^{-4}\frac{\Phi(u_1,u_2)}{d^2u_1d^2u_2}|_{u_1=u_2=0} \\
+=R^2(0)+2R^2(\tau)\\
+R_Y(0)=3R_X^2(0)\le \infty</script><p>所以Y是宽平稳过程</p>
+<h3 id="分布函数"><a href="#分布函数" class="headerlink" title="分布函数"></a>分布函数</h3><script type="math/tex; mode=display">
+\begin{aligned}
+\text { 方法一: . 换元 } y &=x^{2}, x=\sqrt{y},|J|=\frac{1}{2 \sqrt{y}}, \\
+f(y) &=\frac{1}{\sqrt{2 \pi} \sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \cdot \frac{1}{2 \sqrt{y}} \cdot 2 \cdot I_{\{y \geq 0\}} \\
+&=\frac{1}{\sqrt{2 \pi y} \sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \cdot I_{\{y \geq 0\}} .
+\end{aligned}</script><p>我建议用方法2</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+F_{Y}(y) &=P\{Y \leq y\}=P\left\{X^{2} \leq y\right\} \\
+&=\left\{\begin{array}{cl}
+P(-\sqrt{y} \leq X \leq \sqrt{y}) \quad, & y \geq 0 \\
+0 & , \quad y<0
+\end{array}\right.\\
+
+&=\left\{\begin{array}{cl}
+2 P\{0 \leq X \leq \sqrt{y}\}, & y \geq 0 \\
+0, & y<0
+\end{array} 
+=\left\{\begin{array}{cl}
+2 F(\sqrt{y})-1, & y \geq 0 \\
+0, & y<0
+\end{array}\right.\right.
+\end{aligned}</script><script type="math/tex; mode=display">
+\begin{aligned}
+f_{Y}(y) &=\frac{d F_{Y}(y)}{d y}=\left\{\begin{array}{cc}
+2 F^{\prime}(\sqrt{y}) \cdot \frac{d \sqrt{y}}{d y} & , \quad y \geq 0 \\
+0 & , \quad y<0
+\end{array}\right.\\
+&=\left\{\begin{array}{cc}
+\frac{f(\sqrt{y})}{\sqrt{y}} \quad, \quad y \geq 0 \\
+0 \quad, \quad y<0
+\end{array}\right.\\
+&=\left\{\begin{array}{cl}
+\frac{1}{\sqrt{2 \pi y }\sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \quad, & y \geq 0 \\
+0 \quad & , y<0
+\end{array} .\right.
+\end{aligned}</script><h2 id="限幅器"><a href="#限幅器" class="headerlink" title="限幅器"></a>限幅器</h2><script type="math/tex; mode=display">
+Y(t)= \begin{cases}1 & X(t) \geq 0 \\ -1 & X(t)<0\end{cases},X\sim  N(0,R(0))</script><h3 id="均值-1"><a href="#均值-1" class="headerlink" title="均值"></a>均值</h3><script type="math/tex; mode=display">
+E(Y(t))=P(X\ge0)-P(X<0)\\
+=0对称性\\</script><h3 id="相关函数-1"><a href="#相关函数-1" class="headerlink" title="相关函数"></a>相关函数</h3><script type="math/tex; mode=display">
+E(Y(t)Y(t+\tau))=P(X(t)X(t+
+\tau)>=0)-P(X(t)X(t+
+\tau)<0)\\
+=1-2P(X(t)X(t+\tau)<0)\\
+=1-2\int \int_{x1x2<0} f_{x1x2}dx1dx2</script><script type="math/tex; mode=display">
+f_{x1x2}=\frac{1}{2\pi|B|^{\frac{1}{2}}} \exp(-\frac{1}{2}x^TB^{-1}x)</script><p>其中B如下</p>
+<script type="math/tex; mode=display">
+B=\begin{Vmatrix} R(0) & R(\tau)\\ R(\tau) & R(0) \end{Vmatrix}</script><p>于是我们可以得到$|B|^{\frac{1}{2}}=\sqrt{R^2(0)-R^2(\tau)}$  而且</p>
+<script type="math/tex; mode=display">
+B^{-1}=\frac{1}{R^2(0)-R^2(\tau)}\begin{Vmatrix} R(0) & -R(\tau)\\ -R(\tau) & R(0) \end{Vmatrix}</script><p>于是我们可以得到相关函数如下，我们记$w=\sqrt{R^2(0)-R^2(\tau)}$ </p>
+<script type="math/tex; mode=display">
+R_Y(t,t+\tau)=1-2\int \int_{x1x2<0} f_{x1x2}dx1dx2 \\
+= 1- 2\int \int_{x1x2<0}\frac{1}{2\pi w} \exp(-\frac{1}{2w^2}[R[0]x_1^2+R[0]x_2^2-2x_1x_2R[\tau]]) dx_1dx_2\\
+= 1-2\frac{\arccos r}{\pi}\\
+= \frac{2}{\pi} \arcsin r</script><p>可以看出仍然是一个严平稳的随机过程，其中$r=\frac{R(\tau)}{R(0)}$称为线性相关系数$R_Y(0)=\frac{2}{\pi} \arcsin 1=1&lt;\infty$</p>
+<h3 id="分布函数-1"><a href="#分布函数-1" class="headerlink" title="分布函数"></a>分布函数</h3><p>并没有</p>
+<h1 id="错位相减"><a href="#错位相减" class="headerlink" title="错位相减"></a>错位相减</h1><script type="math/tex; mode=display">
+S_n= \sum_{i=1}^n a_ib_i\\
+a_{n+1}-a_{n}=d\\
+\frac{b_{n+1}}{b_n}=q\\</script><script type="math/tex; mode=display">
+\begin{aligned}
+q S_n&=\sum_{i=1}^n a_i qb_i\\
+&= \sum_{i=1}^n a_i b_{i+1}\\
+&=\sum_{k=2}^{n+1} a_{k-1} b_{k}\\
+&= a_nb_{n+1}+\sum_{k=2}^{n} a_{k-1} b_{k}\\
+\end{aligned}\\</script><script type="math/tex; mode=display">
+\begin{aligned}
+S_n-qS_n&=(1-q)S_n\\
+&=a_1b_1+\sum_{i=2}^n a_ib_i - \sum_{k=2}^{n} a_{k-1} b_{k} - a_nb_{n+1}\\
+&=a_1b_1 - a_nb_{n+1} + \sum_{i=2}^n d b_i\\
+&=a_1b_1 -a_nb_{n+1}+db_2 \frac{1-q^{n-1}}{1-q}\\
+S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
+\end{aligned}</script><h1 id="常见结论"><a href="#常见结论" class="headerlink" title="常见结论"></a>常见结论</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">结论</th>
+<th style="text-align:center">公式</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">高斯分布线性变换仍然高斯</td>
+<td style="text-align:center">$\xi \rightarrow \eta, \eta=\mathbf{C} \xi, \mathbf{C}=\left(c<em>{k i}\right)</em>{m \times n}$</td>
+<td style="text-align:center">n 维-&gt;m维; $\mu<em>\eta=C\mu,B</em>\eta=C^TBC$</td>
+</tr>
+<tr>
+<td style="text-align:center">高斯分布线性组合仍然高斯</td>
+<td style="text-align:center">$\eta=\sum<em>{k} a</em>{k} \xi_{k}=\mathbf{a}^{T} \xi$</td>
+<td style="text-align:center">n维-&gt;一维;$\mu<em>\eta=a^T\mu,B</em>\eta=a^TBa$</td>
+</tr>
+<tr>
+<td style="text-align:center">高斯分布边缘分布仍然高斯</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">高斯分布分量仍然高斯;均值和方差就是把对应行列置0</td>
+</tr>
+<tr>
+<td style="text-align:center">高斯分布正交化</td>
+<td style="text-align:center">$\text { 存在正交矩阵 } \mathbf{Q}, \eta=Q \xi \text {, 使得 } \eta<em>{1}, \ldots, \eta</em>{n} \text { 相互独立}$</td>
+<td style="text-align:center">协方差矩阵对角化等价于高斯分布正交化</td>
+</tr>
+<tr>
+<td style="text-align:center">高斯过程宽平稳等于严平稳</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="宽平稳-严平稳"><a href="#宽平稳-严平稳" class="headerlink" title="宽平稳==严平稳"></a>宽平稳==严平稳</h2><script type="math/tex; mode=display">
+\begin{aligned}
+\{\xi(t)\} \text { 宽平稳 } & \Leftrightarrow \mu_{t_{k}}=\mu, b_{k i}=b\left(t_{k}-t_{i}\right) \\
+\Leftrightarrow \Phi\left(u_{1}, \ldots, u_{n} ;\right.&\left.t_{1}, \ldots, t_{n}\right)=\exp \left\{\sum_{k} j u_{k} \mu-\frac{1}{2} \sum_{k} \sum_{i} u_{k} u_{i} b\left(t_{k}-t_{i}\right)\right\} \\
+& \Phi\left(u_{1}, \ldots, u_{n} ; t_{1}+h, \ldots, t_{n}+h\right) \\
+=& \exp \left\{\sum_{k} j u_{k} \mu-\frac{1}{2} \sum_{k} \sum_{i} u_{k} u_{i} b\left(t_{k}-t_{i}\right)\right\}
+\end{aligned}</script><p>简单来说就是因为高斯过程完全由均值和相关函数确定。</p>
+<h2 id="研究汇总"><a href="#研究汇总" class="headerlink" title="研究汇总"></a>研究汇总</h2><ul>
+<li>高斯过程主要研究以下几个内容<ul>
+<li>任意n个时刻的联合高斯分布的计算（有限维分布）<ul>
+<li>均值、方差、特征函数</li>
+<li>协方差矩阵、概率密度、概率</li>
+</ul>
+</li>
+<li>高斯分布的线性性质<ul>
+<li>微分仍是高斯</li>
+<li>积分仍是高斯</li>
+<li>过线性系统仍是高斯</li>
+</ul>
+</li>
+<li>高斯分布过非线性系统的特性<ul>
+<li>平方器</li>
+<li>限幅器</li>
+</ul>
+</li>
+<li>常见推广与定理</li>
+<li>协方差矩阵的渐进性质，一般表示</li>
+</ul>
+</li>
+<li>$n \text { 元正态分布完全由其一阶矩和二阶矩确定! }$</li>
+<li>联合高斯中各个随机变量独立与不相关等价</li>
+<li>多元高斯函数的形式，特征函数，非负定性质</li>
+<li>均值为0的多元高斯的高阶矩</li>
+<li>对于高斯过程，<strong>独立就是不相关（要会证）</strong>，宽平稳就是严平稳</li>
+<li>联合高斯的线性变换仍为<strong>高斯过程（要会证）</strong></li>
+<li>瑞利分布的形式的形式，与窄带高斯的关系</li>
+<li>协方差矩阵对角化，可以化简分布形式，然后反代就可以重构概率分布</li>
+<li>0均值高斯，奇数阶距为0。</li>
+</ul>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<li><p>如何判断是否是一个高斯分布？</p>
+<ul>
+<li>计算母函数</li>
+<li>母函数形式符合高斯函数的标准形式</li>
+</ul>
+</li>
+<li><p>为啥这里会有一个2？或者说我咋知道这是个2？</p>
+<p><img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225211516978-1888575.png" alt="image-20211225211516978"></p>
+</li>
+<li><p>下面我们用协方差矩阵表示可以么？一定要用线性相关系数吗？</p>
+<p><img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225224934772-1888575.png" alt="image-20211225224934772"></p>
+</li>
+<li><p>联合高斯的线性变换仍然高斯（过程）</p>
+</li>
+<li><p>高斯向量列的线性组合仍然高斯向量列，<strong>高斯过程中任意时刻组成的随机向量是高斯向量。</strong></p>
+</li>
+</ol>
+<h2 id="等待解决"><a href="#等待解决" class="headerlink" title="等待解决"></a>等待解决</h2><ol>
+<li>三角函数不等式求解</li>
+<li>有限维分布换元</li>
+<li>概率密度函数换元基准公式<ol>
+<li>特别是需要换变量域的</li>
+</ol>
+</li>
+<li>条件概率公式</li>
+<li>基本概率学定义、概率与分布函数的关系、分布函数的定义</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"># 清华课程</a>
+              <a href="/blog_cn/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag"># 随机过程</a>
+          </div>
+
+        
+
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/" rel="prev" title="常见数学技巧">
+      <i class="fa fa-chevron-left"></i> 常见数学技巧
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/PPT%E6%B1%87%E6%80%BB/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%AF%BE%E4%BB%B6/" rel="next" title="随机过程课件">
+      随机过程课件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">常见定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5B"><span class="nav-number">1.1.</span> <span class="nav-text">协方差矩阵B</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%9A%84%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">线性变换的特征函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88"><span class="nav-number">2.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">线性变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B%E8%BF%87%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">高斯过程过非线性系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">平方器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC"><span class="nav-number">3.1.1.</span> <span class="nav-text">均值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%B9%85%E5%99%A8"><span class="nav-number">3.2.</span> <span class="nav-text">限幅器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">均值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%99%E4%BD%8D%E7%9B%B8%E5%87%8F"><span class="nav-number">4.</span> <span class="nav-text">错位相减</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">常见结论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%BD%E5%B9%B3%E7%A8%B3-%E4%B8%A5%E5%B9%B3%E7%A8%B3"><span class="nav-number">5.1.</span> <span class="nav-text">宽平稳&#x3D;&#x3D;严平稳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%B1%87%E6%80%BB"><span class="nav-number">5.2.</span> <span class="nav-text">研究汇总</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E8%A7%A3%E5%86%B3"><span class="nav-number">6.1.</span> <span class="nav-text">等待解决</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="范嘉骏"
+      src="/blog_cn/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">范嘉骏</p>
+  <div class="site-description" itemprop="description">Nothing is impossible unless you give up early!</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog_cn/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog_cn/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog_cn/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiajunfanthu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiajunfanthu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:fanjj21@mails.tsinghua.edu.cn" title="E-Mail → mailto:fanjj21@mails.tsinghua.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5vtx00lrmp4&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+
+
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=472045267&auto=1&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">范嘉骏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">83k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:15</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog_cn/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/blog_cn/lib/velocity/velocity.min.js"></script>
+  <script src="/blog_cn/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog_cn/js/utils.js"></script>
+
+<script src="/blog_cn/js/motion.js"></script>
+
+
+<script src="/blog_cn/js/schemes/muse.js"></script>
+
+
+<script src="/blog_cn/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog_cn/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/blog_cn/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: 'unset',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Ge52km1d442Yeko4hMwPBuMQ-gzGzoHsz',
+      appKey     : 'OWEnRLKjLr5pVzeW3Jo50yGQ',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<script type="text/javascript" src="js/love.js"></script>
+
+<script src="live2d-widget/autoload.js"></script>
+
+
+</body>
+
+</html>
