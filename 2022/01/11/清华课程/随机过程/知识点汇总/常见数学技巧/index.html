@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog_cn/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog_cn/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog_cn/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog_cn/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog_cn/css/main.css">
+
+
+<link rel="stylesheet" href="/blog_cn/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/blog_cn/lib/pace/pace-theme-minimal.min.css">
+  <script src="/blog_cn/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jiajunfanthu.github.io","root":"/blog_cn/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这里总结一些常见的数学技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见数学技巧">
+<meta property="og:url" content="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:site_name" content="范嘉骏的博客">
+<meta property="og:description" content="这里总结一些常见的数学技巧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/1203675-20181120113537579-1627502064.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211229154903296.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211229141052758.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211229154132478.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211231235519754.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20220101001430337.png">
+<meta property="og:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20220101195525962.png">
+<meta property="article:published_time" content="2022-01-11T07:47:06.000Z">
+<meta property="article:modified_time" content="2022-01-11T07:59:29.690Z">
+<meta property="article:author" content="范嘉骏">
+<meta property="article:tag" content="清华课程">
+<meta property="article:tag" content="随机过程">
+<meta property="article:tag" content="数学技巧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jiajunfanthu.github.io/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/1203675-20181120113537579-1627502064.png">
+
+<link rel="canonical" href="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>常见数学技巧 | 范嘉骏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog_cn/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">范嘉骏的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog_cn/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog_cn/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog_cn/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog_cn/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog_cn/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog_cn/images/avatar.jpg">
+      <meta itemprop="name" content="范嘉骏">
+      <meta itemprop="description" content="Nothing is impossible unless you give up early!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="范嘉骏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          常见数学技巧
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-01-11 15:47:06 / 修改时间：15:59:29" itemprop="dateCreated datePublished" datetime="2022-01-11T15:47:06+08:00">2022-01-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog_cn/categories/%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">数学技巧</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/" class="post-meta-item leancloud_visitors" data-flag-title="常见数学技巧" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这里总结一些常见的数学技巧</p>
+<a id="more"></a>
+<h1 id="常见分布">常见分布</h1>
+<table>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 43%">
+<col style="width: 13%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">分布名称</th>
+<th style="text-align: center;">分布形式</th>
+<th style="text-align: center;">均值</th>
+<th style="text-align: center;">方差</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">高斯分布</td>
+<td style="text-align: center;">$f_{}=(-) $</td>
+<td style="text-align: center;"><span class="math inline">\(\mu\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sigma\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">泊松分布</td>
+<td style="text-align: center;"><span class="math inline">\(P(\xi=k)=\frac{\lambda^k}{k!} \exp(-\lambda)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">指数分布/负指数分布</td>
+<td style="text-align: center;"><span class="math inline">\(f_{\xi}=\lambda \exp(-\lambda x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{\lambda}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{\lambda^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Gamma\)</span>分布</td>
+<td style="text-align: center;"><span class="math inline">\(f_{\xi}=\lambda \exp(-\lambda x)\frac{(\lambda x)^{r-1}}{(r-1)!}\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">几何分布（一定要注意k-1），首次发生时刻</td>
+<td style="text-align: center;"><span class="math inline">\(P(\xi=k)=pq^{k-1} ,k\in[1,\infty)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{q}{p^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">二项分布</td>
+<td style="text-align: center;"><span class="math inline">\(P(\xi=k)= C_{n}^k p^k q^{n-k},k\in[0,n]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(np\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(npq\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">伯努利分布</td>
+<td style="text-align: center;"><span class="math inline">\(P(\xi=1)=p,P(\xi=0)=q\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(p\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(pq\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="数列求和">数列求和</h1>
+<h2 id="有限项求和">有限项求和</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">数列形式</th>
+<th style="text-align: center;">求和形式</th>
+<th style="text-align: center;">注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(a_n=a_1q^{n-1}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{k=1}^{n}a_n=\frac{a_1(1-q^{n})}{1-q}\)</span></td>
+<td style="text-align: center;">注意分子的首项标号</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(a_n=a_1+(n-1)d\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{k=1}^{n}a_n=\frac{(a_1+a_1+(n-1)d)*n}{2}\)</span></td>
+<td style="text-align: center;">（首项+尾项）*项数/2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="无穷级数求和">无穷级数求和</h2>
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 34%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">数列形式</th>
+<th style="text-align: center;">无穷级数</th>
+<th style="text-align: center;">注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(a_n=a_1q^{n-1}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lim_{n-&gt;\infty}\sum_{k=1}^{n}a_n=\frac{a_1}{1-q}\)</span></td>
+<td style="text-align: center;">注意分子的首项标号</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\frac{x^k}{k!}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{k=0}^{\infty}\frac{x^k}{k!}=\exp(x)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(c_i = a_ib_i,a,b分别为等差,等比数列\)</span></td>
+<td style="text-align: center;">$S_n=  +  $</td>
+<td style="text-align: center;"><span class="math inline">\(d=1\)</span>时我们有,<span class="math inline">\(S_{\infty}=\frac{a_1b_1}{p}+\frac{db_2}{p^2}\)</span>,此外<span class="math inline">\(p=q=\frac{1}{2}\)</span>时我们有<span class="math inline">\(\mu=1+1=2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(p^k\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_{k=0}^{\infty} p^k=\frac{1}{1-p}\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="泰勒展开与等价无穷小">泰勒展开与等价无穷小</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">函数</th>
+<th style="text-align: center;">泰勒展开</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\exp(x)\)</span></td>
+<td style="text-align: center;">$ 1+x+o(x)$</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\exp(-x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1-x\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1-\exp(-\lambda \Delta t)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1-1+\lambda \Delta t= \lambda \Delta t\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\((1+\beta x)^{\alpha}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1+\alpha \beta x +o(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{1-x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1+x+o(x)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\((1-x)^{\alpha}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1-\alpha x+o(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="错位相减">错位相减</h1>
+<p><span class="math display">\[
+S_n= \sum_{i=1}^n a_ib_i\\
+a_{n+1}-a_{n}=d\\
+\frac{b_{n+1}}{b_n}=q\\
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+q S_n&amp;=\sum_{i=1}^n a_i qb_i\\
+&amp;= \sum_{i=1}^n a_i b_{i+1}\\
+&amp;=\sum_{k=2}^{n+1} a_{k-1} b_{k}\\
+&amp;= a_nb_{n+1}+\sum_{k=2}^{n} a_{k-1} b_{k}\\
+\end{aligned}\\
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+S_n-qS_n&amp;=(1-q)S_n\\
+&amp;=a_1b_1+\sum_{i=2}^n a_ib_i - \sum_{k=2}^{n} a_{k-1} b_{k} - a_nb_{n+1}\\
+&amp;=a_1b_1 - a_nb_{n+1} + \sum_{i=2}^n d b_i\\
+&amp;=a_1b_1 -a_nb_{n+1}+d b_2\frac{1-q^{n-1}}{1-q}\\
+S_n&amp;=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2 \frac{1-q^{n-1}}{(1-q)^2}
+\end{aligned}
+\]</span></p>
+<h1 id="傅里叶变换">傅里叶变换</h1>
+<p>傅里叶变换的核心是了解变量的含义。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">变换类型</th>
+<th style="text-align: center;">公式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">傅里叶正变换</td>
+<td style="text-align: center;"><span class="math inline">\(S(w)=\int R(\tau)\exp(-jw \tau)d\tau\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">傅里叶逆变换</td>
+<td style="text-align: center;"><span class="math inline">\(R(\tau)=\frac{1}{2\pi}\int S(w)\exp(jw \tau)dw\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="三角函数变换">三角函数变换</h1>
+<h2 id="反三角函数公式">反三角函数公式</h2>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\arcsin (-x)=-\arcsin (x) \\
+&amp;\arccos (-x)=\pi-\arccos (x) \\
+&amp;\arctan (-x)=-\arctan (x) \\
+&amp;\operatorname{arccot}(-x)=\pi-\operatorname{arccot}(x) \\
+&amp;\operatorname{arcsec}(-x)=\pi-\operatorname{arcsec}(x) \\
+&amp;\operatorname{arccsc}(-x)=-\operatorname{arccsc}(x)
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\arcsin (x)+\arccos (x)=\frac{\pi}{2} \\
+&amp;\arctan (x)+\operatorname{arccot}(x)=\frac{\pi}{2} \\
+&amp;\operatorname{arcsec}(x)+\operatorname{arccsc}(x)=\frac{\pi}{2}
+\end{aligned}
+\]</span></p>
+<h2 id="倍角放缩">倍角放缩</h2>
+<p><span class="math display">\[
+\frac{1}{4}[1-cos(2\theta)] \le 1-cos(\theta)
+\]</span></p>
+<h1 id="组合数公式">组合数公式</h1>
+<h2 id="组合数计算">组合数计算</h2>
+<p><span class="math display">\[
+C_{n}^k=\frac{n!}{k!(n-k)!}
+\]</span></p>
+<h2 id="二项式定理">二项式定理</h2>
+<p><span class="math display">\[
+(a+b)^{n}=\sum_{r=0}^{n} C_{n}^{r} a^{n-r} b^{r}
+\]</span></p>
+<h3 id="概率形式">概率形式</h3>
+<p>对于概率形式我们有 <span class="math display">\[
+(p+q)^{n}=\sum_{r=0}^{n} C_{n}^{r} p^{n-r} q^{r}
+\]</span> 对于等概率形式我们有 <span class="math display">\[
+(\frac{1}{2}+\frac{1}{2})^{n}=\sum_{r=0}^{n} C_{n}^{r} (\frac{1}{2})^{n} =1
+\]</span> 于是我们可以得到 <span class="math display">\[
+2^n=\sum_{r=0}^{n} C_{n}^{r}
+\]</span></p>
+<h3 id="特殊形式1">特殊形式1</h3>
+<p><span class="math display">\[
+(a+1)^{n}=\sum_{r=0}^{n} C_{n}^{r} a^{r} = \sum_{r=0}^{n} C_{n}^{r} a^{n-r}
+\]</span></p>
+<h1 id="线性方程组求解">线性方程组求解</h1>
+<h2 id="齐次线性方程组">齐次线性方程组</h2>
+<p>形式为 <span class="math display">\[
+Ax=0 \ or \ x^T A^T=0
+\]</span> 求解过程如下</p>
+<ul>
+<li>系数矩阵<span class="math inline">\(A\)</span>转换为行阶梯形</li>
+<li>根据<span class="math inline">\(dim_A - Rank(A)\)</span>得到自由变量个数</li>
+<li>采用one-hot给自由变量赋值得到一组解<span class="math inline">\(\xi_i\)</span>。</li>
+<li>所有解用系数串联<span class="math inline">\(\xi=\sum_i k_i \xi_i\)</span>就是通解。</li>
+</ul>
+<h2 id="非齐次线性方程组">非齐次线性方程组</h2>
+<p>形式为 <span class="math display">\[
+Ax=b
+\]</span></p>
+<ul>
+<li>增广矩阵<span class="math inline">\(A|b\)</span>转换为行阶梯型</li>
+<li>根据<span class="math inline">\(dim_A-Rank(A)\)</span>得到自由变量个数</li>
+<li>自由变量全部设置为0得到特解<span class="math inline">\(\eta\)</span></li>
+<li>b设置为0，得到齐次方程组通解<span class="math inline">\(\xi=\sum_i k_i \xi_i\)</span></li>
+<li>于是非齐次方程组的解为<span class="math inline">\(\xi+\eta\)</span></li>
+</ul>
+<p>解的形式 如下 <span class="math display">\[
+齐次通解+非齐次特解\\
+Rank(A)=Rank(A|b)才有解，\\
+Rank(A)&lt;n 无穷解,\\
+Rank(A)=n唯一解
+\]</span></p>
+<h1 id="矩阵计算">矩阵计算</h1>
+<h2 id="行列式计算性质">行列式计算性质</h2>
+<ul>
+<li><p>如果交换矩阵的两行，则行列式的符号要取反。</p></li>
+<li><p>如果用某数t乘以矩阵的一行，则行列式等于原行列式的t倍(每一行单独算) <span class="math display">\[
+\left|\begin{array}{cc}
+\operatorname{ta} &amp; t b \\
+c &amp; d
+\end{array}\right|=t\left|\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right|
+\]</span></p></li>
+<li><p>行列式可以按行分解，这里需要注意每一行单独算 <span class="math display">\[
+\left|\begin{array}{cc}
+a+a^{\prime} &amp; b+b^{\prime} \\
+c &amp; d
+\end{array}\right|=\left|\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right|+\left|\begin{array}{ll}
+a^{\prime} &amp; b^{\prime} \\
+c &amp; d
+\end{array}\right|
+\]</span></p></li>
+<li><p>如果矩阵中有两行相等，那么行列式为0</p></li>
+<li><p>从矩阵的行k减去行i的l倍，行列式不会改变，即消元过程不改变行列式</p></li>
+<li><p>若矩阵中有一行是全0，则|A|=0</p></li>
+<li><p>三角阵的行列式等于对角线元素乘积 <span class="math display">\[
+U=\left[\begin{array}{cccc}
+d 1 &amp; * &amp; * &amp; * \\
+0 &amp; d 2 &amp; * &amp; * \\
+0 &amp; 0 &amp; * &amp; * \\
+0 &amp; 0 &amp; 0 &amp; d n
+\end{array}\right]\\
+det(U)=\Pi_id_i
+\]</span></p></li>
+<li><p><span class="math inline">\(detAB=det(A)det(B)\)</span> <span class="math display">\[
+det(A^{-1})=det(A)^{-1}\\
+det(A^T)=det(A)\\
+det(2A)=2^ndet(A)\\
+det(A^k)=det(A)^k
+\]</span></p></li>
+</ul>
+<h2 id="对称矩阵性质">对称矩阵性质</h2>
+<ul>
+<li><span class="math inline">\((A^T)^T=A\)</span></li>
+<li><span class="math inline">\((AB)^T=B^TA^T\)</span></li>
+<li><span class="math inline">\((A+B)^T=A^T+B^T\)</span></li>
+<li><span class="math inline">\((\lambda A)^T=\lambda A^T\)</span></li>
+<li>数$<span class="math inline">\(乘矩阵就是\)</span>$乘以矩阵中每一个元素</li>
+</ul>
+<h2 id="逆矩阵性质">逆矩阵性质</h2>
+<ul>
+<li><span class="math inline">\(A \text { 可逆 } \Rightarrow\left|A^{-1}\right|=\frac{1}{|A|}\)</span></li>
+<li><span class="math inline">\(A \text { 可逆 } \Rightarrow A^{-1} \text { 可逆, }\left(A^{-1}\right)^{-1}=A\)</span></li>
+<li><span class="math inline">\(\left(A^{T}\right)^{-1}=\left(A^{-1}\right)^{T}\)</span></li>
+<li><span class="math inline">\((k A)^{-1}=\frac{1}{k} A^{-1}(k \neq 0, A \text { 可逆 })\)</span></li>
+<li><span class="math inline">\((A B)^{-1}=B^{-1} A^{-1}\)</span></li>
+</ul>
+<h2 id="正交矩阵性质">正交矩阵性质</h2>
+<p>正交矩阵一定不对称，仅当<span class="math inline">\(A=E\)</span>才对称。</p>
+<ul>
+<li><span class="math inline">\(A^T A = E\)</span></li>
+<li><span class="math inline">\(A^T=A^{-1}\)</span></li>
+</ul>
+<h2 id="特征值与特征向量">特征值与特征向量</h2>
+<h3 id="特征值">特征值</h3>
+<p>矩阵的特征值就是求解如下的方程 <span class="math display">\[
+|A-\lambda E|=0
+\]</span> 简单来说就是系数矩阵的行列式为0。假设我们可以得到n个特征值，其中k重根算k个。</p>
+<h3 id="特征向量">特征向量</h3>
+<p>每一个特征值对应一个齐次线性方程组的系数矩阵<span class="math inline">\(A-\lambda E\)</span>。其中k重根对应该线性方程组的k个自由向量。也就是该线性方程组的系数矩阵的秩为n-k。</p>
+<p>于是每一个方程组我们可以得到k个特征向量，总共可以得到n个特征向量。</p>
+<h2 id="矩阵分解-对角化">矩阵分解-对角化</h2>
+<p>实对称矩阵可以分解为<span class="math inline">\(B=Q^T \Lambda Q\)</span>的形式其中<span class="math inline">\(Q\)</span>是矩阵特征向量经过施密特正交化后的矩阵。而且<span class="math inline">\(A^T B Q=\Lambda\)</span> 其中对角矩阵是对应的特征值，和Q中特征向量的位置对齐。</p>
+<ul>
+<li>计算B对应的特征值、特征向量</li>
+<li>对特征向量进行施密特正交化、标准化（标准化就是除以向量的模）
+<ul>
+<li>注意只有出现重根的时候才需要正交化，否则不需要正交化。</li>
+<li>不同特征值计算得到的特征向量已经正交。</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+Q^TBQ=\Lambda\\
+\]</span></p>
+<p>其中Q对应的是特征向量的组合<span class="math inline">\([p_1,p_2,p_3,...]\)</span>，注意是<span class="math inline">\(Q^T BQ\)</span>不要看PPT那个格式，所以理论上<span class="math inline">\(B=Q\Lambda Q^T\)</span></p>
+<h3 id="一般步骤">一般步骤</h3>
+<ul>
+<li>求特征值；</li>
+<li>求特征向量；</li>
+<li>将同一个特征值所对应的不同特征向量正交化（施密特正交化方法）；</li>
+<li>将所有正交特征向量规范化</li>
+<li>得到 Q与 B。</li>
+</ul>
+<h3 id="施密特正交化">施密特正交化</h3>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/1203675-20181120113537579-1627502064.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p>我们已知a,b要求对应的正交向量B，于是我们可以的得到 <span class="math display">\[
+p+B = b\\
+A= a\\
+B = b-p\\
+\begin{aligned}
+p &amp;= x a \\
+ &amp;= |b|cos(\theta) a \\
+ &amp;= \frac{a \cdot b}{a \cdot a} a\\
+\end{aligned}\\
+B= b- \frac{A^Tb}{A^TA}A\\
+C = c- \frac{A^Tc}{A^TA}A-\frac{B^Tc}{B^TB}B
+\]</span> 最后通过<span class="math inline">\(A=\frac{A}{|A|}\)</span>进行标准化，值得注意的是，没有重根的时候不需要正交化。</p>
+<h2 id="特殊矩阵求逆">特殊矩阵求逆</h2>
+<h3 id="伴随矩阵法">伴随矩阵法</h3>
+<p><span class="math display">\[
+A^{-1} = \frac{A^*}{|A|}\\
+A^{*}=\{A^{*}_{ij}\}\\
+A^{*}_{ij} = (-1)^{i+j}det(A^{-}_{ij})\\
+A^{-}_{ij} 代表除去第i行、第j列剩下来的矩阵
+\]</span></p>
+<h3 id="对角矩阵">对角矩阵</h3>
+<ul>
+<li>对角矩阵的逆矩阵就是对角线的倒数，对角线元素就是对应的特征值。</li>
+<li>这个用伴随矩阵很好证</li>
+</ul>
+<h3 id="二阶矩阵">二阶矩阵</h3>
+<p>如下所示的二阶方阵 <span class="math display">\[
+A=\left(\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right)
+\]</span> 逆矩阵如下 <span class="math display">\[
+A^{-1}=\frac{1}{a d-b c}\left(\begin{array}{cc}
+d &amp; -b \\
+-c &amp; a
+\end{array}\right)
+\]</span> 如果二阶矩阵是对称矩阵 <span class="math display">\[
+A = \left(\begin{array}{cc}
+a &amp; c \\
+c &amp; d
+\end{array}\right)
+\\
+A^{-1}=\frac{1}{|A|}\left(\begin{array}{cc}
+d &amp; -c \\
+-c &amp; a
+\end{array}\right)
+\]</span> 二阶以上的建议用行列变换求解</p>
+<h1 id="随机变量函数的概率分布">随机变量函数的概率分布</h1>
+<h2 id="一维">一维</h2>
+<p><span class="math display">\[
+y = f(x)\\
+g(y) = x\\
+f_y = f_x \frac{\partial{x}}{\partial(y)}=f_x(g(y)) g^{&#39;}(y)
+\]</span></p>
+<p>这个公式来源于 <span class="math display">\[
+\int_{-\infty}^{x} f_x dx =  \int_{R^y} f_x(g(y))  dg(y)
+\]</span> 如果<span class="math inline">\(y=f(x)\)</span>单调，那么我们可以直接求解得到对应的概率分布，但是如果不单调，我们就需要x的积分区间进行划分，划分为若干个单调区间。若干个单调区间的求和才能得到真正的概率密度函数。</p>
+<p>当然类似的方法是<span class="math inline">\(P(Y\le y)\)</span>，其实是殊途同归，都是通过计算概率分布函数，然后求导得到概率密度函数。</p>
+<h2 id="二维">二维</h2>
+<p>所谓的积分换元，用的就是概率恒等式 <span class="math display">\[
+1= \int \int f_{xy}dx dy= \int \int f_{uv} |\frac{\partial(x,y)}{\partial(u,v)}| du dv
+\]</span> 积分区域变换如下 <span class="math display">\[
+R_x \cap  R_y \rightarrow R_u R_v
+\]</span> 这里J取绝对值，是假设进行了区域变换而不是简单的变量替换，变量的关系已经保持一致了。</p>
+<h2 id="雅克比矩阵">雅克比矩阵</h2>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\mathbf{J}=\left[\begin{array}{ccc}
+\frac{\partial \mathbf{f}}{\partial x_{1}} &amp; \cdots &amp; \frac{\partial \mathbf{f}}{\partial x_{n}}
+\end{array}\right]=\left[\begin{array}{ccc}
+\frac{\partial f_{1}}{\partial x_{1}} &amp; \cdots &amp; \frac{\partial f_{1}}{\partial x_{n}} \\
+\vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial f_{m}}{\partial x_{1}} &amp; \cdots &amp; \frac{\partial f_{m}}{\partial x_{n}}
+\end{array}\right]
+\end{aligned}
+\]</span></p>
+<p>雅克比矩阵求导，完全可以看成行列关系。</p>
+<h1 id="函数求导">函数求导</h1>
+<h2 id="常见函数求导">常见函数求导</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">原函数</th>
+<th style="text-align: center;">导数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(x^n\)</span></td>
+<td style="text-align: center;"><span class="math inline">\((n-1)x^{n-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(sinx\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(cosx\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(cosx\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(sinx\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(tanx\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(sec^2 x\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(cotx\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-csc ^2x\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(n^x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(n^x ln(n)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{x}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\frac{1}{x^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(x^{-n}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-n x^{-n-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(log_a(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{xln(a)}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\exp(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\exp(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(arcsin(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{\sqrt{1-x^2}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(arccos(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\frac{1}{\sqrt{1-x^2}}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(arctanx\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{1+x^2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(g(f(x))\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(g^{&#39;}(f(x))f^{&#39;}(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(uv\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(u&#39;v+v&#39;u\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\frac{v}{u}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{v&#39;u-u&#39;v}{u^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\int^{x}_{c}f(u)du\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(f(x)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\int_{g(x)}^{f(x)} h(u)du=H(f(x))-H(g(x))\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(h(f(x))f^{&#39;}(x)-h(g(x))g^{&#39;}(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h1 id="概率1收敛">概率1收敛</h1>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211229154903296.png" alt="image-20211229154903296"><figcaption aria-hidden="true">image-20211229154903296</figcaption>
+</figure>
+<h1 id="复数运算规律">复数运算规律</h1>
+<ul>
+<li>欧拉公式：<span class="math inline">\(e^{i \theta}=\cos \theta+i \sin \theta\)</span></li>
+<li><span class="math inline">\(|z|^2=z\overline{z}\)</span></li>
+<li><ol type="1">
+<li><span class="math inline">\(\overline{z_{1}+z_{2}}=\bar{z}_{1}+\bar{z}_{2}\)</span></li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><span class="math inline">\(\overline{z_{1}-z_{2}}=\bar{z}_{1}-\bar{z}_{2}\)</span></li>
+</ol></li>
+<li><ol start="3" type="1">
+<li><span class="math inline">\(\overline{z_{1} \cdot z_{2}}=\bar{z}_{1} \cdot \bar{z}_{2}\)</span></li>
+</ol></li>
+<li><ol start="4" type="1">
+<li><span class="math inline">\(\overline{z_{1} / z_{2}}=\bar{z}_{1} / \bar{z}_{2}\left(z_{2} \neq 0\right)\)</span></li>
+</ol></li>
+</ul>
+<h1 id="问题">问题</h1>
+<ol type="1">
+<li><p>这参数是啥？</p>
+<p><img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211229141052758.png" alt="image-20211229141052758"> <span class="math display">\[
+\exp(ju^T\xi)=\Phi(u)\\
+\Phi(s)=\exp(js\eta)=\exp(jsa^T\xi)=\exp(j(as)^T\xi)=\Phi(u=as)
+\]</span></p></li>
+<li><p>我哪知道哪个是m?</p>
+<p><img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211229154132478.png" alt="image-20211229154132478"> <span class="math display">\[
+R(t,t+\tau)那么前面那个就是m否则后面那个是m
+\]</span></p></li>
+<li><p>这个怎么理解？</p>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20211231235519754.png" alt="image-20211231235519754"><figcaption aria-hidden="true">image-20211231235519754</figcaption>
+</figure></li>
+<li><p>为啥不考虑减少的部分？</p>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20220101001430337.png" alt="image-20220101001430337"><figcaption aria-hidden="true">image-20220101001430337</figcaption>
+</figure></li>
+<li><p>下面是为啥？</p>
+<figure>
+<img src="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/image-20220101195525962.png" alt="image-20220101195525962"><figcaption aria-hidden="true">image-20220101195525962</figcaption>
+</figure></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"># 清华课程</a>
+              <a href="/blog_cn/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag"># 随机过程</a>
+              <a href="/blog_cn/tags/%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/" rel="tag"># 数学技巧</a>
+          </div>
+
+        
+
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87/" rel="prev" title="条件概率">
+      <i class="fa fa-chevron-left"></i> 条件概率
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">常见分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%88%97%E6%B1%82%E5%92%8C"><span class="nav-number">2.</span> <span class="nav-text">数列求和</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E9%A1%B9%E6%B1%82%E5%92%8C"><span class="nav-number">2.1.</span> <span class="nav-text">有限项求和</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%A9%B7%E7%BA%A7%E6%95%B0%E6%B1%82%E5%92%8C"><span class="nav-number">2.2.</span> <span class="nav-text">无穷级数求和</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80%E4%B8%8E%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F"><span class="nav-number">3.</span> <span class="nav-text">泰勒展开与等价无穷小</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%99%E4%BD%8D%E7%9B%B8%E5%87%8F"><span class="nav-number">4.</span> <span class="nav-text">错位相减</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="nav-number">5.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%8F%98%E6%8D%A2"><span class="nav-number">6.</span> <span class="nav-text">三角函数变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="nav-number">6.1.</span> <span class="nav-text">反三角函数公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%8D%E8%A7%92%E6%94%BE%E7%BC%A9"><span class="nav-number">6.2.</span> <span class="nav-text">倍角放缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E6%95%B0%E5%85%AC%E5%BC%8F"><span class="nav-number">7.</span> <span class="nav-text">组合数公式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E6%95%B0%E8%AE%A1%E7%AE%97"><span class="nav-number">7.1.</span> <span class="nav-text">组合数计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="nav-number">7.2.</span> <span class="nav-text">二项式定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E5%BD%A2%E5%BC%8F"><span class="nav-number">7.2.1.</span> <span class="nav-text">概率形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%BD%A2%E5%BC%8F1"><span class="nav-number">7.2.2.</span> <span class="nav-text">特殊形式1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E6%B1%82%E8%A7%A3"><span class="nav-number">8.</span> <span class="nav-text">线性方程组求解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-number">8.1.</span> <span class="nav-text">齐次线性方程组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-number">8.2.</span> <span class="nav-text">非齐次线性方程组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97"><span class="nav-number">9.</span> <span class="nav-text">矩阵计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%80%A7%E8%B4%A8"><span class="nav-number">9.1.</span> <span class="nav-text">行列式计算性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E6%80%A7%E8%B4%A8"><span class="nav-number">9.2.</span> <span class="nav-text">对称矩阵性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%86%E7%9F%A9%E9%98%B5%E6%80%A7%E8%B4%A8"><span class="nav-number">9.3.</span> <span class="nav-text">逆矩阵性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5%E6%80%A7%E8%B4%A8"><span class="nav-number">9.4.</span> <span class="nav-text">正交矩阵性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="nav-number">9.5.</span> <span class="nav-text">特征值与特征向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E5%80%BC"><span class="nav-number">9.5.1.</span> <span class="nav-text">特征值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="nav-number">9.5.2.</span> <span class="nav-text">特征向量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3-%E5%AF%B9%E8%A7%92%E5%8C%96"><span class="nav-number">9.6.</span> <span class="nav-text">矩阵分解-对角化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">9.6.1.</span> <span class="nav-text">一般步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%BD%E5%AF%86%E7%89%B9%E6%AD%A3%E4%BA%A4%E5%8C%96"><span class="nav-number">9.6.2.</span> <span class="nav-text">施密特正交化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%9F%A9%E9%98%B5%E6%B1%82%E9%80%86"><span class="nav-number">9.7.</span> <span class="nav-text">特殊矩阵求逆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%B4%E9%9A%8F%E7%9F%A9%E9%98%B5%E6%B3%95"><span class="nav-number">9.7.1.</span> <span class="nav-text">伴随矩阵法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%A7%92%E7%9F%A9%E9%98%B5"><span class="nav-number">9.7.2.</span> <span class="nav-text">对角矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E7%9F%A9%E9%98%B5"><span class="nav-number">9.7.3.</span> <span class="nav-text">二阶矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%87%BD%E6%95%B0%E7%9A%84%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83"><span class="nav-number">10.</span> <span class="nav-text">随机变量函数的概率分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4"><span class="nav-number">10.1.</span> <span class="nav-text">一维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4"><span class="nav-number">10.2.</span> <span class="nav-text">二维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%85%E5%85%8B%E6%AF%94%E7%9F%A9%E9%98%B5"><span class="nav-number">10.3.</span> <span class="nav-text">雅克比矩阵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC"><span class="nav-number">11.</span> <span class="nav-text">函数求导</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC"><span class="nav-number">11.1.</span> <span class="nav-text">常见函数求导</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E7%8E%871%E6%94%B6%E6%95%9B"><span class="nav-number">12.</span> <span class="nav-text">概率1收敛</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E8%BF%90%E7%AE%97%E8%A7%84%E5%BE%8B"><span class="nav-number">13.</span> <span class="nav-text">复数运算规律</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">14.</span> <span class="nav-text">问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="范嘉骏"
+      src="/blog_cn/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">范嘉骏</p>
+  <div class="site-description" itemprop="description">Nothing is impossible unless you give up early!</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog_cn/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog_cn/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog_cn/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiajunfanthu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiajunfanthu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:fanjj21@mails.tsinghua.edu.cn" title="E-Mail → mailto:fanjj21@mails.tsinghua.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5vtx00lrmp4&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+
+
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=472045267&auto=1&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">范嘉骏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">86k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:18</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog_cn/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/blog_cn/lib/velocity/velocity.min.js"></script>
+  <script src="/blog_cn/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog_cn/js/utils.js"></script>
+
+<script src="/blog_cn/js/motion.js"></script>
+
+
+<script src="/blog_cn/js/schemes/muse.js"></script>
+
+
+<script src="/blog_cn/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog_cn/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/blog_cn/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: 'unset',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Ge52km1d442Yeko4hMwPBuMQ-gzGzoHsz',
+      appKey     : 'OWEnRLKjLr5pVzeW3Jo50yGQ',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+<script type="text/javascript"
+color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+<script type="text/javascript" src="js/love.js"></script>
+
+<script src="live2d-widget/autoload.js"></script>
+
+
+</body>
+
+</html>
