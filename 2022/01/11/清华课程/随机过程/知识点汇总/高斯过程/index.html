@@ -261,14 +261,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.5k</span>
+              <span>7.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -280,249 +280,305 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这边文章中我们给出期末复习第五章的内容，主要就是高斯过程。<br><a id="more"></a></p>
-<h1 id="常见定义"><a href="#常见定义" class="headerlink" title="常见定义"></a>常见定义</h1><div class="table-container">
+        <p>这边文章中我们给出期末复习第五章的内容，主要就是高斯过程。 <a id="more"></a></p>
+<h1 id="常见定义">常见定义</h1>
 <table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">基本概念</th>
-<th style="text-align:center">定义公式</th>
-<th style="text-align:center">注意事项</th>
+<tr class="header">
+<th style="text-align: center;">基本概念</th>
+<th style="text-align: center;">定义公式</th>
+<th style="text-align: center;">注意事项</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">高斯过程</td>
-<td style="text-align:center">$\Phi\left(t<em>{1}, \ldots, t</em>{n}\right)=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)$</td>
-<td style="text-align:center">有限维分布全是高斯</td>
+<tr class="odd">
+<td style="text-align: center;">高斯过程</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi\left(t_{1}, \ldots, t_{n}\right)=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)\)</span></td>
+<td style="text-align: center;">有限维分布全是高斯</td>
 </tr>
-<tr>
-<td style="text-align:center">一维高斯分布</td>
-<td style="text-align:center">$\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$</td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">一维高斯分布</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(x-\mu)^2}{2\sigma^2})\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">一维高斯分布特征函数</td>
-<td style="text-align:center">$\Phi(t)=E[\exp(jt\xi)]=\exp(jt\mu-\frac{t^2\sigma^2}{2})$</td>
-<td style="text-align:center"><strong>一定要注意1维和N维的特征函数公式是不一样的</strong></td>
+<tr class="odd">
+<td style="text-align: center;">一维高斯分布特征函数</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi(t)=E[\exp(jt\xi)]=\exp(jt\mu-\frac{t^2\sigma^2}{2})\)</span></td>
+<td style="text-align: center;"><strong>一定要注意1维和N维的特征函数公式是不一样的</strong></td>
 </tr>
-<tr>
-<td style="text-align:center">有限维高斯特征函数</td>
-<td style="text-align:center">$\Phi\left(t<em>{1}, \ldots, t</em>{n}\right)=E[\exp(jt^T\xi)]=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)$</td>
-<td style="text-align:center">0均值时得到$\Phi=\exp(-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t})$ 这个很常用;另外$\exp \left(\sum<em>{k} j t</em>{k} \mu<em>{k}-\frac{1}{2} \sum</em>{k} \sum<em>{i} t</em>{k} t<em>{i} b</em>{k i}\right)$也很常用</td>
+<tr class="even">
+<td style="text-align: center;">有限维高斯特征函数</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi\left(t_{1}, \ldots, t_{n}\right)=E[\exp(jt^T\xi)]=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)\)</span></td>
+<td style="text-align: center;">0均值时得到<span class="math inline">\(\Phi=\exp(-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t})\)</span> 这个很常用;另外<span class="math inline">\(\exp \left(\sum_{k} j t_{k} \mu_{k}-\frac{1}{2} \sum_{k} \sum_{i} t_{k} t_{i} b_{k i}\right)\)</span>也很常用</td>
 </tr>
-<tr>
-<td style="text-align:center">有限维联合高斯概率密度函数</td>
-<td style="text-align:center">$\frac{1}{(2 \pi)^{\frac{n}{2}}\mathbf{</td>
-<td style="text-align:center">B</td>
-<td>}^{\frac{1}{2}}} \exp \left[-\frac{1}{2}(\mathbf{x}-\mu)^{T} \mathbf{B}^{-1}(\mathbf{x}-\mu)\right]  $</td>
-<td></td>
+<tr class="odd">
+<td style="text-align: center;">有限维联合高斯概率密度函数</td>
+<td style="text-align: center;">$ $</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">高斯分布线性变换</td>
-<td style="text-align:center">$\eta= C\xi$</td>
-<td style="text-align:center">高斯分布做线性变换仍是高斯</td>
+<tr class="even">
+<td style="text-align: center;">高斯分布线性变换</td>
+<td style="text-align: center;"><span class="math inline">\(\eta= C\xi\)</span></td>
+<td style="text-align: center;">高斯分布做线性变换仍是高斯</td>
 </tr>
-<tr>
-<td style="text-align:center">高斯分布的边缘分布的特征函数</td>
-<td style="text-align:center">$\Phi\left(t<em>{1}, \ldots, t</em>{k},0,0,0\right)$</td>
-<td style="text-align:center">所谓的边缘分布仅仅在特征函数中将其对应的参数置成0就好了。可以看出仍是高斯</td>
+<tr class="odd">
+<td style="text-align: center;">高斯分布的边缘分布的特征函数</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi\left(t_{1}, \ldots, t_{k},0,0,0\right)\)</span></td>
+<td style="text-align: center;">所谓的边缘分布仅仅在特征函数中将其对应的参数置成0就好了。可以看出仍是高斯</td>
 </tr>
-<tr>
-<td style="text-align:center">特征函数计算各阶距</td>
-<td style="text-align:center">$E \xi<em>{1}^{k</em>{1}} \ldots \xi<em>{n}^{k</em>{n}}=\left.j^{-\sum<em>{i} k</em>{i}} \cdot \frac{\partial^{k<em>{1}+\cdots+k</em>{n}} \Phi\left(t<em>{i}, \ldots, t</em>{n}\right)}{\partial t<em>{1}^{k</em>{1}} \ldots \partial t<em>{n}^{k</em>{n}}}\right</td>
-<td style="text-align:center"><em>{t</em>{1}=\cdots=t_{n}=0}$</td>
-<td>特别容易忽略这个j</td>
+<tr class="even">
+<td style="text-align: center;">特征函数计算各阶距</td>
+<td style="text-align: center;"><span class="math inline">\(E \xi_{1}^{k_{1}} \ldots \xi_{n}^{k_{n}}=\left.j^{-\sum_{i} k_{i}} \cdot \frac{\partial^{k_{1}+\cdots+k_{n}} \Phi\left(t_{i}, \ldots, t_{n}\right)}{\partial t_{1}^{k_{1}} \ldots \partial t_{n}^{k_{n}}}\right|_{t_{1}=\cdots=t_{n}=0}\)</span></td>
+<td style="text-align: center;">特别容易忽略这个j</td>
 </tr>
-<tr>
-<td style="text-align:center">随机变量独立</td>
-<td style="text-align:center">$\Phi(t,u)=\Phi(t)\Phi(u)$</td>
-<td style="text-align:center">当然$f_{xy}=f_x f_y$更经典</td>
+<tr class="odd">
+<td style="text-align: center;">随机变量独立</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi(t,u)=\Phi(t)\Phi(u)\)</span></td>
+<td style="text-align: center;">当然<span class="math inline">\(f_{xy}=f_x f_y\)</span>更经典</td>
 </tr>
-<tr>
-<td style="text-align:center">随机变量不线性相关</td>
-<td style="text-align:center">$c<em>{ij}=E\left(X-\mu</em>{X}\right)\left(Y-\mu_{Y}\right)=0$</td>
-<td style="text-align:center">协方差矩阵为对角矩阵</td>
+<tr class="even">
+<td style="text-align: center;">随机变量不线性相关</td>
+<td style="text-align: center;"><span class="math inline">\(c_{ij}=E\left(X-\mu_{X}\right)\left(Y-\mu_{Y}\right)=0\)</span></td>
+<td style="text-align: center;">协方差矩阵为对角矩阵</td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="协方差矩阵B"><a href="#协方差矩阵B" class="headerlink" title="协方差矩阵B"></a>协方差矩阵B</h2><script type="math/tex; mode=display">
+<h2 id="协方差矩阵b">协方差矩阵B</h2>
+<p><span class="math display">\[
 B={c_{ij}}\\
 c_{ij} = E\left(\xi_{i}-\mu_{i}\right)\left(\xi_{k}-\mu_{k}\right) \\
-c_{ii} =E[(\xi_i-\mu_i)^2]=D(\xi_i)</script><p>所以协方差矩阵的对角线全部都是方差，而退化到一维情况的时候，仅剩下方差。协方差为0，说明两个随机变量不线性相关。因为线性相关系数$\rho<em>{ij}=\frac{c</em>{ij}}{\sigma_i\sigma_j}$，协方差矩阵具有以下性质</p>
+c_{ii} =E[(\xi_i-\mu_i)^2]=D(\xi_i)
+\]</span></p>
+<p>所以协方差矩阵的对角线全部都是方差，而退化到一维情况的时候，仅剩下方差。协方差为0，说明两个随机变量不线性相关。因为线性相关系数<span class="math inline">\(\rho_{ij}=\frac{c_{ij}}{\sigma_i\sigma_j}\)</span>，协方差矩阵具有以下性质</p>
 <ul>
 <li>正定</li>
 <li>对称</li>
 <li>可以进行对角化分解</li>
 </ul>
-<h1 id="线性变换的特征函数"><a href="#线性变换的特征函数" class="headerlink" title="线性变换的特征函数"></a>线性变换的特征函数</h1><h2 id="线性组合"><a href="#线性组合" class="headerlink" title="线性组合"></a>线性组合</h2><script type="math/tex; mode=display">
-\eta=\sum_{k} a_{k} \xi_{k}=\mathbf{a}^{T} \xi</script><script type="math/tex; mode=display">
+<h1 id="线性变换的特征函数">线性变换的特征函数</h1>
+<h2 id="线性组合">线性组合</h2>
+<p><span class="math display">\[
+\eta=\sum_{k} a_{k} \xi_{k}=\mathbf{a}^{T} \xi
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
- & \Phi(\mathbf{t})=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)=E e^{j \mathbf{t}^{T} \xi} \\
-\Phi_{\eta}(u)=& E e^{j u \eta}=E e^{j u\left(\mathbf{a}^{T} \xi\right)}=E \exp \left[j(u \mathbf{a})^{T} \xi\right] \\
-=& \exp \left[j(u \mathbf{a})^{T} \mu-\frac{1}{2}(u \mathbf{a})^{T} \mathbf{B}(u \mathbf{a})\right] \\
-=& \exp \left[j u\left(\mathbf{a}^{T} \mu\right)-\frac{1}{2} u^{2}\left(\mathbf{a}^{T} \mathbf{B a}\right)\right] \\
-=& \exp \left[j u E \eta-\frac{1}{2} u^{2} D \eta\right], \quad \text { 故 } \eta \text { 正态. }
-\end{aligned}</script><p>这里巧妙的运用了$u$作为一个常数，其转置等于自身。而且这里需要了解特征函数真正的定义，一维和多维的定义是不一样的。</p>
-<h2 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h2><script type="math/tex; mode=display">
-\xi \rightarrow \eta, \eta=\mathbf{C} \xi, \mathbf{C}=\left(c_{k i}\right)_{m \times n}</script><p>线性变换后仍是高斯</p>
-<script type="math/tex; mode=display">
+ &amp; \Phi(\mathbf{t})=\exp \left(j \mathbf{t}^{T} \mu-\frac{1}{2} \mathbf{t}^{T} \mathbf{B} \mathbf{t}\right)=E e^{j \mathbf{t}^{T} \xi} \\
+\Phi_{\eta}(u)=&amp; E e^{j u \eta}=E e^{j u\left(\mathbf{a}^{T} \xi\right)}=E \exp \left[j(u \mathbf{a})^{T} \xi\right] \\
+=&amp; \exp \left[j(u \mathbf{a})^{T} \mu-\frac{1}{2}(u \mathbf{a})^{T} \mathbf{B}(u \mathbf{a})\right] \\
+=&amp; \exp \left[j u\left(\mathbf{a}^{T} \mu\right)-\frac{1}{2} u^{2}\left(\mathbf{a}^{T} \mathbf{B a}\right)\right] \\
+=&amp; \exp \left[j u E \eta-\frac{1}{2} u^{2} D \eta\right], \quad \text { 故 } \eta \text { 正态. }
+\end{aligned}
+\]</span></p>
+<p>这里巧妙的运用了<span class="math inline">\(u\)</span>作为一个常数，其转置等于自身。而且这里需要了解特征函数真正的定义，一维和多维的定义是不一样的。</p>
+<h2 id="线性变换">线性变换</h2>
+<p><span class="math display">\[
+\xi \rightarrow \eta, \eta=\mathbf{C} \xi, \mathbf{C}=\left(c_{k i}\right)_{m \times n}
+\]</span></p>
+<p>线性变换后仍是高斯 <span class="math display">\[
 \begin{aligned}
-\Phi_{\eta}\left(t_{1}, \ldots, t_{m}\right) &=E \exp \left(j \mathbf{t}^{T} \eta\right)=E \exp \left(j \mathbf{t}^{T} \mathbf{C} \xi\right) \\
-&=E \exp \left[j\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \xi\right] \\
-&=\exp \left[j\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \mu-\frac{1}{2}\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \mathbf{B}\left(\mathbf{C}^{T} \mathbf{t}\right)\right] \\
-&=\exp \left[j \mathbf{t}^{T}(\mathbf{C} \mu)-\frac{1}{2} \mathbf{t}^{T}\left(\mathbf{C B C}^{T}\right) \mathbf{t}\right]
-\end{aligned}</script><p>简单来说就是直接带入特征函数公式，然后得到类似的结果就好了</p>
-<h1 id="高斯过程过非线性系统"><a href="#高斯过程过非线性系统" class="headerlink" title="高斯过程过非线性系统"></a>高斯过程过非线性系统</h1><h2 id="平方器"><a href="#平方器" class="headerlink" title="平方器"></a>平方器</h2><p>输入假设为零均值，平稳高斯。</p>
-<script type="math/tex; mode=display">
-Y(t)=X(t)^2,X(t)\sim N(0,R(0))</script><h3 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h3><script type="math/tex; mode=display">
-E(Y(t))=E(X^2(t))=R(0)</script><h3 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h3><script type="math/tex; mode=display">
+\Phi_{\eta}\left(t_{1}, \ldots, t_{m}\right) &amp;=E \exp \left(j \mathbf{t}^{T} \eta\right)=E \exp \left(j \mathbf{t}^{T} \mathbf{C} \xi\right) \\
+&amp;=E \exp \left[j\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \xi\right] \\
+&amp;=\exp \left[j\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \mu-\frac{1}{2}\left(\mathbf{C}^{T} \mathbf{t}\right)^{T} \mathbf{B}\left(\mathbf{C}^{T} \mathbf{t}\right)\right] \\
+&amp;=\exp \left[j \mathbf{t}^{T}(\mathbf{C} \mu)-\frac{1}{2} \mathbf{t}^{T}\left(\mathbf{C B C}^{T}\right) \mathbf{t}\right]
+\end{aligned}
+\]</span> 简单来说就是直接带入特征函数公式，然后得到类似的结果就好了</p>
+<h1 id="高斯过程过非线性系统">高斯过程过非线性系统</h1>
+<h2 id="平方器">平方器</h2>
+<p>输入假设为零均值，平稳高斯。 <span class="math display">\[
+Y(t)=X(t)^2,X(t)\sim N(0,R(0))
+\]</span></p>
+<h3 id="均值">均值</h3>
+<p><span class="math display">\[
+E(Y(t))=E(X^2(t))=R(0)
+\]</span></p>
+<h3 id="相关函数">相关函数</h3>
+<p><span class="math display">\[
 R_Y(t,t+\tau)=E[Y(t)Y(t+\tau)]\\
 = E[X^2(t)X^2(t+\tau)]\\
 =E[\xi_{t_1}^2\xi_{t_2}^2]\\
 =j^{-4}\frac{\Phi(u_1,u_2)}{d^2u_1d^2u_2}|_{u_1=u_2=0} \\
 =R^2(0)+2R^2(\tau)\\
-R_Y(0)=3R_X^2(0)\le \infty</script><p>所以Y是宽平稳过程</p>
-<h3 id="分布函数"><a href="#分布函数" class="headerlink" title="分布函数"></a>分布函数</h3><script type="math/tex; mode=display">
+R_Y(0)=3R_X^2(0)\le \infty
+\]</span></p>
+<p>所以Y是宽平稳过程</p>
+<h3 id="分布函数">分布函数</h3>
+<p><span class="math display">\[
 \begin{aligned}
-\text { 方法一: . 换元 } y &=x^{2}, x=\sqrt{y},|J|=\frac{1}{2 \sqrt{y}}, \\
-f(y) &=\frac{1}{\sqrt{2 \pi} \sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \cdot \frac{1}{2 \sqrt{y}} \cdot 2 \cdot I_{\{y \geq 0\}} \\
-&=\frac{1}{\sqrt{2 \pi y} \sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \cdot I_{\{y \geq 0\}} .
-\end{aligned}</script><p>我建议用方法2</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-F_{Y}(y) &=P\{Y \leq y\}=P\left\{X^{2} \leq y\right\} \\
-&=\left\{\begin{array}{cl}
-P(-\sqrt{y} \leq X \leq \sqrt{y}) \quad, & y \geq 0 \\
-0 & , \quad y<0
+\text { 方法一: . 换元 } y &amp;=x^{2}, x=\sqrt{y},|J|=\frac{1}{2 \sqrt{y}}, \\
+f(y) &amp;=\frac{1}{\sqrt{2 \pi} \sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \cdot \frac{1}{2 \sqrt{y}} \cdot 2 \cdot I_{\{y \geq 0\}} \\
+&amp;=\frac{1}{\sqrt{2 \pi y} \sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \cdot I_{\{y \geq 0\}} .
+\end{aligned}
+\]</span></p>
+我建议用方法2 $$
+<span class="math display">\[\begin{aligned}
+F_{Y}(y) &amp;=P\{Y \leq y\}=P\left\{X^{2} \leq y\right\} \\
+&amp;=\left\{\begin{array}{cl}
+P(-\sqrt{y} \leq X \leq \sqrt{y}) \quad, &amp; y \geq 0 \\
+0 &amp; , \quad y&lt;0
 \end{array}\right.\\
 
-&=\left\{\begin{array}{cl}
-2 P\{0 \leq X \leq \sqrt{y}\}, & y \geq 0 \\
-0, & y<0
+&amp;=\left\{\begin{array}{cl}
+2 P\{0 \leq X \leq \sqrt{y}\}, &amp; y \geq 0 \\
+0, &amp; y&lt;0
 \end{array} 
 =\left\{\begin{array}{cl}
-2 F(\sqrt{y})-1, & y \geq 0 \\
-0, & y<0
+2 F(\sqrt{y})-1, &amp; y \geq 0 \\
+0, &amp; y&lt;0
 \end{array}\right.\right.
-\end{aligned}</script><script type="math/tex; mode=display">
+\end{aligned}\]</span>
+<p>$$</p>
+<p><span class="math display">\[
 \begin{aligned}
-f_{Y}(y) &=\frac{d F_{Y}(y)}{d y}=\left\{\begin{array}{cc}
-2 F^{\prime}(\sqrt{y}) \cdot \frac{d \sqrt{y}}{d y} & , \quad y \geq 0 \\
-0 & , \quad y<0
+f_{Y}(y) &amp;=\frac{d F_{Y}(y)}{d y}=\left\{\begin{array}{cc}
+2 F^{\prime}(\sqrt{y}) \cdot \frac{d \sqrt{y}}{d y} &amp; , \quad y \geq 0 \\
+0 &amp; , \quad y&lt;0
 \end{array}\right.\\
-&=\left\{\begin{array}{cc}
+&amp;=\left\{\begin{array}{cc}
 \frac{f(\sqrt{y})}{\sqrt{y}} \quad, \quad y \geq 0 \\
-0 \quad, \quad y<0
+0 \quad, \quad y&lt;0
 \end{array}\right.\\
-&=\left\{\begin{array}{cl}
-\frac{1}{\sqrt{2 \pi y }\sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \quad, & y \geq 0 \\
-0 \quad & , y<0
+&amp;=\left\{\begin{array}{cl}
+\frac{1}{\sqrt{2 \pi y }\sigma} \exp \left(-\frac{y}{2 \sigma^{2}}\right) \quad, &amp; y \geq 0 \\
+0 \quad &amp; , y&lt;0
 \end{array} .\right.
-\end{aligned}</script><h2 id="限幅器"><a href="#限幅器" class="headerlink" title="限幅器"></a>限幅器</h2><script type="math/tex; mode=display">
-Y(t)= \begin{cases}1 & X(t) \geq 0 \\ -1 & X(t)<0\end{cases},X\sim  N(0,R(0))</script><h3 id="均值-1"><a href="#均值-1" class="headerlink" title="均值"></a>均值</h3><script type="math/tex; mode=display">
-E(Y(t))=P(X\ge0)-P(X<0)\\
-=0对称性\\</script><h3 id="相关函数-1"><a href="#相关函数-1" class="headerlink" title="相关函数"></a>相关函数</h3><script type="math/tex; mode=display">
+\end{aligned}
+\]</span></p>
+<h2 id="限幅器">限幅器</h2>
+<p><span class="math display">\[
+Y(t)= \begin{cases}1 &amp; X(t) \geq 0 \\ -1 &amp; X(t)&lt;0\end{cases},X\sim  N(0,R(0))
+\]</span></p>
+<h3 id="均值-1">均值</h3>
+<p><span class="math display">\[
+E(Y(t))=P(X\ge0)-P(X&lt;0)\\
+=0对称性\\
+\]</span></p>
+<h3 id="相关函数-1">相关函数</h3>
+<p><span class="math display">\[
 E(Y(t)Y(t+\tau))=P(X(t)X(t+
-\tau)>=0)-P(X(t)X(t+
-\tau)<0)\\
-=1-2P(X(t)X(t+\tau)<0)\\
-=1-2\int \int_{x1x2<0} f_{x1x2}dx1dx2</script><script type="math/tex; mode=display">
-f_{x1x2}=\frac{1}{2\pi|B|^{\frac{1}{2}}} \exp(-\frac{1}{2}x^TB^{-1}x)</script><p>其中B如下</p>
-<script type="math/tex; mode=display">
-B=\begin{Vmatrix} R(0) & R(\tau)\\ R(\tau) & R(0) \end{Vmatrix}</script><p>于是我们可以得到$|B|^{\frac{1}{2}}=\sqrt{R^2(0)-R^2(\tau)}$  而且</p>
-<script type="math/tex; mode=display">
-B^{-1}=\frac{1}{R^2(0)-R^2(\tau)}\begin{Vmatrix} R(0) & -R(\tau)\\ -R(\tau) & R(0) \end{Vmatrix}</script><p>于是我们可以得到相关函数如下，我们记$w=\sqrt{R^2(0)-R^2(\tau)}$ </p>
-<script type="math/tex; mode=display">
-R_Y(t,t+\tau)=1-2\int \int_{x1x2<0} f_{x1x2}dx1dx2 \\
-= 1- 2\int \int_{x1x2<0}\frac{1}{2\pi w} \exp(-\frac{1}{2w^2}[R[0]x_1^2+R[0]x_2^2-2x_1x_2R[\tau]]) dx_1dx_2\\
+\tau)&gt;=0)-P(X(t)X(t+
+\tau)&lt;0)\\
+=1-2P(X(t)X(t+\tau)&lt;0)\\
+=1-2\int \int_{x1x2&lt;0} f_{x1x2}dx1dx2
+\]</span></p>
+<p><span class="math display">\[
+f_{x1x2}=\frac{1}{2\pi|B|^{\frac{1}{2}}} \exp(-\frac{1}{2}x^TB^{-1}x)
+\]</span></p>
+<p>其中B如下 <span class="math display">\[
+B=\begin{Vmatrix} R(0) &amp; R(\tau)\\ R(\tau) &amp; R(0) \end{Vmatrix}
+\]</span> 于是我们可以得到<span class="math inline">\(|B|^{\frac{1}{2}}=\sqrt{R^2(0)-R^2(\tau)}\)</span> 而且 <span class="math display">\[
+B^{-1}=\frac{1}{R^2(0)-R^2(\tau)}\begin{Vmatrix} R(0) &amp; -R(\tau)\\ -R(\tau) &amp; R(0) \end{Vmatrix}
+\]</span> 于是我们可以得到相关函数如下，我们记<span class="math inline">\(w=\sqrt{R^2(0)-R^2(\tau)}\)</span> <span class="math display">\[
+R_Y(t,t+\tau)=1-2\int \int_{x1x2&lt;0} f_{x1x2}dx1dx2 \\
+= 1- 2\int \int_{x1x2&lt;0}\frac{1}{2\pi w} \exp(-\frac{1}{2w^2}[R[0]x_1^2+R[0]x_2^2-2x_1x_2R[\tau]]) dx_1dx_2\\
 = 1-2\frac{\arccos r}{\pi}\\
-= \frac{2}{\pi} \arcsin r</script><p>可以看出仍然是一个严平稳的随机过程，其中$r=\frac{R(\tau)}{R(0)}$称为线性相关系数$R_Y(0)=\frac{2}{\pi} \arcsin 1=1&lt;\infty$</p>
-<h3 id="分布函数-1"><a href="#分布函数-1" class="headerlink" title="分布函数"></a>分布函数</h3><p>并没有</p>
-<h1 id="错位相减"><a href="#错位相减" class="headerlink" title="错位相减"></a>错位相减</h1><script type="math/tex; mode=display">
+= \frac{2}{\pi} \arcsin r
+\]</span> 可以看出仍然是一个严平稳的随机过程，其中<span class="math inline">\(r=\frac{R(\tau)}{R(0)}\)</span>称为线性相关系数<span class="math inline">\(R_Y(0)=\frac{2}{\pi} \arcsin 1=1&lt;\infty\)</span></p>
+<h3 id="分布函数-1">分布函数</h3>
+<p>并没有</p>
+<h1 id="错位相减">错位相减</h1>
+<p><span class="math display">\[
 S_n= \sum_{i=1}^n a_ib_i\\
 a_{n+1}-a_{n}=d\\
-\frac{b_{n+1}}{b_n}=q\\</script><script type="math/tex; mode=display">
+\frac{b_{n+1}}{b_n}=q\\
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-q S_n&=\sum_{i=1}^n a_i qb_i\\
-&= \sum_{i=1}^n a_i b_{i+1}\\
-&=\sum_{k=2}^{n+1} a_{k-1} b_{k}\\
-&= a_nb_{n+1}+\sum_{k=2}^{n} a_{k-1} b_{k}\\
-\end{aligned}\\</script><script type="math/tex; mode=display">
+q S_n&amp;=\sum_{i=1}^n a_i qb_i\\
+&amp;= \sum_{i=1}^n a_i b_{i+1}\\
+&amp;=\sum_{k=2}^{n+1} a_{k-1} b_{k}\\
+&amp;= a_nb_{n+1}+\sum_{k=2}^{n} a_{k-1} b_{k}\\
+\end{aligned}\\
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
-S_n-qS_n&=(1-q)S_n\\
-&=a_1b_1+\sum_{i=2}^n a_ib_i - \sum_{k=2}^{n} a_{k-1} b_{k} - a_nb_{n+1}\\
-&=a_1b_1 - a_nb_{n+1} + \sum_{i=2}^n d b_i\\
-&=a_1b_1 -a_nb_{n+1}+db_2 \frac{1-q^{n-1}}{1-q}\\
-S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
-\end{aligned}</script><h1 id="常见结论"><a href="#常见结论" class="headerlink" title="常见结论"></a>常见结论</h1><div class="table-container">
+S_n-qS_n&amp;=(1-q)S_n\\
+&amp;=a_1b_1+\sum_{i=2}^n a_ib_i - \sum_{k=2}^{n} a_{k-1} b_{k} - a_nb_{n+1}\\
+&amp;=a_1b_1 - a_nb_{n+1} + \sum_{i=2}^n d b_i\\
+&amp;=a_1b_1 -a_nb_{n+1}+db_2 \frac{1-q^{n-1}}{1-q}\\
+S_n&amp;=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
+\end{aligned}
+\]</span></p>
+<h1 id="常见结论">常见结论</h1>
 <table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 45%">
+<col style="width: 36%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">结论</th>
-<th style="text-align:center">公式</th>
-<th style="text-align:center">解释</th>
+<tr class="header">
+<th style="text-align: center;">结论</th>
+<th style="text-align: center;">公式</th>
+<th style="text-align: center;">解释</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">高斯分布线性变换仍然高斯</td>
-<td style="text-align:center">$\xi \rightarrow \eta, \eta=\mathbf{C} \xi, \mathbf{C}=\left(c<em>{k i}\right)</em>{m \times n}$</td>
-<td style="text-align:center">n 维-&gt;m维; $\mu<em>\eta=C\mu,B</em>\eta=C^TBC$</td>
+<tr class="odd">
+<td style="text-align: center;">高斯分布线性变换仍然高斯</td>
+<td style="text-align: center;"><span class="math inline">\(\xi \rightarrow \eta, \eta=\mathbf{C} \xi, \mathbf{C}=\left(c_{k i}\right)_{m \times n}\)</span></td>
+<td style="text-align: center;">n 维-&gt;m维; <span class="math inline">\(\mu_\eta=C\mu,B_\eta=C^TBC\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">高斯分布线性组合仍然高斯</td>
-<td style="text-align:center">$\eta=\sum<em>{k} a</em>{k} \xi_{k}=\mathbf{a}^{T} \xi$</td>
-<td style="text-align:center">n维-&gt;一维;$\mu<em>\eta=a^T\mu,B</em>\eta=a^TBa$</td>
+<tr class="even">
+<td style="text-align: center;">高斯分布线性组合仍然高斯</td>
+<td style="text-align: center;"><span class="math inline">\(\eta=\sum_{k} a_{k} \xi_{k}=\mathbf{a}^{T} \xi\)</span></td>
+<td style="text-align: center;">n维-&gt;一维;<span class="math inline">\(\mu_\eta=a^T\mu,B_\eta=a^TBa\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">高斯分布边缘分布仍然高斯</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">高斯分布分量仍然高斯;均值和方差就是把对应行列置0</td>
+<tr class="odd">
+<td style="text-align: center;">高斯分布边缘分布仍然高斯</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">高斯分布分量仍然高斯;均值和方差就是把对应行列置0</td>
 </tr>
-<tr>
-<td style="text-align:center">高斯分布正交化</td>
-<td style="text-align:center">$\text { 存在正交矩阵 } \mathbf{Q}, \eta=Q \xi \text {, 使得 } \eta<em>{1}, \ldots, \eta</em>{n} \text { 相互独立}$</td>
-<td style="text-align:center">协方差矩阵对角化等价于高斯分布正交化</td>
+<tr class="even">
+<td style="text-align: center;">高斯分布正交化</td>
+<td style="text-align: center;"><span class="math inline">\(\text { 存在正交矩阵 } \mathbf{Q}, \eta=Q \xi \text {, 使得 } \eta_{1}, \ldots, \eta_{n} \text { 相互独立}\)</span></td>
+<td style="text-align: center;">协方差矩阵对角化等价于高斯分布正交化</td>
 </tr>
-<tr>
-<td style="text-align:center">高斯过程宽平稳等于严平稳</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">高斯过程宽平稳等于严平稳</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h2 id="宽平稳-严平稳"><a href="#宽平稳-严平稳" class="headerlink" title="宽平稳==严平稳"></a>宽平稳==严平稳</h2><script type="math/tex; mode=display">
+<h2 id="宽平稳严平稳">宽平稳==严平稳</h2>
+<p><span class="math display">\[
 \begin{aligned}
-\{\xi(t)\} \text { 宽平稳 } & \Leftrightarrow \mu_{t_{k}}=\mu, b_{k i}=b\left(t_{k}-t_{i}\right) \\
-\Leftrightarrow \Phi\left(u_{1}, \ldots, u_{n} ;\right.&\left.t_{1}, \ldots, t_{n}\right)=\exp \left\{\sum_{k} j u_{k} \mu-\frac{1}{2} \sum_{k} \sum_{i} u_{k} u_{i} b\left(t_{k}-t_{i}\right)\right\} \\
-& \Phi\left(u_{1}, \ldots, u_{n} ; t_{1}+h, \ldots, t_{n}+h\right) \\
-=& \exp \left\{\sum_{k} j u_{k} \mu-\frac{1}{2} \sum_{k} \sum_{i} u_{k} u_{i} b\left(t_{k}-t_{i}\right)\right\}
-\end{aligned}</script><p>简单来说就是因为高斯过程完全由均值和相关函数确定。</p>
-<h2 id="研究汇总"><a href="#研究汇总" class="headerlink" title="研究汇总"></a>研究汇总</h2><ul>
-<li>高斯过程主要研究以下几个内容<ul>
-<li>任意n个时刻的联合高斯分布的计算（有限维分布）<ul>
+\{\xi(t)\} \text { 宽平稳 } &amp; \Leftrightarrow \mu_{t_{k}}=\mu, b_{k i}=b\left(t_{k}-t_{i}\right) \\
+\Leftrightarrow \Phi\left(u_{1}, \ldots, u_{n} ;\right.&amp;\left.t_{1}, \ldots, t_{n}\right)=\exp \left\{\sum_{k} j u_{k} \mu-\frac{1}{2} \sum_{k} \sum_{i} u_{k} u_{i} b\left(t_{k}-t_{i}\right)\right\} \\
+&amp; \Phi\left(u_{1}, \ldots, u_{n} ; t_{1}+h, \ldots, t_{n}+h\right) \\
+=&amp; \exp \left\{\sum_{k} j u_{k} \mu-\frac{1}{2} \sum_{k} \sum_{i} u_{k} u_{i} b\left(t_{k}-t_{i}\right)\right\}
+\end{aligned}
+\]</span></p>
+<p>简单来说就是因为高斯过程完全由均值和相关函数确定。</p>
+<h2 id="研究汇总">研究汇总</h2>
+<ul>
+<li>高斯过程主要研究以下几个内容
+<ul>
+<li>任意n个时刻的联合高斯分布的计算（有限维分布）
+<ul>
 <li>均值、方差、特征函数</li>
 <li>协方差矩阵、概率密度、概率</li>
-</ul>
-</li>
-<li>高斯分布的线性性质<ul>
+</ul></li>
+<li>高斯分布的线性性质
+<ul>
 <li>微分仍是高斯</li>
 <li>积分仍是高斯</li>
 <li>过线性系统仍是高斯</li>
-</ul>
-</li>
-<li>高斯分布过非线性系统的特性<ul>
+</ul></li>
+<li>高斯分布过非线性系统的特性
+<ul>
 <li>平方器</li>
 <li>限幅器</li>
-</ul>
-</li>
+</ul></li>
 <li>常见推广与定理</li>
 <li>协方差矩阵的渐进性质，一般表示</li>
-</ul>
-</li>
-<li>$n \text { 元正态分布完全由其一阶矩和二阶矩确定! }$</li>
+</ul></li>
+<li><span class="math inline">\(n \text { 元正态分布完全由其一阶矩和二阶矩确定! }\)</span></li>
 <li>联合高斯中各个随机变量独立与不相关等价</li>
 <li>多元高斯函数的形式，特征函数，非负定性质</li>
 <li>均值为0的多元高斯的高阶矩</li>
@@ -532,31 +588,32 @@ S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
 <li>协方差矩阵对角化，可以化简分布形式，然后反代就可以重构概率分布</li>
 <li>0均值高斯，奇数阶距为0。</li>
 </ul>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<h1 id="问题">问题</h1>
+<ol type="1">
 <li><p>如何判断是否是一个高斯分布？</p>
 <ul>
 <li>计算母函数</li>
 <li>母函数形式符合高斯函数的标准形式</li>
-</ul>
-</li>
+</ul></li>
 <li><p>为啥这里会有一个2？或者说我咋知道这是个2？</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225211516978-1888575.png" alt="image-20211225211516978"></p>
-</li>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225211516978-1888575.png" alt="image-20211225211516978"><figcaption aria-hidden="true">image-20211225211516978</figcaption>
+</figure></li>
 <li><p>下面我们用协方差矩阵表示可以么？一定要用线性相关系数吗？</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225224934772-1888575.png" alt="image-20211225224934772"></p>
-</li>
-<li><p>联合高斯的线性变换仍然高斯（过程）</p>
-</li>
-<li><p>高斯向量列的线性组合仍然高斯向量列，<strong>高斯过程中任意时刻组成的随机向量是高斯向量。</strong></p>
-</li>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/image-20211225224934772-1888575.png" alt="image-20211225224934772"><figcaption aria-hidden="true">image-20211225224934772</figcaption>
+</figure></li>
+<li><p>联合高斯的线性变换仍然高斯（过程）</p></li>
+<li><p>高斯向量列的线性组合仍然高斯向量列，<strong>高斯过程中任意时刻组成的随机向量是高斯向量。</strong></p></li>
 </ol>
-<h2 id="等待解决"><a href="#等待解决" class="headerlink" title="等待解决"></a>等待解决</h2><ol>
+<h2 id="等待解决">等待解决</h2>
+<ol type="1">
 <li>三角函数不等式求解</li>
 <li>有限维分布换元</li>
-<li>概率密度函数换元基准公式<ol>
+<li>概率密度函数换元基准公式
+<ol type="1">
 <li>特别是需要换变量域的</li>
-</ol>
-</li>
+</ol></li>
 <li>条件概率公式</li>
 <li>基本概率学定义、概率与分布函数的关系、分布函数的定义</li>
 </ol>
@@ -566,11 +623,29 @@ S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>范嘉骏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B/" title="高斯过程">https://jiajunfanthu.github.io/2022/01/11/清华课程/随机过程/知识点汇总/高斯过程/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"># 清华课程</a>
-              <a href="/blog_cn/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag"># 随机过程</a>
+              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 清华课程</a>
+              <a href="/blog_cn/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 随机过程</a>
           </div>
 
         
@@ -646,7 +721,7 @@ S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">常见定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5B"><span class="nav-number">1.1.</span> <span class="nav-text">协方差矩阵B</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%9A%84%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">线性变换的特征函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88"><span class="nav-number">2.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">线性变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B%E8%BF%87%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">高斯过程过非线性系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">平方器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC"><span class="nav-number">3.1.1.</span> <span class="nav-text">均值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%B9%85%E5%99%A8"><span class="nav-number">3.2.</span> <span class="nav-text">限幅器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">均值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%99%E4%BD%8D%E7%9B%B8%E5%87%8F"><span class="nav-number">4.</span> <span class="nav-text">错位相减</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">常见结论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%BD%E5%B9%B3%E7%A8%B3-%E4%B8%A5%E5%B9%B3%E7%A8%B3"><span class="nav-number">5.1.</span> <span class="nav-text">宽平稳&#x3D;&#x3D;严平稳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%B1%87%E6%80%BB"><span class="nav-number">5.2.</span> <span class="nav-text">研究汇总</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E8%A7%A3%E5%86%B3"><span class="nav-number">6.1.</span> <span class="nav-text">等待解决</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">常见定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5b"><span class="nav-number">1.1.</span> <span class="nav-text">协方差矩阵B</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%9A%84%E7%89%B9%E5%BE%81%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">线性变换的特征函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88"><span class="nav-number">2.1.</span> <span class="nav-text">线性组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2"><span class="nav-number">2.2.</span> <span class="nav-text">线性变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E6%96%AF%E8%BF%87%E7%A8%8B%E8%BF%87%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">高斯过程过非线性系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E6%96%B9%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">平方器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC"><span class="nav-number">3.1.1.</span> <span class="nav-text">均值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.2.</span> <span class="nav-text">相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">3.1.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%B9%85%E5%99%A8"><span class="nav-number">3.2.</span> <span class="nav-text">限幅器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">均值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">相关函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">分布函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%99%E4%BD%8D%E7%9B%B8%E5%87%8F"><span class="nav-number">4.</span> <span class="nav-text">错位相减</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">常见结论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%BD%E5%B9%B3%E7%A8%B3%E4%B8%A5%E5%B9%B3%E7%A8%B3"><span class="nav-number">5.1.</span> <span class="nav-text">宽平稳&#x3D;&#x3D;严平稳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%B1%87%E6%80%BB"><span class="nav-number">5.2.</span> <span class="nav-text">研究汇总</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E5%BE%85%E8%A7%A3%E5%86%B3"><span class="nav-number">6.1.</span> <span class="nav-text">等待解决</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -688,6 +763,9 @@ S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
         <a href="mailto:fanjj21@mails.tsinghua.edu.cn" title="E-Mail → mailto:fanjj21@mails.tsinghua.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -726,12 +804,12 @@ S_n&=\frac{a_1b_1 -a_nb_{n+1}}{1-q}+ db_2\frac{1-q^{n-1}}{(1-q)^2}
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>

@@ -267,7 +267,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.3k</span>
+              <span>5.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -286,293 +286,348 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这边文章中我们给出期末复习第八章的内容，主要就是泊松过程。<br><a id="more"></a></p>
-<h1 id="常见分布"><a href="#常见分布" class="headerlink" title="常见分布"></a>常见分布</h1><div class="table-container">
+        <p>这边文章中我们给出期末复习第八章的内容，主要就是泊松过程。 <a id="more"></a></p>
+<h1 id="常见分布">常见分布</h1>
 <table>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 45%">
+<col style="width: 45%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">分布</th>
-<th style="text-align:center">定义公式</th>
-<th style="text-align:center">参数解释</th>
+<tr class="header">
+<th style="text-align: center;">分布</th>
+<th style="text-align: center;">定义公式</th>
+<th style="text-align: center;">参数解释</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">泊松分布</td>
-<td style="text-align:center">$f_{N}(x)=\frac{\lambda^k}{k!}\exp(-\lambda)$</td>
-<td style="text-align:center">其中$\lambda$是参数，可以看出是瞬时泊松强度，简单来说就是事件发生时候的瞬间强度</td>
+<tr class="odd">
+<td style="text-align: center;">泊松分布</td>
+<td style="text-align: center;"><span class="math inline">\(f_{N}(x)=\frac{\lambda^k}{k!}\exp(-\lambda)\)</span></td>
+<td style="text-align: center;">其中<span class="math inline">\(\lambda\)</span>是参数，可以看出是瞬时泊松强度，简单来说就是事件发生时候的瞬间强度</td>
 </tr>
-<tr>
-<td style="text-align:center">$\Gamma$分布</td>
-<td style="text-align:center">$f_{S}(x)=\lambda e^{-\lambda x} \frac{(\lambda x)^{r-1}}{(r-1) !}$</td>
-<td style="text-align:center">泊松分布发生的事件发生的时间点$S_n$的分布就是$\Gamma$分布</td>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\Gamma\)</span>分布</td>
+<td style="text-align: center;"><span class="math inline">\(f_{S}(x)=\lambda e^{-\lambda x} \frac{(\lambda x)^{r-1}}{(r-1) !}\)</span></td>
+<td style="text-align: center;">泊松分布发生的事件发生的时间点<span class="math inline">\(S_n\)</span>的分布就是<span class="math inline">\(\Gamma\)</span>分布</td>
 </tr>
-<tr>
-<td style="text-align:center">指数分布</td>
-<td style="text-align:center">$f<em>{T}(x)=\lambda\exp(-\lambda x)I</em>{x\ge0}$</td>
-<td style="text-align:center">泊松分布事件发生的时间间隔$T_n$的分布就是指数分布</td>
+<tr class="odd">
+<td style="text-align: center;">指数分布</td>
+<td style="text-align: center;"><span class="math inline">\(f_{T}(x)=\lambda\exp(-\lambda x)I_{x\ge0}\)</span></td>
+<td style="text-align: center;">泊松分布事件发生的时间间隔<span class="math inline">\(T_n\)</span>的分布就是指数分布</td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>简单来说$S<em>n=\sum</em>{i=1}^{n}T_i$而且$P(N(t)\le n)=P(S(n)\ge t)$ 注意泊松分布是时间连续的但是状态离散的，伽马分布是时间连续，状态也是连续的。</p>
-<h1 id="常见概念"><a href="#常见概念" class="headerlink" title="常见概念"></a>常见概念</h1><div class="table-container">
-<table>
+<p>简单来说<span class="math inline">\(S_n=\sum_{i=1}^{n}T_i\)</span>而且<span class="math inline">\(P(N(t)\le n)=P(S(n)\ge t)\)</span> 注意泊松分布是时间连续的但是状态离散的，伽马分布是时间连续，状态也是连续的。</p>
+<h1 id="常见概念">常见概念</h1>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">基本概念</th>
-<th style="text-align:center">公式</th>
-<th style="text-align:center">注意事项</th>
+<tr class="header">
+<th style="text-align: center;">基本概念</th>
+<th style="text-align: center;">公式</th>
+<th style="text-align: center;">注意事项</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">事件发生的次数</td>
-<td style="text-align:center">$N(t)=n$表示$[0,t]$内发生的事件的次数</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">事件发生的次数</td>
+<td style="text-align: center;"><span class="math inline">\(N(t)=n\)</span>表示<span class="math inline">\([0,t]\)</span>内发生的事件的次数</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">事件发生的间隔</td>
-<td style="text-align:center">$T_n={s-t</td>
-<td style="text-align:center">N(s)=n,N(t)=n-1}$表示第n-1个事件和第n个事件发生的时间差</td>
-<td></td>
+<tr class="even">
+<td style="text-align: center;">事件发生的间隔</td>
+<td style="text-align: center;"><span class="math inline">\(T_n=\{s-t|N(s)=n,N(t)=n-1\}\)</span>表示第n-1个事件和第n个事件发生的时间差</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">事件发生的时间点</td>
-<td style="text-align:center">$S<em>n=\sum</em>{i=1}^{n}T_i$ 表示第n个事件发生的时间点，如果齐次的话和起始时间无关</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">事件发生的时间点</td>
+<td style="text-align: center;"><span class="math inline">\(S_n=\sum_{i=1}^{n}T_i\)</span> 表示第n个事件发生的时间点，如果齐次的话和起始时间无关</td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">泊松过程</td>
-<td style="text-align:center">$P{N(t_0+t)-N(t_0)=k}=\frac{(\lambda t)^k}{k!}\exp(-\lambda t)$</td>
-<td style="text-align:center">简单来说就是在时间t内发生n次事件的概率服从泊松分布，而且这个和起始的时间点$t_0$无关，参数$\lambda(t)=\lambda$就是单位时间内时间发生的平均次数</td>
+<tr class="even">
+<td style="text-align: center;">泊松过程</td>
+<td style="text-align: center;"><span class="math inline">\(P\{N(t_0+t)-N(t_0)=k\}=\frac{(\lambda t)^k}{k!}\exp(-\lambda t)\)</span></td>
+<td style="text-align: center;">简单来说就是在时间t内发生n次事件的概率服从泊松分布，而且这个和起始的时间点<span class="math inline">\(t_0\)</span>无关，参数<span class="math inline">\(\lambda(t)=\lambda\)</span>就是单位时间内时间发生的平均次数</td>
 </tr>
-<tr>
-<td style="text-align:center">状态转移矩阵</td>
-<td style="text-align:center">$P(t)={p_{ij}(t)}$</td>
-<td style="text-align:center">这个是齐次的情况，非齐次一般不考虑，齐次就是状态转移矩阵仅仅受转移时间差的影响</td>
+<tr class="odd">
+<td style="text-align: center;">状态转移矩阵</td>
+<td style="text-align: center;"><span class="math inline">\(P(t)={p_{ij}(t)}\)</span></td>
+<td style="text-align: center;">这个是齐次的情况，非齐次一般不考虑，齐次就是状态转移矩阵仅仅受转移时间差的影响</td>
 </tr>
-<tr>
-<td style="text-align:center">Q矩阵（微分矩阵；转移率矩阵）</td>
-<td style="text-align:center">$Q=lim_{t-&gt;0}\frac{P(\Delta t)-I}{\Delta t}$</td>
-<td style="text-align:center">齐次时Q与时间无关；其实Q就是连续情况下的一步转移矩阵</td>
+<tr class="even">
+<td style="text-align: center;">Q矩阵（微分矩阵；转移率矩阵）</td>
+<td style="text-align: center;"><span class="math inline">\(Q=lim_{t-&gt;0}\frac{P(\Delta t)-I}{\Delta t}\)</span></td>
+<td style="text-align: center;">齐次时Q与时间无关；其实Q就是连续情况下的一步转移矩阵</td>
 </tr>
-<tr>
-<td style="text-align:center">后退方程</td>
-<td style="text-align:center">$\frac{dP(t)}{dt}=QP(t)$</td>
-<td style="text-align:center">需要注意使用条件</td>
+<tr class="odd">
+<td style="text-align: center;">后退方程</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{dP(t)}{dt}=QP(t)\)</span></td>
+<td style="text-align: center;">需要注意使用条件</td>
 </tr>
-<tr>
-<td style="text-align:center">前进方程</td>
-<td style="text-align:center">$\frac{dP(t)}{dt}=P(t)Q$</td>
-<td style="text-align:center">需要注意使用条件</td>
+<tr class="even">
+<td style="text-align: center;">前进方程</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{dP(t)}{dt}=P(t)Q\)</span></td>
+<td style="text-align: center;">需要注意使用条件</td>
 </tr>
-<tr>
-<td style="text-align:center">转移概率的极限行为</td>
-<td style="text-align:center">$\lim_{t-&gt;\infty}P(t)$</td>
-<td style="text-align:center">简单来说就是转移矩阵的极限是否存在</td>
+<tr class="odd">
+<td style="text-align: center;">转移概率的极限行为</td>
+<td style="text-align: center;"><span class="math inline">\(\lim_{t-&gt;\infty}P(t)\)</span></td>
+<td style="text-align: center;">简单来说就是转移矩阵的极限是否存在</td>
 </tr>
-<tr>
-<td style="text-align:center">瞬时分布的极限（稳态）</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<tr class="even">
+<td style="text-align: center;">瞬时分布的极限（稳态）</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">CK方程</td>
-<td style="text-align:center">$p<em>{ij}^{s+t}=\sum</em>{k}p<em>{ik}^{s}p</em>{kj}^{t}$</td>
-<td style="text-align:center">更简洁的表达形式是$P(s+t)=P(s)P(t)$</td>
+<tr class="odd">
+<td style="text-align: center;">CK方程</td>
+<td style="text-align: center;"><span class="math inline">\(p_{ij}^{s+t}=\sum_{k}p_{ik}^{s}p_{kj}^{t}\)</span></td>
+<td style="text-align: center;">更简洁的表达形式是<span class="math inline">\(P(s+t)=P(s)P(t)\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">特征函数</td>
-<td style="text-align:center">$\Phi_{\xi}(w)=E[\exp(jw\xi)]$</td>
-<td style="text-align:center">注意特征函数通过<strong>傅里叶正变换</strong>得到概率密度函数</td>
+<tr class="even">
+<td style="text-align: center;">特征函数</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi_{\xi}(w)=E[\exp(jw\xi)]\)</span></td>
+<td style="text-align: center;">注意特征函数通过<strong>傅里叶正变换</strong>得到概率密度函数</td>
 </tr>
-<tr>
-<td style="text-align:center">独立随机变量之和的分布</td>
-<td style="text-align:center">$\Phi_{\eta}=E[\exp(\sum_i^njw\xi_i)]=\Pi_i^nE[\exp(jw\xi_i)]$</td>
-<td style="text-align:center">$\eta=\sum_i^n\xi_i$</td>
+<tr class="odd">
+<td style="text-align: center;">独立随机变量之和的分布</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi_{\eta}=E[\exp(\sum_i^njw\xi_i)]=\Pi_i^nE[\exp(jw\xi_i)]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\eta=\sum_i^n\xi_i\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">随机变量的期望</td>
-<td style="text-align:center">$\Phi^{(1)}</td>
-<td style="text-align:center">_{w=0}=jE[x]$</td>
-<td></td>
+<tr class="even">
+<td style="text-align: center;">随机变量的期望</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi^{(1)}|_{w=0}=jE[x]\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">随机变量的方差</td>
-<td style="text-align:center">$\Phi^{(2)}</td>
-<td style="text-align:center">_{w=0}=-E[x^2]$</td>
-<td>$D(x)=E(x^2)-E^2(x)$</td>
+<tr class="odd">
+<td style="text-align: center;">随机变量的方差</td>
+<td style="text-align: center;"><span class="math inline">\(\Phi^{(2)}|_{w=0}=-E[x^2]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(D(x)=E(x^2)-E^2(x)\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">顺序统计量</td>
-<td style="text-align:center">将随机随机变量按照顺序排序后的联合分布</td>
-<td style="text-align:center">按照顺序排序后重新取值，肯定和排序前有区别。比如原来是$x_1=1$但是现在可能是$x_n=1$。</td>
+<tr class="even">
+<td style="text-align: center;">顺序统计量</td>
+<td style="text-align: center;">将随机随机变量按照顺序排序后的联合分布</td>
+<td style="text-align: center;">按照顺序排序后重新取值，肯定和排序前有区别。比如原来是<span class="math inline">\(x_1=1\)</span>但是现在可能是<span class="math inline">\(x_n=1\)</span>。</td>
 </tr>
-<tr>
-<td style="text-align:center">到达时间的条件分布</td>
-<td style="text-align:center">$f(x1,…,xn)=\frac{n!}{t^n}$</td>
-<td style="text-align:center">已知[0,t]时时间发生的数量为n，那么这n个事件发生的时间点分布。类似均匀分布</td>
+<tr class="odd">
+<td style="text-align: center;">到达时间的条件分布</td>
+<td style="text-align: center;"><span class="math inline">\(f(x1,...,xn)=\frac{n!}{t^n}\)</span></td>
+<td style="text-align: center;">已知[0,t]时时间发生的数量为n，那么这n个事件发生的时间点分布。类似均匀分布</td>
 </tr>
-<tr>
-<td style="text-align:center">第n个事件达到时间的条件分布</td>
-<td style="text-align:center">$f(S_n</td>
-<td style="text-align:center">N(t)=n)=(\frac{s}{t})^n$</td>
-<td></td>
+<tr class="even">
+<td style="text-align: center;">第n个事件达到时间的条件分布</td>
+<td style="text-align: center;"><span class="math inline">\(f(S_n|N(t)=n)=(\frac{s}{t})^n\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">非齐次泊松</td>
-<td style="text-align:center">$P{N(t<em>0+t)-N(t_0)=n}=\frac{(\int</em>{t}^{t+t<em>0} \lambda(t) dt )^k}{k!}\exp[-\int</em>{t}^{t+t_0} \lambda(t) dt]$</td>
-<td style="text-align:center">所谓的非齐次泊松就是事件发生的速度$E[N(t)]=m(t)=\int\lambda(t)dt$不再是一个常数而是一个函数$m(t)$</td>
+<tr class="odd">
+<td style="text-align: center;">非齐次泊松</td>
+<td style="text-align: center;"><span class="math inline">\(P\{N(t_0+t)-N(t_0)=n\}=\frac{(\int_{t}^{t+t_0} \lambda(t) dt )^k}{k!}\exp[-\int_{t}^{t+t_0} \lambda(t) dt]\)</span></td>
+<td style="text-align: center;">所谓的非齐次泊松就是事件发生的速度<span class="math inline">\(E[N(t)]=m(t)=\int\lambda(t)dt\)</span>不再是一个常数而是一个函数<span class="math inline">\(m(t)\)</span></td>
 </tr>
-<tr>
-<td style="text-align:center">保守Q矩阵</td>
-<td style="text-align:center">$\forall i \in I, \sum<em>{j \neq i} q</em>{i j}=-q_{i i}&lt;\infty$</td>
-<td style="text-align:center">有限状态集中Q必保守；对角线元素非正；非对角线元素非负；每行元素和为0</td>
+<tr class="even">
+<td style="text-align: center;">保守Q矩阵</td>
+<td style="text-align: center;"><span class="math inline">\(\forall i \in I, \sum_{j \neq i} q_{i j}=-q_{i i}&lt;\infty\)</span></td>
+<td style="text-align: center;">有限状态集中Q必保守；对角线元素非正；非对角线元素非负；每行元素和为0</td>
 </tr>
-<tr>
-<td style="text-align:center">福柯普朗克方程</td>
-<td style="text-align:center">$\frac{r(t)}{dt}=r(t)Q$</td>
-<td style="text-align:center">其中$r(t)$是t时刻状态的概率分布，也就是随机过程的一维分布</td>
+<tr class="odd">
+<td style="text-align: center;">福柯普朗克方程</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{r(t)}{dt}=r(t)Q\)</span></td>
+<td style="text-align: center;">其中<span class="math inline">\(r(t)\)</span>是t时刻状态的概率分布，也就是随机过程的一维分布</td>
 </tr>
-<tr>
-<td style="text-align:center">极限分布存在引理</td>
-<td style="text-align:center">$\begin{aligned} &amp;p<em>{j}(t) \triangleq \operatorname{Pr}{\xi(t)=j} \quad p</em>{i j}(t)=\operatorname{Pr}{\xi(s+t)=j \mid \xi(s)=i} \ &amp;\text { 极限分布 } \lim <em>{t \rightarrow \infty} p</em>{j}(t), \lim <em>{t \rightarrow \infty} p</em>{i j}(t) \end{aligned}$</td>
-<td style="text-align:center">引理： $\lim <em>{t \rightarrow \infty} p</em>{j}(t)$ 存在且与初始分布 $p<em>{j}(0)$ 无关, 当且仅当 $\lim </em>{t \rightarrow \infty} p_{i j}(t)$ 对任何 $i$ 都存在且相等。</td>
+<tr class="even">
+<td style="text-align: center;">极限分布存在引理</td>
+<td style="text-align: center;"><span class="math inline">\(\begin{aligned} &amp;p_{j}(t) \triangleq \operatorname{Pr}\{\xi(t)=j\} \quad p_{i j}(t)=\operatorname{Pr}\{\xi(s+t)=j \mid \xi(s)=i\} \\ &amp;\text { 极限分布 } \lim _{t \rightarrow \infty} p_{j}(t), \lim _{t \rightarrow \infty} p_{i j}(t) \end{aligned}\)</span></td>
+<td style="text-align: center;">引理： <span class="math inline">\(\lim _{t \rightarrow \infty} p_{j}(t)\)</span> 存在且与初始分布 <span class="math inline">\(p_{j}(0)\)</span> 无关, 当且仅当 <span class="math inline">\(\lim _{t \rightarrow \infty} p_{i j}(t)\)</span> 对任何 <span class="math inline">\(i\)</span> 都存在且相等。</td>
 </tr>
-<tr>
-<td style="text-align:center">马尔科夫定理</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">有限状态马氏链，如果所有状态联通，那么所有极限分布存在。</td>
+<tr class="odd">
+<td style="text-align: center;">马尔科夫定理</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">有限状态马氏链，如果所有状态联通，那么所有极限分布存在。</td>
 </tr>
-<tr>
-<td style="text-align:center"><strong>极限分布的解</strong></td>
-<td style="text-align:center">$P \cdot Q=0 \\sum p_i=1$</td>
-<td style="text-align:center">根据前进方程$\frac{dP(t)}{dt}=P(t)Q$，令t趋于无穷可以直接得到。注意还有就是概率分布求和为1这个条件一定要有</td>
+<tr class="even">
+<td style="text-align: center;"><strong>极限分布的解</strong></td>
+<td style="text-align: center;"><span class="math inline">\(P \cdot Q=0 \\\sum p_i=1\)</span></td>
+<td style="text-align: center;">根据前进方程<span class="math inline">\(\frac{dP(t)}{dt}=P(t)Q\)</span>，令t趋于无穷可以直接得到。注意还有就是概率分布求和为1这个条件一定要有</td>
 </tr>
-<tr>
-<td style="text-align:center">平均人数$L$</td>
-<td style="text-align:center">$L=\sum_{k=0}^{\infty}kp_k$</td>
-<td style="text-align:center"></td>
+<tr class="odd">
+<td style="text-align: center;">平均人数<span class="math inline">\(L\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(L=\sum_{k=0}^{\infty}kp_k\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
-<tr>
-<td style="text-align:center">平均排队人数$L_Q$</td>
-<td style="text-align:center">$L=\sum_{k=s}^{\infty}(k-s)p_k$</td>
-<td style="text-align:center">这里s代表服务台数量。</td>
+<tr class="even">
+<td style="text-align: center;">平均排队人数<span class="math inline">\(L_Q\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(L=\sum_{k=s}^{\infty}(k-s)p_k\)</span></td>
+<td style="text-align: center;">这里s代表服务台数量。</td>
 </tr>
-<tr>
-<td style="text-align:center">平均服务时间$W$</td>
-<td style="text-align:center">$W=\frac{L}{\lambda}$</td>
-<td style="text-align:center">$\lambda$ 系统中人数增加的速度，倒数为顾客平均到达时间</td>
+<tr class="odd">
+<td style="text-align: center;">平均服务时间<span class="math inline">\(W\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(W=\frac{L}{\lambda}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\lambda\)</span> 系统中人数增加的速度，倒数为顾客平均到达时间</td>
 </tr>
-<tr>
-<td style="text-align:center">平均排队时间$W_Q$</td>
-<td style="text-align:center">$W_Q=\frac{L_Q}{\lambda}$</td>
+<tr class="even">
+<td style="text-align: center;">平均排队时间<span class="math inline">\(W_Q\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(W_Q=\frac{L_Q}{\lambda}\)</span></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<h1 id="常见Q矩阵分析"><a href="#常见Q矩阵分析" class="headerlink" title="常见Q矩阵分析"></a>常见Q矩阵分析</h1><h2 id="排队过程"><a href="#排队过程" class="headerlink" title="排队过程"></a>排队过程</h2><h3 id="M-M-1-无穷"><a href="#M-M-1-无穷" class="headerlink" title="M|M|1 无穷"></a>M|M|1 无穷</h3><script type="math/tex; mode=display">
+<h1 id="常见q矩阵分析">常见Q矩阵分析</h1>
+<h2 id="排队过程">排队过程</h2>
+<h3 id="mm1-无穷">M|M|1 无穷</h3>
+<p><span class="math display">\[
 Q = \begin{pmatrix} 
--\lambda_0 & \lambda_0 & \cdots
-\\ \mu_1 & -\mu_1-\lambda_1 & \lambda_1 \end{pmatrix}</script><p>其中$q<em>{ii-1}=\frac{d p</em>{ii-1}}{d t}=\mu<em>i,q</em>{ii+1}=\frac{d p_{ii+1}}{d t}=\lambda_j,i\in[1,\infty],j\in[0,\infty]$</p>
-<h1 id="常见题型"><a href="#常见题型" class="headerlink" title="常见题型"></a>常见题型</h1><h2 id="Q矩阵计算"><a href="#Q矩阵计算" class="headerlink" title="Q矩阵计算"></a>Q矩阵计算</h2><h3 id="根据状态转移矩阵计算-目前好像都是这么算"><a href="#根据状态转移矩阵计算-目前好像都是这么算" class="headerlink" title="根据状态转移矩阵计算 目前好像都是这么算"></a>根据状态转移矩阵计算 目前好像都是这么算</h3><ul>
+-\lambda_0 &amp; \lambda_0 &amp; \cdots
+\\ \mu_1 &amp; -\mu_1-\lambda_1 &amp; \lambda_1 \end{pmatrix}
+\]</span></p>
+<p>其中<span class="math inline">\(q_{ii-1}=\frac{d p_{ii-1}}{d t}=\mu_i,q_{ii+1}=\frac{d p_{ii+1}}{d t}=\lambda_j,i\in[1,\infty],j\in[0,\infty]\)</span></p>
+<h1 id="常见题型">常见题型</h1>
+<h2 id="q矩阵计算">Q矩阵计算</h2>
+<h3 id="根据状态转移矩阵计算-目前好像都是这么算">根据状态转移矩阵计算 目前好像都是这么算</h3>
+<ul>
 <li>根据题意得到状态转移矩阵</li>
-<li>根据$Q=lim_{t-&gt;0}\frac{P(\Delta t)-I}{\Delta t}$ 分别计算Q中每一个元素</li>
+<li>根据<span class="math inline">\(Q=lim_{t-&gt;0}\frac{P(\Delta t)-I}{\Delta t}\)</span> 分别计算Q中每一个元素</li>
 <li>采用保守矩阵行和为0，以及对角线非正检验计算结果</li>
 </ul>
-<h2 id="极限分布"><a href="#极限分布" class="headerlink" title="极限分布"></a>极限分布</h2><h2 id="线性齐次生灭过程"><a href="#线性齐次生灭过程" class="headerlink" title="线性齐次生灭过程"></a>线性齐次生灭过程</h2><h3 id="极限分布-1"><a href="#极限分布-1" class="headerlink" title="极限分布"></a>极限分布</h3><script type="math/tex; mode=display">
-p_{1}=\frac{\lambda_{0}}{\mu_{1}} p_{0}, \quad \ldots, \quad p_{k}=\frac{\lambda_{0} \cdots \lambda_{k-1}}{\mu_{1} \cdots \mu_{k}} p_{0}</script><p>由 $\sum<em>{k \in I} p</em>{k}=1$ 得</p>
-<script type="math/tex; mode=display">
-p_{0}=\left(1+\sum_{k=1}^{\infty} \frac{\lambda_{0} \cdots \lambda_{k-1}}{\mu_{1} \cdots \mu_{k}}\right)^{-1}</script><h3 id="灭绝概率"><a href="#灭绝概率" class="headerlink" title="灭绝概率"></a>灭绝概率</h3><p>定理: ${ }^{11}{\xi(t), t \geq 0}$ 齐次线性生灭过程, $\xi(0)=i$, 参数 $\lambda, \mu$. 则:</p>
-<script type="math/tex; mode=display">
-p_{i 0}(t)=\alpha^{i}(t)</script><p>这里的i是初始状态分布</p>
-<p>其中</p>
-<script type="math/tex; mode=display">
-\alpha(t)=\frac{\mu-\mu e^{(\lambda-\mu) t}}{\mu-\lambda e^{(\lambda-\mu) t}}</script><p>注： $\lim <em>{t \rightarrow \infty} p</em>{i 0}(t)$ 初始状态为 $i$, 经过长时间后转移到状态 0 (灭绝) $=\lim _{t \rightarrow \infty} \alpha^{i}(t)=\left{\begin{array}{ll}1 &amp; \lambda&lt;\mu \ \left(\frac{\mu}{\lambda}\right)^{i} &amp; \lambda&gt;\mu\end{array} \quad i\right.$ 越大, 灭绝的可能性越小。</p>
-<h1 id="常见结论"><a href="#常见结论" class="headerlink" title="常见结论"></a>常见结论</h1><ul>
-<li>马尔科夫过程的研究基本包含三个部分<ul>
+<h2 id="极限分布">极限分布</h2>
+<h2 id="线性齐次生灭过程">线性齐次生灭过程</h2>
+<h3 id="极限分布-1">极限分布</h3>
+<p><span class="math display">\[
+p_{1}=\frac{\lambda_{0}}{\mu_{1}} p_{0}, \quad \ldots, \quad p_{k}=\frac{\lambda_{0} \cdots \lambda_{k-1}}{\mu_{1} \cdots \mu_{k}} p_{0}
+\]</span></p>
+<p>由 <span class="math inline">\(\sum_{k \in I} p_{k}=1\)</span> 得 <span class="math display">\[
+p_{0}=\left(1+\sum_{k=1}^{\infty} \frac{\lambda_{0} \cdots \lambda_{k-1}}{\mu_{1} \cdots \mu_{k}}\right)^{-1}
+\]</span></p>
+<h3 id="灭绝概率">灭绝概率</h3>
+<p>定理: <span class="math inline">\({ }^{11}\{\xi(t), t \geq 0\}\)</span> 齐次线性生灭过程, <span class="math inline">\(\xi(0)=i\)</span>, 参数 <span class="math inline">\(\lambda, \mu\)</span>. 则: <span class="math display">\[
+p_{i 0}(t)=\alpha^{i}(t)
+\]</span> 这里的i是初始状态分布</p>
+<p>其中 <span class="math display">\[
+\alpha(t)=\frac{\mu-\mu e^{(\lambda-\mu) t}}{\mu-\lambda e^{(\lambda-\mu) t}}
+\]</span> 注： <span class="math inline">\(\lim _{t \rightarrow \infty} p_{i 0}(t)\)</span> 初始状态为 <span class="math inline">\(i\)</span>, 经过长时间后转移到状态 0 (灭绝) <span class="math inline">\(=\lim _{t \rightarrow \infty} \alpha^{i}(t)=\left\{\begin{array}{ll}1 &amp; \lambda&lt;\mu \\ \left(\frac{\mu}{\lambda}\right)^{i} &amp; \lambda&gt;\mu\end{array} \quad i\right.\)</span> 越大, 灭绝的可能性越小。</p>
+<h1 id="常见结论">常见结论</h1>
+<ul>
+<li>马尔科夫过程的研究基本包含三个部分
+<ul>
 <li>初始状态</li>
 <li>演化过程</li>
 <li>稳定状态/终态</li>
-</ul>
-</li>
+</ul></li>
 <li>伯努利分布之和是二项分布</li>
 <li>二项分布的极限是泊松分布</li>
-<li>泊松分布的对偶分布（反函数）是$\Gamma$分布</li>
-<li>$\Gamma$分布的差是指数分布</li>
+<li>泊松分布的对偶分布（反函数）是<span class="math inline">\(\Gamma\)</span>分布</li>
+<li><span class="math inline">\(\Gamma\)</span>分布的差是指数分布</li>
 <li>指数分布的参数就是事件发生的速度，期望就是事件发生的间隔事件。</li>
 <li>指数分布的条件分布仍然是同参数的指数分布</li>
-<li>$\forall i \in I, t \in T, p_{i i}(t)&gt;0$ 这个给出了同状态转移概率的任意时刻的分布特性</li>
-<li>$\text { i.e., 若 } p<em>{i j}\left(t</em>{0}\right)&gt;0 \text {, 则 } \forall t&gt;t<em>{0}, p</em>{i j}(t)&gt;0$ 一次能达到，那么永远能到达。$t_0$充分大无法到达，那么永远无法到达</li>
-<li>$\lim <em>{t \rightarrow 0} \frac{p</em>{i j}(t)}{t}$ 极限存在且有限, $i \neq j$<br>$\lim <em>{t \rightarrow 0} \frac{p</em>{i i}(t)-1}{t}$ 极限存在, 但可能是无限, $i=j$ 这个是用于计算Q矩阵的</li>
+<li><span class="math inline">\(\forall i \in I, t \in T, p_{i i}(t)&gt;0\)</span> 这个给出了同状态转移概率的任意时刻的分布特性</li>
+<li><span class="math inline">\(\text { i.e., 若 } p_{i j}\left(t_{0}\right)&gt;0 \text {, 则 } \forall t&gt;t_{0}, p_{i j}(t)&gt;0\)</span> 一次能达到，那么永远能到达。<span class="math inline">\(t_0\)</span>充分大无法到达，那么永远无法到达</li>
+<li><span class="math inline">\(\lim _{t \rightarrow 0} \frac{p_{i j}(t)}{t}\)</span> 极限存在且有限, <span class="math inline">\(i \neq j\)</span> <span class="math inline">\(\lim _{t \rightarrow 0} \frac{p_{i i}(t)-1}{t}\)</span> 极限存在, 但可能是无限, <span class="math inline">\(i=j\)</span> 这个是用于计算Q矩阵的</li>
 </ul>
-<h2 id="泊松分布的条件分布"><a href="#泊松分布的条件分布" class="headerlink" title="泊松分布的条件分布"></a>泊松分布的条件分布</h2><p>设有一泊松过程 ${N(t), t \geqslant 0}$, 若有两时刻 $s, t$, 且 $s&lt;t$, 我们有</p>
-<script type="math/tex; mode=display">
+<h2 id="泊松分布的条件分布">泊松分布的条件分布</h2>
+<p>设有一泊松过程 <span class="math inline">\(\{N(t), t \geqslant 0\}\)</span>, 若有两时刻 <span class="math inline">\(s, t\)</span>, 且 <span class="math inline">\(s&lt;t\)</span>, 我们有 <span class="math display">\[
 P\{N(s)=k / N(t)=n\}=\left(\begin{array}{l}
 n \\
 k
-\end{array}\right)\left(\frac{s}{t}\right){*}\left(1-\frac{s}{t}\right)^{n-k}</script><h1 id="常见数学方法"><a href="#常见数学方法" class="headerlink" title="常见数学方法"></a>常见数学方法</h1><h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><script type="math/tex; mode=display">
-(a+b)^{n}=\sum_{r=0}^{n} C_{n}^{r} a^{n-r} b^{r}</script><h3 id="概率形式"><a href="#概率形式" class="headerlink" title="概率形式"></a>概率形式</h3><p>对于概率形式我们有</p>
-<script type="math/tex; mode=display">
-(p+q)^{n}=\sum_{r=0}^{n} C_{n}^{r} p^{n-r} q^{r}</script><p>对于等概率形式我们有</p>
-<script type="math/tex; mode=display">
-(\frac{1}{2}+\frac{1}{2})^{n}=\sum_{r=0}^{n} C_{n}^{r} (\frac{1}{2})^{n} =1</script><p>于是我们可以得到</p>
-<script type="math/tex; mode=display">
-2^n=\sum_{r=0}^{n} C_{n}^{r}</script><h3 id="特殊形式-1"><a href="#特殊形式-1" class="headerlink" title="特殊形式-1"></a>特殊形式-1</h3><script type="math/tex; mode=display">
-(a+1)^{n}=\sum_{r=0}^{n} C_{n}^{r} a^{r} = \sum_{r=0}^{n} C_{n}^{r} a^{n-r}</script><h2 id="泰勒展开"><a href="#泰勒展开" class="headerlink" title="泰勒展开"></a>泰勒展开</h2><script type="math/tex; mode=display">
-e^x = \sum_{k=0}^\infty \frac{x^k}{k!}</script><h2 id="等价无穷小近似-算Q"><a href="#等价无穷小近似-算Q" class="headerlink" title="等价无穷小近似-算Q"></a>等价无穷小近似-算Q</h2><script type="math/tex; mode=display">
+\end{array}\right)\left(\frac{s}{t}\right){*}\left(1-\frac{s}{t}\right)^{n-k}
+\]</span></p>
+<h1 id="常见数学方法">常见数学方法</h1>
+<h2 id="二项式定理">二项式定理</h2>
+<p><span class="math display">\[
+(a+b)^{n}=\sum_{r=0}^{n} C_{n}^{r} a^{n-r} b^{r}
+\]</span></p>
+<h3 id="概率形式">概率形式</h3>
+<p>对于概率形式我们有 <span class="math display">\[
+(p+q)^{n}=\sum_{r=0}^{n} C_{n}^{r} p^{n-r} q^{r}
+\]</span> 对于等概率形式我们有 <span class="math display">\[
+(\frac{1}{2}+\frac{1}{2})^{n}=\sum_{r=0}^{n} C_{n}^{r} (\frac{1}{2})^{n} =1
+\]</span> 于是我们可以得到 <span class="math display">\[
+2^n=\sum_{r=0}^{n} C_{n}^{r}
+\]</span></p>
+<h3 id="特殊形式-1">特殊形式-1</h3>
+<p><span class="math display">\[
+(a+1)^{n}=\sum_{r=0}^{n} C_{n}^{r} a^{r} = \sum_{r=0}^{n} C_{n}^{r} a^{n-r}
+\]</span></p>
+<h2 id="泰勒展开">泰勒展开</h2>
+<p><span class="math display">\[
+e^x = \sum_{k=0}^\infty \frac{x^k}{k!}
+\]</span></p>
+<h2 id="等价无穷小近似-算q">等价无穷小近似-算Q</h2>
+<p><span class="math display">\[
 (1-a\Delta t)^k= 1-ak\Delta t\\
 e^x = 1+x \\
-e^{-x}=1-x</script><h2 id="三角不等式"><a href="#三角不等式" class="headerlink" title="三角不等式"></a>三角不等式</h2><script type="math/tex; mode=display">
-\frac{1}{4}[1-cos(2\theta)] \le 1-cos(\theta)</script><h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><h2 id="前进后退方程"><a href="#前进后退方程" class="headerlink" title="前进后退方程"></a>前进后退方程</h2><script type="math/tex; mode=display">
+e^{-x}=1-x
+\]</span></p>
+<h2 id="三角不等式">三角不等式</h2>
+<p><span class="math display">\[
+\frac{1}{4}[1-cos(2\theta)] \le 1-cos(\theta)
+\]</span></p>
+<h1 id="证明">证明</h1>
+<h2 id="前进后退方程">前进后退方程</h2>
+<p><span class="math display">\[
 \begin{aligned}
-\frac{dP(t)}{dt}&=lim_{t->0} \frac{P(t+\Delta t)-P(t)}{\Delta t}\\
-&\overset{CK}{=}lim_{t->0} \frac{P(t)P(\Delta t)-P(t)}{\Delta t}\\
-&= lim_{t->0} \frac{P(\Delta t)-I}{\Delta t}P(t)\\
-&=QP(t) 后退方程\\
-&=lim_{t->0} \frac{P(t)P(\Delta t)-P(t)}{\Delta t}\\
-&=lim_{t->0} P(t)\frac{P(\Delta t)-I}{\Delta t}\\
-&=P(t)Q 前进方程\\
-\end{aligned}</script><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+\frac{dP(t)}{dt}&amp;=lim_{t-&gt;0} \frac{P(t+\Delta t)-P(t)}{\Delta t}\\
+&amp;\overset{CK}{=}lim_{t-&gt;0} \frac{P(t)P(\Delta t)-P(t)}{\Delta t}\\
+&amp;= lim_{t-&gt;0} \frac{P(\Delta t)-I}{\Delta t}P(t)\\
+&amp;=QP(t) 后退方程\\
+&amp;=lim_{t-&gt;0} \frac{P(t)P(\Delta t)-P(t)}{\Delta t}\\
+&amp;=lim_{t-&gt;0} P(t)\frac{P(\Delta t)-I}{\Delta t}\\
+&amp;=P(t)Q 前进方程\\
+\end{aligned}
+\]</span></p>
+<h1 id="问题">问题</h1>
+<ol type="1">
 <li><p>如果说每个均匀分布并不是相同的，那么如何证明期望仍然是这个?</p>
 <p>期望是线性的，如果仅仅算期望和，那么不用求联合分布。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225143651138.png" alt="image-20211225143651138"></p>
-</li>
-<li><p>这个求导为啥没有$F’(s)$？</p>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225143651138.png" alt="image-20211225143651138"><figcaption aria-hidden="true">image-20211225143651138</figcaption>
+</figure></li>
+<li><p>这个求导为啥没有<span class="math inline">\(F&#39;(s)\)</span>？</p>
 <p>不会考察</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225150417017.png" alt="image-20211225150417017"></p>
-</li>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225150417017.png" alt="image-20211225150417017"><figcaption aria-hidden="true">image-20211225150417017</figcaption>
+</figure></li>
 <li><p>这里应该是乘法吧？</p>
 <p>乘法，答案错了</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225174714974.png" alt="image-20211225174714974"></p>
-</li>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225174714974.png" alt="image-20211225174714974"><figcaption aria-hidden="true">image-20211225174714974</figcaption>
+</figure></li>
 <li><p>这是个啥玩意？</p>
 <ul>
-<li>一定要注意存在两个$P(S^1_k \le S^2_1)=[\frac{\lambda_1}{\lambda_1+\lambda_2}]^k$</li>
+<li>一定要注意存在两个<span class="math inline">\(P(S^1_k \le S^2_1)=[\frac{\lambda_1}{\lambda_1+\lambda_2}]^k\)</span></li>
 </ul>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225175047279.png" alt="image-20211225175047279"></p>
-</li>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211225175047279.png" alt="image-20211225175047279"><figcaption aria-hidden="true">image-20211225175047279</figcaption>
+</figure></li>
 <li><p>这个事件为啥等价呀？</p>
 <p>这个肯定等价，记住等号是分布列，也就是常说的最小概率单元。不等号是若干个最小概率单元的求和。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211226235355718.png" alt="image-20211226235355718"></p>
-</li>
-<li><p>如何确定这个积分区域？  x&lt;y</p>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211226235355718.png" alt="image-20211226235355718"><figcaption aria-hidden="true">image-20211226235355718</figcaption>
+</figure></li>
+<li><p>如何确定这个积分区域？ x&lt;y</p>
 <ul>
-<li>很正常 </li>
+<li>很正常</li>
 </ul>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211227000021359.png" alt="image-20211227000021359"></p>
-</li>
-<li><p>这两个$S_n$是同一个意思吗？我感觉下面那个是排序之后的</p>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211227000021359.png" alt="image-20211227000021359"><figcaption aria-hidden="true">image-20211227000021359</figcaption>
+</figure></li>
+<li><p>这两个<span class="math inline">\(S_n\)</span>是同一个意思吗？我感觉下面那个是排序之后的</p>
 <p>这个是说的第n个，也就是有个前提，必须是第n个。而不能是随便的一个，有顺序的。</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211227002548610.png" alt="image-20211227002548610"></p>
-</li>
-<li><p>为什么不考虑这个人服务完毕了？  $p_{01}$ </p>
-<p>其实一般不用考虑 $(\lambda t + o(t))(1-(1-\exp(-\mu t)))=(\lambda t + o(t))(1-\mu t)$</p>
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211227174333756.png" alt="image-20211227174333756"></p>
-</li>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211227002548610.png" alt="image-20211227002548610"><figcaption aria-hidden="true">image-20211227002548610</figcaption>
+</figure></li>
+<li><p>为什么不考虑这个人服务完毕了？ <span class="math inline">\(p_{01}\)</span></p>
+<p>其实一般不用考虑 <span class="math inline">\((\lambda t + o(t))(1-(1-\exp(-\mu t)))=(\lambda t + o(t))(1-\mu t)\)</span></p>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/image-20211227174333756.png" alt="image-20211227174333756"><figcaption aria-hidden="true">image-20211227174333756</figcaption>
+</figure></li>
 </ol>
-<h1 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h1><ol>
+<h1 id="待解决">待解决</h1>
+<ol type="1">
 <li>错位相减</li>
 <li>等价无穷小</li>
 </ol>
@@ -582,11 +637,29 @@ e^{-x}=1-x</script><h2 id="三角不等式"><a href="#三角不等式" class="he
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>范嘉骏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://jiajunfanthu.github.io/2022/01/11/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/%E6%B3%8A%E6%9D%BE%E8%BF%87%E7%A8%8B/" title="泊松过程">https://jiajunfanthu.github.io/2022/01/11/清华课程/随机过程/知识点汇总/泊松过程/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"># 清华课程</a>
-              <a href="/blog_cn/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag"># 随机过程</a>
+              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 清华课程</a>
+              <a href="/blog_cn/tags/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 随机过程</a>
           </div>
 
         
@@ -662,7 +735,7 @@ e^{-x}=1-x</script><h2 id="三角不等式"><a href="#三角不等式" class="he
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">常见分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">常见概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81Q%E7%9F%A9%E9%98%B5%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">常见Q矩阵分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E9%98%9F%E8%BF%87%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">排队过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#M-M-1-%E6%97%A0%E7%A9%B7"><span class="nav-number">3.1.1.</span> <span class="nav-text">M|M|1 无穷</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">常见题型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97"><span class="nav-number">4.1.</span> <span class="nav-text">Q矩阵计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97-%E7%9B%AE%E5%89%8D%E5%A5%BD%E5%83%8F%E9%83%BD%E6%98%AF%E8%BF%99%E4%B9%88%E7%AE%97"><span class="nav-number">4.1.1.</span> <span class="nav-text">根据状态转移矩阵计算 目前好像都是这么算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E5%88%86%E5%B8%83"><span class="nav-number">4.2.</span> <span class="nav-text">极限分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E7%94%9F%E7%81%AD%E8%BF%87%E7%A8%8B"><span class="nav-number">4.3.</span> <span class="nav-text">线性齐次生灭过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E5%88%86%E5%B8%83-1"><span class="nav-number">4.3.1.</span> <span class="nav-text">极限分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%81%AD%E7%BB%9D%E6%A6%82%E7%8E%87"><span class="nav-number">4.3.2.</span> <span class="nav-text">灭绝概率</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">常见结论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B8%83"><span class="nav-number">5.1.</span> <span class="nav-text">泊松分布的条件分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">常见数学方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="nav-number">6.1.</span> <span class="nav-text">二项式定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E5%BD%A2%E5%BC%8F"><span class="nav-number">6.1.1.</span> <span class="nav-text">概率形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%BD%A2%E5%BC%8F-1"><span class="nav-number">6.1.2.</span> <span class="nav-text">特殊形式-1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80"><span class="nav-number">6.2.</span> <span class="nav-text">泰勒展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E8%BF%91%E4%BC%BC-%E7%AE%97Q"><span class="nav-number">6.3.</span> <span class="nav-text">等价无穷小近似-算Q</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">6.4.</span> <span class="nav-text">三角不等式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%81%E6%98%8E"><span class="nav-number">7.</span> <span class="nav-text">证明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%BF%9B%E5%90%8E%E9%80%80%E6%96%B9%E7%A8%8B"><span class="nav-number">7.1.</span> <span class="nav-text">前进后退方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%85%E8%A7%A3%E5%86%B3"><span class="nav-number">9.</span> <span class="nav-text">待解决</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">常见分布</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">常见概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81q%E7%9F%A9%E9%98%B5%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">常见Q矩阵分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E9%98%9F%E8%BF%87%E7%A8%8B"><span class="nav-number">3.1.</span> <span class="nav-text">排队过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mm1-%E6%97%A0%E7%A9%B7"><span class="nav-number">3.1.1.</span> <span class="nav-text">M|M|1 无穷</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">常见题型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#q%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97"><span class="nav-number">4.1.</span> <span class="nav-text">Q矩阵计算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97-%E7%9B%AE%E5%89%8D%E5%A5%BD%E5%83%8F%E9%83%BD%E6%98%AF%E8%BF%99%E4%B9%88%E7%AE%97"><span class="nav-number">4.1.1.</span> <span class="nav-text">根据状态转移矩阵计算 目前好像都是这么算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E5%88%86%E5%B8%83"><span class="nav-number">4.2.</span> <span class="nav-text">极限分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E9%BD%90%E6%AC%A1%E7%94%9F%E7%81%AD%E8%BF%87%E7%A8%8B"><span class="nav-number">4.3.</span> <span class="nav-text">线性齐次生灭过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E5%88%86%E5%B8%83-1"><span class="nav-number">4.3.1.</span> <span class="nav-text">极限分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%81%AD%E7%BB%9D%E6%A6%82%E7%8E%87"><span class="nav-number">4.3.2.</span> <span class="nav-text">灭绝概率</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">常见结论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B8%83"><span class="nav-number">5.1.</span> <span class="nav-text">泊松分布的条件分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%95%B0%E5%AD%A6%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">常见数学方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86"><span class="nav-number">6.1.</span> <span class="nav-text">二项式定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E5%BD%A2%E5%BC%8F"><span class="nav-number">6.1.1.</span> <span class="nav-text">概率形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%BD%A2%E5%BC%8F-1"><span class="nav-number">6.1.2.</span> <span class="nav-text">特殊形式-1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%B0%E5%8B%92%E5%B1%95%E5%BC%80"><span class="nav-number">6.2.</span> <span class="nav-text">泰勒展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F%E8%BF%91%E4%BC%BC-%E7%AE%97q"><span class="nav-number">6.3.</span> <span class="nav-text">等价无穷小近似-算Q</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">6.4.</span> <span class="nav-text">三角不等式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%81%E6%98%8E"><span class="nav-number">7.</span> <span class="nav-text">证明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%BF%9B%E5%90%8E%E9%80%80%E6%96%B9%E7%A8%8B"><span class="nav-number">7.1.</span> <span class="nav-text">前进后退方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">8.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%85%E8%A7%A3%E5%86%B3"><span class="nav-number">9.</span> <span class="nav-text">待解决</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -704,6 +777,9 @@ e^{-x}=1-x</script><h2 id="三角不等式"><a href="#三角不等式" class="he
         <a href="mailto:fanjj21@mails.tsinghua.edu.cn" title="E-Mail → mailto:fanjj21@mails.tsinghua.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/blog_cn/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -742,12 +818,12 @@ e^{-x}=1-x</script><h2 id="三角不等式"><a href="#三角不等式" class="he
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">26k</span>
+    <span title="站点总字数">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
