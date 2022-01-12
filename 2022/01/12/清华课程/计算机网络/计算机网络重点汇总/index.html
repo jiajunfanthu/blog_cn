@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog_cn/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog_cn/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog_cn/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog_cn/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog_cn/css/main.css">
+
+
+<link rel="stylesheet" href="/blog_cn/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/blog_cn/lib/pace/pace-theme-minimal.min.css">
+  <script src="/blog_cn/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jiajunfanthu.github.io","root":"/blog_cn/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="清华大学计算机网络课程期中复习——计算机网络，总结了一些重点内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络重点汇总">
+<meta property="og:url" content="https://jiajunfanthu.github.io/2022/01/12/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="范嘉骏的博客">
+<meta property="og:description" content="清华大学计算机网络课程期中复习——计算机网络，总结了一些重点内容。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-12T06:54:29.000Z">
+<meta property="article:modified_time" content="2022-01-12T06:56:45.787Z">
+<meta property="article:author" content="范嘉骏">
+<meta property="article:tag" content="清华课程">
+<meta property="article:tag" content="计算机网络">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://jiajunfanthu.github.io/2022/01/12/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>计算机网络重点汇总 | 范嘉骏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog_cn/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">范嘉骏的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog_cn/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog_cn/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog_cn/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog_cn/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog_cn/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jiajunfanthu.github.io/2022/01/12/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog_cn/images/avatar.jpg">
+      <meta itemprop="name" content="范嘉骏">
+      <meta itemprop="description" content="Nothing is impossible unless you give up early!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="范嘉骏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络重点汇总
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-01-12 14:54:29 / 修改时间：14:56:45" itemprop="dateCreated datePublished" datetime="2022-01-12T14:54:29+08:00">2022-01-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog_cn/categories/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">清华课程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog_cn/categories/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>清华大学计算机网络课程期中复习——计算机网络，总结了一些重点内容。</p>
+<a id="more"></a>
+<h1 id="常见缩写"><a href="#常见缩写" class="headerlink" title="常见缩写"></a>常见缩写</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">英文</th>
+<th style="text-align:center">中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">link-state</td>
+<td style="text-align:center">链路状态路由算法（建图+Dj算法）</td>
+</tr>
+<tr>
+<td style="text-align:center">vector</td>
+<td style="text-align:center">距离向量协议</td>
+</tr>
+<tr>
+<td style="text-align:center">RIP</td>
+<td style="text-align:center">路由信息协议</td>
+</tr>
+<tr>
+<td style="text-align:center">OSPF</td>
+<td style="text-align:center">开放最短路径优先协议</td>
+</tr>
+<tr>
+<td style="text-align:center">BGP</td>
+<td style="text-align:center">边界网关协议</td>
+</tr>
+<tr>
+<td style="text-align:center">IGMP</td>
+<td style="text-align:center">因特网组网管理协议</td>
+</tr>
+<tr>
+<td style="text-align:center">NAT</td>
+<td style="text-align:center">网络地址转换</td>
+</tr>
+<tr>
+<td style="text-align:center">ARP</td>
+<td style="text-align:center">地址解析协议(IP—&gt;MAC)</td>
+</tr>
+<tr>
+<td style="text-align:center">RARP</td>
+<td style="text-align:center">逆地址解析协议（MAC-&gt;IP）</td>
+</tr>
+<tr>
+<td style="text-align:center">DHCP</td>
+<td style="text-align:center">动态主机配置协议</td>
+</tr>
+<tr>
+<td style="text-align:center">ICMP</td>
+<td style="text-align:center">网际控制报文协议</td>
+</tr>
+<tr>
+<td style="text-align:center">CIDR</td>
+<td style="text-align:center">无分类域内路由选择协议</td>
+</tr>
+<tr>
+<td style="text-align:center">TTL</td>
+<td style="text-align:center">存活时间</td>
+</tr>
+<tr>
+<td style="text-align:center">ISP</td>
+<td style="text-align:center">地区发言人（BGP）</td>
+</tr>
+<tr>
+<td style="text-align:center">LSA</td>
+<td style="text-align:center">链路状态广播</td>
+</tr>
+<tr>
+<td style="text-align:center">LSU</td>
+<td style="text-align:center">链路状态更新（OSPF）</td>
+</tr>
+<tr>
+<td style="text-align:center">LSR</td>
+<td style="text-align:center">链路状态请求协议</td>
+</tr>
+<tr>
+<td style="text-align:center">PIM</td>
+<td style="text-align:center">协议无关的组播</td>
+</tr>
+<tr>
+<td style="text-align:center">RTT</td>
+<td style="text-align:center">往返时延（从发送方发送数据到接收到接收方的反馈信息的总时间延迟）</td>
+</tr>
+<tr>
+<td style="text-align:center">$C_{WND}$</td>
+<td style="text-align:center">拥塞窗口</td>
+</tr>
+<tr>
+<td style="text-align:center">$R_{WND}$</td>
+<td style="text-align:center">接收窗口</td>
+</tr>
+<tr>
+<td style="text-align:center">ISP(Internet severvice provider)</td>
+<td style="text-align:center">服务提供商</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">信号采集单位周期</td>
+</tr>
+<tr>
+<td style="text-align:center">ssthresh</td>
+<td style="text-align:center">慢开始门限</td>
+</tr>
+<tr>
+<td style="text-align:center">SAP</td>
+<td style="text-align:center">服务访问点（MAC地址、IP地址、端口号、用户界面）</td>
+</tr>
+<tr>
+<td style="text-align:center">PPP协议</td>
+<td style="text-align:center">串行链路通信协议</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="IBGP和EBGP的关系与区别"><a href="#IBGP和EBGP的关系与区别" class="headerlink" title="IBGP和EBGP的关系与区别"></a>IBGP和EBGP的关系与区别</h1><h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ul>
+<li>二者都属于BGP协议的一种<ul>
+<li>EBGP是外部边界网关协议，主要用于在不同的自治系统之间进行路由选择</li>
+<li>IBGP是运行在自治系统内部的BGP协议，用于为内部路由器提供更多信息。<ul>
+<li>IGP协议是针对同一个AS的网络来设计的，但是IGP协议支持的自治系统规模一般都不大，设计之初没考虑大规模网络的情况。</li>
+<li>当一个自治网络足够大时候，OSPF存在性能瓶颈。</li>
+<li>BGP本身就是为了满足大网络之间的连接，所以大型私有网络IP网络的内部可以使用IBGP。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>简单来说<ul>
+<li>IGP用于小规模私有网络</li>
+<li>IBGP用于大规模私有网络</li>
+<li>EBGP用于互联网（AS之间的互联）</li>
+</ul>
+</li>
+</ul>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
+<li>从应用场景来看iBGP和eBGP有很大区别<ul>
+<li>eBGP用于互联网上各个独立的AS之间的连接</li>
+<li>iBGP应用于AS内部节点之间的路由。（所以iBGP要求同步，eBGP不要求同步）<ul>
+<li>与其他IGP相比，iBGP可以用于在边界路由（AS的边缘，用于连接其他AS的路由器）之间同步路由。通过eBGP，边界路由器可以学习对端AS的路由；通过iBGP，可以将这一信息传递给其他的边界路由。从而可以实现跨AS的连接。</li>
+<li>虽然运行在AS内部，但是iBGP的目的仍然是连接互联网（连接若干个AS）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当然iBGP也可以作为一个普通的IGP，网络规模足够大的时候，IBGP比OSPF能更稳定可靠的传输路由信息。</li>
+<li>通过iBGP学习到的路由，不能传递给其他iBGP。也就是为了避免环路，iBGP没有AS_PATH。</li>
+<li>使用的属性不同，iBGP有LOCAL_REF，但是eBGP没有。</li>
+<li>iBGP只是逻辑上的连接（可以通过路由转发），而eBGP要求物理上连接。</li>
+</ul>
+<h1 id="BGP中建立输入备份链路-inbound-traffic"><a href="#BGP中建立输入备份链路-inbound-traffic" class="headerlink" title="BGP中建立输入备份链路(inbound traffic)"></a>BGP中建立输入备份链路(inbound traffic)</h1><ul>
+<li>可以<ul>
+<li>AS-PATH</li>
+<li>COMMUNITY</li>
+<li>MULTI-EXIT-DISC</li>
+</ul>
+</li>
+<li>不行<ul>
+<li>LOCAL PREF</li>
+</ul>
+</li>
+</ul>
+<h1 id="IP-Multicast"><a href="#IP-Multicast" class="headerlink" title="IP Multicast"></a>IP Multicast</h1><h2 id="域内路由协议"><a href="#域内路由协议" class="headerlink" title="域内路由协议"></a>域内路由协议</h2><ul>
+<li>IGMP（主机信号路由协议i）</li>
+<li>DVMRP</li>
+</ul>
+<h2 id="域间路由协议"><a href="#域间路由协议" class="headerlink" title="域间路由协议"></a>域间路由协议</h2><ul>
+<li>BGMP</li>
+<li>PIM-DM（无协议）</li>
+<li>MBGP</li>
+</ul>
+<h1 id="IPv4到IPv6的三种转换技术"><a href="#IPv4到IPv6的三种转换技术" class="headerlink" title="IPv4到IPv6的三种转换技术"></a>IPv4到IPv6的三种转换技术</h1><ul>
+<li>双协议栈<ul>
+<li>路由器中同时支持IPv4协议栈和IPv6协议栈。也就是主机可以同时具有IPv4地址和IPv6地址，而且具备同时处理这两类协议地址的功能。主机不仅可以与IPv4通信，也能与IPv6通信。</li>
+</ul>
+</li>
+<li>隧道技术<ul>
+<li>将IPv6的数据报放到IPv4数据报的数据部分，使得IPv6数据报可以在IPv4的网络隧道中传输。同理IPv4分组离开IPv4网络时，封装在IPv6的数据部分，从而可以在IPv4的网络隧道中进行传输。</li>
+</ul>
+</li>
+<li>协议翻译技术<ul>
+<li>对IPv6和IPv4的报文头相互翻译，实现IPv4/IPv6协议和地址的转换。NAT/PT中NAT技术演变而来，在IPv4下的动态翻译。</li>
+</ul>
+</li>
+</ul>
+<h1 id="DNS协议"><a href="#DNS协议" class="headerlink" title="DNS协议"></a>DNS协议</h1><h2 id="测试是否正确"><a href="#测试是否正确" class="headerlink" title="测试是否正确"></a>测试是否正确</h2><ul>
+<li>PING</li>
+<li>IPCONFIG</li>
+<li>NSLOOKUP</li>
+<li>注意不能用LOGIN</li>
+</ul>
+<h1 id="OSPF协议"><a href="#OSPF协议" class="headerlink" title="OSPF协议"></a>OSPF协议</h1><h2 id="子协议"><a href="#子协议" class="headerlink" title="子协议"></a>子协议</h2><ul>
+<li>Hello（确认链路状态）</li>
+<li>Exchange （交换路由表）</li>
+<li>Flooding  （泛洪发送链路更新）</li>
+</ul>
+<h1 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h1><ul>
+<li>电话交换网络中不会出现拥塞。</li>
+<li>中继器两端连接的是网段而不是子网，中继器两端连接的几个网段仍然是一个局域网。</li>
+<li>如果一个设备有存储转发功能，那么它可以连接两个不同协议（两端的速率可以不同，但是可能会缓冲溢出导致丢包），反之不能。</li>
+<li>集线器是一种多端口的中继器，而且不能分割广播，通常用于分发一组包给多个网络。（单输入多输出）</li>
+<li>传输媒体例如双绞线、光纤等并不是物理层设备。</li>
+<li>一个网段是一个冲突域（一块网卡发消息时，可能与另一个网卡冲突，可能冲突的网卡构成冲突域），一个局域网是一个广播域（一块网卡发出广播时候，所有能收到这个广播的网卡称为广播域）<ul>
+<li>物理层设备不能隔离冲突域或者广播域，所以连接起来的设备仍然是一个网段、局域网</li>
+<li>数据链路层设备可以隔离冲突域不能隔离广播域，所以分别连接多个网段。</li>
+<li>网络层设备（路由器）可以隔离广播域，所以连接多个局域网。</li>
+</ul>
+</li>
+<li>连接必确认；确认未必连接</li>
+</ul>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
+<li>不同的AS之间如何区别？</li>
+<li>如何判断两个设备是否在同一个局域网中（只能通过距离么？）还是说广播域隔离。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>范嘉骏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://jiajunfanthu.github.io/2022/01/12/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%87%8D%E7%82%B9%E6%B1%87%E6%80%BB/" title="计算机网络重点汇总">https://jiajunfanthu.github.io/2022/01/12/清华课程/计算机网络/计算机网络重点汇总/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/blog_cn/tags/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 清华课程</a>
+              <a href="/blog_cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"><i class="fa fa-tag"></i> 计算机网络</a>
+          </div>
+
+        
+
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog_cn/2022/01/12/%E6%B8%85%E5%8D%8E%E8%AF%BE%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BA%8C%E7%BA%A7%E7%BB%93%E8%AE%BA/" rel="prev" title="计算机网络二级结论">
+      <i class="fa fa-chevron-left"></i> 计算机网络二级结论
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BC%A9%E5%86%99"><span class="nav-number">1.</span> <span class="nav-text">常见缩写</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IBGP%E5%92%8CEBGP%E7%9A%84%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">IBGP和EBGP的关系与区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB"><span class="nav-number">2.1.</span> <span class="nav-text">关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-number">2.2.</span> <span class="nav-text">区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BGP%E4%B8%AD%E5%BB%BA%E7%AB%8B%E8%BE%93%E5%85%A5%E5%A4%87%E4%BB%BD%E9%93%BE%E8%B7%AF-inbound-traffic"><span class="nav-number">3.</span> <span class="nav-text">BGP中建立输入备份链路(inbound traffic)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP-Multicast"><span class="nav-number">4.</span> <span class="nav-text">IP Multicast</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%86%85%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.1.</span> <span class="nav-text">域内路由协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E9%97%B4%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.2.</span> <span class="nav-text">域间路由协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IPv4%E5%88%B0IPv6%E7%9A%84%E4%B8%89%E7%A7%8D%E8%BD%AC%E6%8D%A2%E6%8A%80%E6%9C%AF"><span class="nav-number">5.</span> <span class="nav-text">IPv4到IPv6的三种转换技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DNS%E5%8D%8F%E8%AE%AE"><span class="nav-number">6.</span> <span class="nav-text">DNS协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE"><span class="nav-number">6.1.</span> <span class="nav-text">测试是否正确</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OSPF%E5%8D%8F%E8%AE%AE"><span class="nav-number">7.</span> <span class="nav-text">OSPF协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E5%8D%8F%E8%AE%AE"><span class="nav-number">7.1.</span> <span class="nav-text">子协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%93%E9%94%99%E7%82%B9"><span class="nav-number">8.</span> <span class="nav-text">易错点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">9.</span> <span class="nav-text">问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="范嘉骏"
+      src="/blog_cn/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">范嘉骏</p>
+  <div class="site-description" itemprop="description">Nothing is impossible unless you give up early!</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog_cn/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog_cn/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog_cn/tags/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jiajunfanthu" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jiajunfanthu" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:fanjj21@mails.tsinghua.edu.cn" title="E-Mail → mailto:fanjj21@mails.tsinghua.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5vtx00lrmp4&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+
+
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=472045267&auto=1&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">范嘉骏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">59k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">53 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog_cn/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/blog_cn/lib/velocity/velocity.min.js"></script>
+  <script src="/blog_cn/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog_cn/js/utils.js"></script>
+
+<script src="/blog_cn/js/motion.js"></script>
+
+
+<script src="/blog_cn/js/schemes/muse.js"></script>
+
+
+<script src="/blog_cn/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog_cn/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/blog_cn/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: 'unset',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '8e7e602c986de3e222fe',
+      clientSecret: 'dd72a53ba750a6963e550162611b11688039d271',
+      repo        : 'blog_cn_gittalk',
+      owner       : 'jiajunfanthu',
+      admin       : ['jiajunfanthu'],
+      id          : '66996e2fac2a4b898d3ae7dfea19242e',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+
+<script type="text/javascript" src="js/love.js"></script>
+
+<script src="live2d-widget/autoload.js"></script>
+
+
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
